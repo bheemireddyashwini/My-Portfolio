@@ -13,6 +13,18 @@ const ProjectData = [
   },
   {
     id: 2,
+    title: "DiceeChallenge",
+    date: "16 october 2024", 
+    description:
+      "A simple and fun dice game built with [your technologies, e.g., HTML, CSS, JavaScript]. Roll the dice, test your luck, and enjoy the thrill of chance! Perfect for learning about randomization, interactive UI, and game mechanics.",
+    image: "/dicee.png", 
+    technologies: ["JavaScript", "CSS", "HTML"],
+    category: "javascript",
+    github: "https://github.com/bheemireddyashwini/random-dice",
+    link: "https://bheemireddyashwini.github.io/random-dice/",
+  },
+  {
+    id: 3,
     title: "Ecommerce App",
     date: "15 November 2024",
     image: "/ecommerce.png", 

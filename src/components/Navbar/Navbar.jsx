@@ -52,15 +52,16 @@ const glowAnimation = keyframes`
   }
 `;
 const Nav = styled.div`
-  background: linear-gradient(135deg, #6790ba, #576d89);
+ background: linear-gradient(135deg, #6790ba, #576d89);
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+  position: fixed; /* Fix the header */
   top: 0;
-  z-index: 10;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other content */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 `;
@@ -99,20 +100,27 @@ const Icon = styled.div`
     color: white;
   }
 `;
-
 const NavItems = styled.ul`
-  display: ${({ showNav }) => (showNav ? "flex" : "none")};
-  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   list-style: none;
-  align-items: center;
-  gap: 38px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  @media screen and (max-width: 768px) {
-    display: ${({ showNav }) => (showNav ? "block" : "none")};
-    text-align: center;
-    padding-top: 20px;
-  }
+  position: fixed; /* Fixed for consistency with header */
+  top: 80px; /* Place below the fixed header */
+  right: 0;
+  background: rgba(26, 27, 38, 0.95);
+  width: 300px; /* Adjust width */
+  height: calc(100vh - 80px); /* Full height minus header */
+  transform: ${({ showNav }) => (showNav ? "translateX(0)" : "translateX(100%)")};
+  opacity: ${({ showNav }) => (showNav ? "1" : "0")};
+  visibility: ${({ showNav }) => (showNav ? "visible" : "hidden")};
+  transition: all 0.4s ease-in-out;
+  z-index: 999;
+
+  /* Spacing between links */
+  gap: 20px;
+  padding: 20px;
 `;
 
 const NavLink = styled.a`
@@ -120,6 +128,7 @@ const NavLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
+  margin-bottom: 10px;
   &:hover {
     color: #f5c42d;
   }
@@ -171,7 +180,6 @@ const OverviewButton = styled.button`
   }
 `;
 
-
 // Overview Section
 const OverviewSection = styled.div`
   display: ${({ show }) => (show ? "block" : "none")};
@@ -211,29 +219,47 @@ const OverviewSection = styled.div`
 
 // Overview Content
 const OverviewContent = styled.div`
-  color: #e0e0e0; /* Light text color for readability */
-  font-size: 1.15rem;
+  color: #e0e0e0;
+  font-size: 1.17rem;
   line-height: 1.7;
   font-family: "Arial", sans-serif;
-  background: rgba(26, 27, 38, 0.9); /* Dark background for content */
+  background: rgba(26, 27, 38, 0.9);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative; /* Ensures z-index works */
-  z-index: 3; /* Content will be behind the section */
+  position: relative;
+  z-index: 3;
+  /* Add scrollbar for overflowing content */
+  max-height: 300px; /* Set a maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+
+  /* Optional: Style the scrollbar for better appearance */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #91bbd4;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #6790ba;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
 
   h2 {
     font-size: 2.2rem;
     margin-bottom: 15px;
-    color: #ffffff; /* White text for headings */
+    color: #ffffff;
     font-weight: 600;
     text-align: center;
   }
 
   p {
     font-size: 1.1rem;
-    color: #ddd; /* Lighter color for paragraph text */
+    color: #ddd;
     line-height: 1.6;
     text-align: justify;
   }
