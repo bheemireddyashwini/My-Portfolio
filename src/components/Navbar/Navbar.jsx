@@ -110,7 +110,7 @@ const NavItems = styled.ul`
   top: 80px; /* Place below the fixed header */
   right: 0;
   background: rgba(26, 27, 38, 0.95);
-  width: 300px; /* Adjust width */
+  width: 170px; /* Adjust width */
   height: calc(100vh - 80px); /* Full height minus header */
   transform: ${({ showNav }) => (showNav ? "translateX(0)" : "translateX(100%)")};
   opacity: ${({ showNav }) => (showNav ? "1" : "0")};
@@ -230,11 +230,9 @@ const OverviewContent = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 3;
-  /* Add scrollbar for overflowing content */
-  max-height: 300px; /* Set a maximum height */
-  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 300px; 
+  overflow-y: auto;
 
-  /* Optional: Style the scrollbar for better appearance */
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -267,11 +265,11 @@ const OverviewContent = styled.div`
 
 function Navbar() {
   const [showOverview, setShowOverview] = useState(false);
-  const [showNav, setShowNav] = useState(false); // To control nav items visibility
+  const [showNav, setShowNav] = useState(false); 
 
   const handleOverviewClick = () => {
-    setShowOverview(!showOverview); // Toggle overview section visibility
-    setShowNav(!showNav); // Toggle nav items visibility when overview is clicked
+    setShowOverview(!showOverview); 
+    setShowNav(!showNav); 
   };
 
   return (

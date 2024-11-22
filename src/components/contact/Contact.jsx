@@ -197,13 +197,10 @@ function Contact() {
         </Description>
         <Form onSubmit={handleSubmit}>
           <Label style={{ marginRight: "8px", color: "white" }}>
-            <MdEmail
-              size={24}
-              style={{ marginRight: "8px", color: "white" }}
-            />
+            <MdEmail size={24} style={{ marginRight: "8px", color: "white" }} />
             Email
           </Label>
-          <Input 
+          <Input
             type="email"
             name="email"
             placeholder="Enter your email"
@@ -212,7 +209,8 @@ function Contact() {
           <Label style={{ marginRight: "8px", color: "white" }}>Name</Label>
           <Input type="text" name="name" placeholder="Your Name" required />
           <Label style={{ marginRight: "8px", color: "white" }}>Message</Label>
-           <TextArea style={{ marginRight: "8px", color: "white" }}
+          <TextArea
+            style={{ marginRight: "8px", color: "white" }}
             name="message"
             placeholder="Write your message here"
             required
