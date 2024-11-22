@@ -117,7 +117,8 @@ const ResumeButton = styled.a`
       ${({ theme }) => theme.primary}
     ); /* Gradient background */
     color: ${({ theme }) => theme.white}; /* Keep text color consistent */
-    animation: pulse 1.2s ease-in-out infinite, glowAnimation 1.5s infinite ease-in-out; /* Pulse + Glow */
+    animation: pulse 1.2s ease-in-out infinite,
+      glowAnimation 1.5s infinite ease-in-out; /* Pulse + Glow */
   }
 
   /* Active state with shrink effect */
@@ -165,16 +166,22 @@ const ResumeButton = styled.a`
   /* Glow effect animation */
   @keyframes glowAnimation {
     0% {
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3);
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
+        0 0 10px rgba(255, 255, 255, 0.3);
     }
     50% {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.7);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+        0 0 20px rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 20px rgba(255, 255, 255, 0.5);
     }
     100% {
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3);
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
+        0 0 10px rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -222,6 +229,7 @@ const HeroRightContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-bottom: 40px;
+  
   }
 
   @media screen and (max-width: 640px) {
@@ -301,8 +309,6 @@ const Subtitle = styled.div`
   }
 `;
 
-
-
 const Img = styled.img`
   width: 60%;
   height: 80%;
@@ -310,6 +316,7 @@ const Img = styled.img`
   border-radius: 50%;
   max-width: 400px;
   max-height: 400px;
+  margin-top: 40px;
   object-fit: cover;
   object-position: center;
   border: 1px solid ${({ theme }) => theme.primary};
@@ -350,7 +357,7 @@ function Herosection() {
             </TextLoop>
             <Subtitle>{Bio.description}</Subtitle>
             <ResumeButton href={Bio.resume} target="_blank">
-            Resume
+              Resume
             </ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>

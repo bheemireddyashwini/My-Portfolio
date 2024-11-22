@@ -193,7 +193,7 @@ function Contact() {
       <Wrapper>
         <Title>Contact Me</Title>
         <Description>
-          I’d love to connect and hear your thoughts! Feel free to reach out.
+          I’d like to connect and hear your thoughts! Feel free to reach out.
         </Description>
         <Form onSubmit={handleSubmit}>
           <Label style={{ marginRight: "8px", color: "white" }}>

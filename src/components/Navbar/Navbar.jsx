@@ -52,7 +52,7 @@ const glowAnimation = keyframes`
   }
 `;
 const Nav = styled.div`
- background: linear-gradient(135deg, #6790ba, #576d89);
+  background: linear-gradient(135deg, #6790ba, #576d89);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -112,7 +112,8 @@ const NavItems = styled.ul`
   background: rgba(26, 27, 38, 0.95);
   width: 170px; /* Adjust width */
   height: calc(100vh - 80px); /* Full height minus header */
-  transform: ${({ showNav }) => (showNav ? "translateX(0)" : "translateX(100%)")};
+  transform: ${({ showNav }) =>
+    showNav ? "translateX(0)" : "translateX(100%)"};
   opacity: ${({ showNav }) => (showNav ? "1" : "0")};
   visibility: ${({ showNav }) => (showNav ? "visible" : "hidden")};
   transition: all 0.4s ease-in-out;
@@ -178,17 +179,18 @@ const OverviewButton = styled.button`
   &:focus {
     outline: none;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
 `;
 
 // Overview Section
 const OverviewSection = styled.div`
   display: ${({ show }) => (show ? "block" : "none")};
   padding: 30px;
-  background: linear-gradient(
-    135deg,
-    rgba(26, 27, 38, 0.8),
-    rgba(101, 152, 206, 0.2)
-  );
+  background: linear-gradient(135deg, rgba(26, 27, 38, 0.8), rgb(26, 29, 41));
   box-shadow: 0 4px 13px rgb(101, 152, 206);
   margin-top: 20px;
   transition: all 0.5s ease-in-out;
@@ -215,10 +217,15 @@ const OverviewSection = styled.div`
       transform: translateY(0);
     }
   }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 `;
 
 // Overview Content
-const OverviewContent = styled.div`
+/* const OverviewContent = styled.div`
   color: #e0e0e0;
   font-size: 1.17rem;
   line-height: 1.7;
@@ -261,15 +268,96 @@ const OverviewContent = styled.div`
     line-height: 1.6;
     text-align: justify;
   }
+`; */
+const OverviewContent = styled.div`
+  color: #e0e0e0;
+  font-size: 1.17rem;
+  line-height: 1.7;
+  font-family: "Arial", sans-serif;
+  background: rgba(26, 27, 38, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-left: 30px;
+
+  /* Adjust width based on Nav visibility */
+  width: ${({ showNav }) => (showNav ? "calc(100% - 200px)" : "100%")};
+  transition: width 0.3s ease;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #91bbd4;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #6790ba;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.17rem;
+    padding: 20px;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+      text-align: justify;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    font-size: 0.9rem;
+    padding: 10px;
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      text-align: justify;
+      margin-right: 10px;
+      padding-right: 10px;
+    }
+
+    h2 {
+    margin-top: 10px;
+      font-size: 1.7rem;
+    }
+  }
 `;
 
 function Navbar() {
   const [showOverview, setShowOverview] = useState(false);
-  const [showNav, setShowNav] = useState(false); 
+  const [showNav, setShowNav] = useState(false);
 
   const handleOverviewClick = () => {
-    setShowOverview(!showOverview); 
-    setShowNav(!showNav); 
+    setShowOverview(!showOverview);
+    setShowNav(!showNav);
   };
 
   return (
@@ -305,7 +393,7 @@ function Navbar() {
 
       {/* Overview Section with smooth reveal */}
       <OverviewSection show={showOverview}>
-        <OverviewContent>
+        <OverviewContent showNav={showNav}>
           <h2>Overview</h2>
           <p>
             Welcome to my portfolio! I am an aspiring web developer currently
