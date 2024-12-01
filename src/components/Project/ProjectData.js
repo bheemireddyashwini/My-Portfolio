@@ -33,6 +33,29 @@ const ProjectData = [
     category: "react",
     github: "https://github.com/bheemireddyashwini/Ecommerce-deployment", 
    link: "https://ecommercesite-kgl9.onrender.com" ,
+  },
+  {
+    id: 4,
+    title: "Cloud-Watch",
+    date: "1 December 2024",
+    image: "/cloudwatch.png", 
+    description: "The Weather App is a powerful and user-friendly application that provides current weather updates and forecasts for cities and regions worldwide. Built with React, it showcases real-time data fetching, dynamic UI updates, and responsive design.",
+    technologies: ["React", "JavaScript", "CSS", "HTML", "State Management",'Tailwind CSS','useReducer'],
+    category: "react",
+    github: "https://github.com/bheemireddyashwini/Cloud-Watch", 
+   link: "https://cloud-watch.onrender.com" ,
+  },
+  {
+    id: 5,
+    title: "Coming Soon",
+    date: "TBA",
+    description:
+      "This project is currently under development. Stay tuned for more information!",
+    technologies: ["TBA"],
+    category: "react",
+    status: "coming-soon",  // New property to indicate this project is upcoming
+    github: "#",  // Placeholder
+    link: "#",  // Placeholder
   }
 
 ];
