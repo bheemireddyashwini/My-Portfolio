@@ -224,51 +224,7 @@ const OverviewSection = styled.div`
   }
 `;
 
-// Overview Content
-/* const OverviewContent = styled.div`
-  color: #e0e0e0;
-  font-size: 1.17rem;
-  line-height: 1.7;
-  font-family: "Arial", sans-serif;
-  background: rgba(26, 27, 38, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 3;
-  max-height: 300px; 
-  overflow-y: auto;
 
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #91bbd4;
-    border-radius: 8px;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: #6790ba;
-  }
-  &::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  h2 {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-    color: #ffffff;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  p {
-    font-size: 1.1rem;
-    color: #ddd;
-    line-height: 1.6;
-    text-align: justify;
-  }
-`; */
 const OverviewContent = styled.div`
   color: #e0e0e0;
   font-size: 1.17rem;
@@ -309,6 +265,7 @@ const OverviewContent = styled.div`
     color: #ffffff;
     font-weight: 600;
     text-align: center;
+    margin-top: 20px;
   }
 
   p {
@@ -316,6 +273,7 @@ const OverviewContent = styled.div`
     color: #ddd;
     line-height: 1.6;
     text-align: justify;
+    
   }
   @media screen and (min-width: 768px) {
     font-size: 1.17rem;
@@ -323,8 +281,9 @@ const OverviewContent = styled.div`
 
     p {
       font-size: 1rem;
-      line-height: 1.4;
+      line-height: 1.3;
       text-align: justify;
+ 
     }
     h2 {
       font-size: 1.8rem;
@@ -338,14 +297,15 @@ const OverviewContent = styled.div`
 
     p {
       font-size: 0.85rem;
-      line-height: 1.5;
+      line-height: 1.4;
       text-align: justify;
       margin-right: 10px;
       padding-right: 10px;
+      word-spacing: -0.5px;
     }
 
     h2 {
-    margin-top: 10px;
+    margin-top: 15px;
       font-size: 1.7rem;
     }
   }
