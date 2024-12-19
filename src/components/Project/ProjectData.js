@@ -31,7 +31,7 @@ const ProjectData = [
     description: "Ecom Express is a modern, responsive e-commerce platform built with React. It offers a seamless shopping experience .",
     technologies: ["React", "JavaScript", "CSS", "HTML", "State Management",'Tailwind CSS','useReducer'],
     category: "react",
-    github: "https://github.com/bheemireddyashwini/Ecommerce-deployment", 
+    github: "https://github.com/bheemireddyashwini/Ecommerce-website", 
    link: "https://ecommercesite-kgl9.onrender.com" ,
   },
   {
