@@ -78,7 +78,7 @@ const EducationCard = styled.div`
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
-  border: 2px solid #2c3e50;
+
 
   &:hover, &:focus {
     transform: translateY(-10px);

@@ -34,7 +34,7 @@ const ProjectData = [
     github: "https://github.com/bheemireddyashwini/Ecommerce-website", 
    link: "https://ecommercesite-kgl9.onrender.com" ,
   },
-  {
+  /* {
     id: 4,
     title: "Cloud-Watch",
     date: "1 December 2024",
@@ -44,9 +44,9 @@ const ProjectData = [
     category: "react",
     github: "https://github.com/bheemireddyashwini/Cloud-Watch", 
    link: "https://cloud-watch.onrender.com" ,
-  },
+  }, */
   {
-    id: 5,
+    id: 4,
     title: "Coming Soon",
     date: "TBA",
     description:
