@@ -308,18 +308,22 @@ const Subtitle = styled.div`
     line-height: 24px;
   }
 `;
-
 const Img = styled.img`
   width: 70%;
-  height: 100%;
+  height: auto;
   position: relative;
-border-radius: 35px;
   max-width: 400px;
   max-height: 400px;
   margin-top: 40px;
   object-fit: cover;
   object-position: center;
-  border: 1px solid ${({ theme }) => theme.primary};
+  clip-path: polygon(
+    50% 0%, 100% 38%, 
+    82% 100%, 18% 100%, 
+    0% 38%
+  ); /* Pentagon shape */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid ${({ theme }) => theme.primary};
 
   @media screen and (max-width: 960px) {
     max-height: 400px;
@@ -329,6 +333,12 @@ border-radius: 35px;
     max-height: 300px;
   }
 `;
+
+
+
+
+
+
 
 function Herosection() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
