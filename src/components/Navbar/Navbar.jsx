@@ -189,7 +189,7 @@ const OverviewButton = styled.button`
 // Overview Section
 const OverviewSection = styled.div`
   display: ${({ show }) => (show ? "block" : "none")};
-  padding: 30px;
+  padding: 10px;
   background: linear-gradient(135deg, rgba(26, 27, 38, 0.8), rgb(26, 29, 41));
   box-shadow: 0 4px 13px rgb(101, 152, 206);
   margin-top: 20px;
@@ -199,13 +199,17 @@ const OverviewSection = styled.div`
   overflow: hidden;
   border-radius: 20px;
   backdrop-filter: blur(8px);
+  font-family: "Arial", sans-serif;
+ 
 
-  margin-left: 20px;
-  margin-right: 20px;
+ 
   animation: slideIn 0.6s ease-out;
   margin-bottom: 20px;
   position: relative; /* Ensures z-index works */
   z-index: 5; /* Section will be behind the button */
+  max-width: 85%;
+
+
 
   @keyframes slideIn {
     0% {
@@ -224,7 +228,6 @@ const OverviewSection = styled.div`
   }
 `;
 
-
 const OverviewContent = styled.div`
   color: #e0e0e0;
   font-size: 1.17rem;
@@ -239,10 +242,12 @@ const OverviewContent = styled.div`
   z-index: 3;
   max-height: 300px;
   overflow-y: auto;
-  margin-left: 30px;
+margin : 0 auto;
+  text-align: justify;
+
 
   /* Adjust width based on Nav visibility */
-  width: ${({ showNav }) => (showNav ? "calc(100% - 200px)" : "100%")};
+  width: ${({ showNav }) => (showNav ? "calc(79% - 200px)" : "100%")};
   transition: width 0.3s ease;
 
   &::-webkit-scrollbar {
@@ -265,7 +270,7 @@ const OverviewContent = styled.div`
     color: #ffffff;
     font-weight: 600;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
   }
 
   p {
@@ -273,7 +278,6 @@ const OverviewContent = styled.div`
     color: #ddd;
     line-height: 1.6;
     text-align: justify;
-    
   }
   @media screen and (min-width: 768px) {
     font-size: 1.17rem;
@@ -283,7 +287,8 @@ const OverviewContent = styled.div`
       font-size: 1rem;
       line-height: 1.3;
       text-align: justify;
- 
+      word-spacing: 0.2px;
+      margin-right: 8px;
     }
     h2 {
       font-size: 1.8rem;
@@ -293,19 +298,18 @@ const OverviewContent = styled.div`
   @media screen and (max-width: 480px) {
     /* Further adjustments for very small screens */
     font-size: 0.9rem;
-    padding: 10px;
+    padding: 15px;
+    display: none;
 
     p {
-      font-size: 0.85rem;
+      /* font-size: 0.9rem;
       line-height: 1.4;
-      text-align: justify;
-      margin-right: 10px;
-      padding-right: 10px;
-      word-spacing: -0.5px;
+      word-spacing: 0.1px; */
+      
     }
 
     h2 {
-    margin-top: 15px;
+      margin-top: 15px;
       font-size: 1.7rem;
     }
   }
