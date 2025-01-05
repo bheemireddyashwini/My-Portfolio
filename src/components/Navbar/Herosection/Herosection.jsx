@@ -310,10 +310,10 @@ const Subtitle = styled.div`
 `;
 
 const Img = styled.img`
-  width: 60%;
-  height: 80%;
+  width: 70%;
+  height: 100%;
   position: relative;
-  border-radius: 50%;
+border-radius: 35px;
   max-width: 400px;
   max-height: 400px;
   margin-top: 40px;
