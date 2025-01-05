@@ -1,16 +1,20 @@
 const ProjectData = [
+
+
   {
     id: 1,
-    title: "React Todo List",
-    date: "10 october 2024", 
+    title: "QuizMaster",
+    date: "5 january 2025",
+    image: "/quizmaster.png",
     description:
-      "A dynamic and user-friendly Todo application built with React. This app allows users to create, update, and delete tasks with ease. Featuring a responsive interface and state management for efficient task handling, it demonstrates core React concepts like components, hooks, and local state.",
-    image: "/todo-list.png", 
-    technologies: ["React", "JavaScript", "CSS", "HTML", "State Management"],
-    category: "react",
-    github: "https://github.com/bheemireddyashwini/Todo-Appilcation.git",
-    link: "https://todo-app-oiwc.onrender.com/",
+      "A dataset for a Multiple-Choice Quiz Application featuring diverse questions on topics like geography, science, and history. Ideal for building quiz apps or integrating trivia features into projects.",
+    technologies: [ "JavaScript", "CSS", "HTML"],
+    category: "javascript",
+    github: "https://github.com/bheemireddyashwini/QuizMaster",  // Placeholder
+    link: "https://quizmaster-98cg.onrender.com/",  // Placeholder
+    
   },
+  
   {
     id: 2,
     title: "DiceeChallenge",
@@ -45,8 +49,21 @@ const ProjectData = [
     github: "https://github.com/bheemireddyashwini/Cloud-Watch", 
    link: "https://cloud-watch.onrender.com" ,
   }, */
+
   {
     id: 4,
+    title: "React Todo List",
+    date: "10 october 2024", 
+    description:
+      "A dynamic and user-friendly Todo application built with React. This app allows users to create, update, and delete tasks with ease. Featuring a responsive interface and state management for efficient task handling, it demonstrates core React concepts like components, hooks, and local state.",
+    image: "/todo-list.png", 
+    technologies: ["React", "JavaScript", "CSS", "HTML", "State Management"],
+    category: "react",
+    github: "https://github.com/bheemireddyashwini/Todo-Appilcation.git",
+    link: "https://todo-app-oiwc.onrender.com/",
+  },
+  {
+    id: 5,
     title: "Coming Soon",
     date: "TBA",
     description:
