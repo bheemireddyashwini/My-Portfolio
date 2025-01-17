@@ -9,7 +9,7 @@ const Bio = {
 
   github: "https://github.com/bheemireddyashwini",
   resume:
-    "https://drive.google.com/file/d/1FgHSP7YKiREznx7cXXq83fAISW02xPbM/view?usp=sharing",
+    "https://drive.google.com/file/d/1ComMxy2zK4tDKCHTyq3Omh8dVo2oopAw/view?usp=sharing",
   linkedin: "www.linkedin.com/in/ashwini2127",
 };
 export default Bio;
