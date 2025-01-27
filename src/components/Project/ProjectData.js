@@ -50,7 +50,7 @@ const ProjectData = [
    link: "https://cloud-watch.onrender.com" ,
   }, */
 
-  {
+  /* {
     id: 4,
     title: "React Todo List",
     date: "10 october 2024", 
@@ -62,7 +62,7 @@ const ProjectData = [
     github: "https://github.com/bheemireddyashwini/Todo-Appilcation.git",
     link: "https://todo-app-oiwc.onrender.com/",
   },
-
+ */
   {
     id: 5,
     title: "Yoga-App",
