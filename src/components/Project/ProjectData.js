@@ -77,16 +77,17 @@ const ProjectData = [
   },
   {
     id: 6,
-    title: "Coming Soon",
-    date: "TBA",
+    title: "Todo_App",
+    date: "10 october 2024",
     description:
-      "This project is currently under development. Stay tuned for more information!",
-    technologies: ["TBA"],
+      "A simple and intuitive Todo app designed to help you stay organized and manage tasks efficiently. This app allows users to create, edit, delete, and update tasks with ease. Built with React, it showcases core concepts like state management, components, and hooks.",
+    technologies: ["JavaScript", "React", "CSS", "HTML"],
     category: "react",
-    status: "coming-soon",  // New property to indicate this project is upcoming
-    github: "#",  // Placeholder
-    link: "#",  // Placeholder
-  }
+    image: "/todo.png",
+   // status: "coming-soon",  // New property to indicate this project is upcoming
+    github: "https://github.com/bheemireddyashwini/Todo_App",  // Placeholder
+    link: "https://todo-app-12od.onrender.com/",  // Placeholder
+  }   
 
 ];
 export default ProjectData;
