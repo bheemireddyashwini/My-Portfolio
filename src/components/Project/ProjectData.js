@@ -46,7 +46,7 @@ const ProjectData = [
   },
 
   {
-    id: 5,
+    id: 4,
     title: "Yoga-App",
     date: "24 december 2024",
     description:
@@ -58,7 +58,7 @@ const ProjectData = [
     link: "https://tuktuk-yoga-9slr.onrender.com/",
   },
   {
-    id: 6,
+    id: 5,
     title: "Todo_App",
     date: "10 october 2024",
     description:
@@ -70,5 +70,20 @@ const ProjectData = [
     github: "https://github.com/bheemireddyashwini/Todo_App", // Placeholder
     link: "https://todo-app-12od.onrender.com/", // Placeholder
   },
+  {
+    id: 6,
+    title: "Four Flavuors Express",
+    date: "9 feb 2025",
+    description:
+      "Four Flavours Express: A modern and responsive food delivery app that offers a variety of cuisines and dishes to satisfy your cravings. Order your favorite meals with just a few clicks and enjoy a seamless delivery experience.",
+    technologies: ["JavaScript", "React", "CSS", "HTML", "Tailwindcss","MongoDB"],
+    category: "react",
+    image: "/ffe.png",
+    // status: "coming-soon",  // New property to indicate this project is upcoming
+    github: "https://github.com/bheemireddyashwini/Food-Delivery-Service-App", // Placeholder
+    link: "https://fourflavoursexpress.onrender.com/", // Placeholder
+  },
+
 ];
+
 export default ProjectData;

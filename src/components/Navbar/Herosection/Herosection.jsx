@@ -309,7 +309,7 @@ const Subtitle = styled.div`
   }
 `;
 const Img = styled.img`
-  width: 70%;
+  width: 80%;
   height: auto;
   position: relative;
   max-width: 400px;
