@@ -307,8 +307,9 @@ const Subtitle = styled.div`
     font-size: 16px;
     line-height: 24px;
   }
+    
 `;
-const Img = styled.img`
+/*const Img = styled.img`
   width: 80%;
   height: auto;
   position: relative;
@@ -322,7 +323,7 @@ const Img = styled.img`
     82% 100%, 18% 100%, 
     0% 38%
   ); /* Pentagon shape */
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   border: 2px solid ${({ theme }) => theme.primary};
 
   @media screen and (max-width: 960px) {
@@ -332,7 +333,7 @@ const Img = styled.img`
   @media screen and (max-width: 640px) {
     max-height: 300px;
   }
-`;
+`;*/
 
 
 
