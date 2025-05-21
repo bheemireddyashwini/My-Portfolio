@@ -371,7 +371,7 @@ function Herosection() {
             </ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>
-            <Img src="profile.jpg" alt="profilepic" />
+            {/* <Img src="profile.jpg" alt="profilepic" /> */}
           </HeroRightContainer>
         </HeroInner>
       </HeroContainer>
