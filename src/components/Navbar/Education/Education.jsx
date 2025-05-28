@@ -1,3 +1,4 @@
+import  { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import EducationData from "./EducationData";
 
@@ -18,7 +19,7 @@ const EducationWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  background-color: #12121a;  /* Darker modern background */
+  background-color: #12121a;
 
   @media (min-width: 768px) {
     max-width: 1200px;
@@ -81,18 +82,15 @@ const EducationCard = styled.div`
   animation: ${slideInFromLeft} 0.6s ease-out forwards;
   animation-delay: ${({ delay }) => delay || "0s"};
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     transform: scale(1.03);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 0 0 15px 5px rgba(0, 255, 255, 0.3);
-  }
-
-  @media (max-width: 768px) {
-    margin: 15px;
-  }
-
-  @media (min-width: 1440px) {
-    max-width: 320px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3),
+      0 0 15px 5px rgba(0, 255, 255, 0.3);
+    outline: none;
   }
 `;
 
@@ -130,6 +128,25 @@ const Description = styled.p`
   margin-bottom: 15px;
   letter-spacing: -0.3px;
   word-spacing: -0.3px;
+
+  max-height: ${({ expanded }) => (expanded ? "1000px" : "60px")};
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  position: relative;
+
+  ${({ expanded }) =>
+    !expanded &&
+    `
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 25px;
+      background: linear-gradient(transparent, #12121a);
+    }
+  `}
 `;
 
 const Degree = styled.p`
@@ -142,6 +159,12 @@ const Degree = styled.p`
 `;
 
 function Education() {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <EducationWrapper id="education">
       <EducationHeaderWrapper>
@@ -154,11 +177,25 @@ function Education() {
 
       <CardGrid>
         {EducationData.map((data, index) => (
-          <EducationCard key={data.id} delay={`${index * 0.2}s`}>
+          <EducationCard
+            key={data.id}
+            delay={`${index * 0.2}s`}
+            expanded={expandedIndex === index}
+            onClick={() => toggleExpand(index)}
+            tabIndex={0}
+            role="button"
+            aria-expanded={expandedIndex === index}
+            aria-controls={`education-desc-${data.id}`}
+          >
             <SchoolLogo src={data.img} alt={`${data.school} logo`} />
             <SchoolName>{data.school}</SchoolName>
             <DateText>{data.date}</DateText>
-            <Description>{data.desc}</Description>
+            <Description
+              id={`education-desc-${data.id}`}
+              expanded={expandedIndex === index}
+            >
+              {data.desc}
+            </Description>
             <Degree>{data.degree}</Degree>
           </EducationCard>
         ))}

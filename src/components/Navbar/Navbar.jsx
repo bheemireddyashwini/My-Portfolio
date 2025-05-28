@@ -200,16 +200,12 @@ const OverviewSection = styled.div`
   border-radius: 20px;
   backdrop-filter: blur(8px);
   font-family: "Arial", sans-serif;
- 
 
- 
   animation: slideIn 0.6s ease-out;
   margin-bottom: 20px;
   position: relative; /* Ensures z-index works */
   z-index: 5; /* Section will be behind the button */
-  max-width: 85%;
-
-
+  max-width: 65%;
 
   @keyframes slideIn {
     0% {
@@ -223,7 +219,7 @@ const OverviewSection = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    margin-left: 20px;
+    margin-left: 150px;
     margin-right: 20px;
   }
 `;
@@ -242,9 +238,8 @@ const OverviewContent = styled.div`
   z-index: 3;
   max-height: 300px;
   overflow-y: auto;
-margin : 0 auto;
+  margin: 0 auto;
   text-align: justify;
-
 
   /* Adjust width based on Nav visibility */
   width: ${({ showNav }) => (showNav ? "calc(79% - 200px)" : "100%")};
@@ -305,7 +300,6 @@ margin : 0 auto;
       /* font-size: 0.9rem;
       line-height: 1.4;
       word-spacing: 0.1px; */
-      
     }
 
     h2 {
@@ -360,8 +354,12 @@ function Navbar() {
         <OverviewContent showNav={showNav}>
           <h2>Overview</h2>
           <p>
-          Certified web developer with a focus on modern front-end technologies and hands-on experience in back-end development. Strong skills in HTML5, CSS3, JavaScript, TypeScript, React, and modern CSS frameworks like Tailwind CSS and CSS Modules.Proficient in Python, Flask, MongoDB, and API testing.Familiar with tools such as Docker, Jenkins, Bitbucket (Git) and development environments like IntelliJ IDEA and Eclipse.Experienced with AI-assisted coding tools like GitHub Copilot to boost productivity.Passionate about writing clean, maintainable code, optimizing performance, ensuring accessibility, and collaborating within cross-functional teams.Successfully completed training at Digital Career Institute (DCI) and now fully prepared to contribute to real-world development projects.
-           </p>
+            Hi! I’m a certified web developer skilled in modern front-end and
+            back-end technologies, including React, TypeScript, Python, and
+            MongoDB. Experienced with tools like Docker and Git, and passionate
+            about clean code and teamwork. Trained at Digital Career Institute
+            (DCI) and ready to contribute to real-world projects!
+          </p>
         </OverviewContent>
       </OverviewSection>
     </>
