@@ -4,12 +4,6 @@ const Skilldata = [
     {
       title: "Frontend Expertise",
       skills: [
-        {
-          name: "React Js",
-          image:
-            "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
-        },
-        
         
         {
           name: "HTML",
@@ -26,14 +20,33 @@ const Skilldata = [
             "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
         },
         {
+          name: "React Js",
+          image:
+            "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+        },
+        {
+          name: "TypeScript",
+          image: "https://cdn.iconscout.com/icon/free/png-256/typescript-1174965.png",
+        },
+  
+        
+        {
           name: "Bootstrap",
           image:
             "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
         },
         {
+          name: "Tailwind CSS",
+          image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+        },
+        {
           name: "Flutter",
           image:
             "https://img.pikbest.com/origin/10/41/85/35HpIkbEsTU62.png!sw800",
+        },
+        {
+          name: "WordPress",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1024px-WordPress_blue_logo.svg.png",
         },
        
       ],
@@ -55,6 +68,15 @@ const Skilldata = [
           name: "MongoDB",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+        },
+        {
+          name: "Python",
+          image: "https://www.python.org/static/community_logos/python-logo.png",
+        },
+        {
+          name: "MySQL",
+          image:
+            "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg",
         },
        
       ],
@@ -82,6 +104,30 @@ const Skilldata = [
         {
           name: "Figma",
           image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx28mg8aQ39CEGURVztotd5VC0bO7Ik-ZpBw&s"
+        },
+        {
+          name: "PyCharm",
+          image: "https://resources.jetbrains.com/storage/products/pycharm/img/meta/pycharm_logo_300x300.png",
+        },
+        {
+          name: "CMS",
+          image: "https://www.drupal.org/files/druplicon-small.png", 
+        },
+        {
+          name: "Selenium",
+          image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png",
+        },
+        {
+          name: "Bitbucket",
+          image: "https://cdn-icons-png.flaticon.com/512/5968/5968319.png",
+        },
+        {
+          name: "Docker",
+          image: "https://cdn-icons-png.flaticon.com/512/919/919853.png",
+        },
+        {
+          name: "Jenkins",
+          image: "https://cdn-icons-png.flaticon.com/512/919/919830.png",
         },
       ],
     },

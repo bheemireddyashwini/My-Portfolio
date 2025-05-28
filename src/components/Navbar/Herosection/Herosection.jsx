@@ -309,37 +309,6 @@ const Subtitle = styled.div`
   }
     
 `;
-/*const Img = styled.img`
-  width: 80%;
-  height: auto;
-  position: relative;
-  max-width: 400px;
-  max-height: 400px;
-  margin-top: 40px;
-  object-fit: cover;
-  object-position: center;
-  clip-path: polygon(
-    50% 0%, 100% 38%, 
-    82% 100%, 18% 100%, 
-    0% 38%
-  ); /* Pentagon shape */
-  /*box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  border: 2px solid ${({ theme }) => theme.primary};
-
-  @media screen and (max-width: 960px) {
-    max-height: 400px;
-  }
-
-  @media screen and (max-width: 640px) {
-    max-height: 300px;
-  }
-`;*/
-
-
-
-
-
-
 
 function Herosection() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
