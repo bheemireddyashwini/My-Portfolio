@@ -71,7 +71,7 @@ const Card = styled.div`
   &::before {
     content: '';
     position: absolute;
-    left: -46px;
+    left: -40px;
     top: 25px;
     width: 16px;
     height: 16px;
@@ -152,7 +152,7 @@ function ExperienceTimeline() {
     <Container id="experience">
       <Title>Experience</Title>
       <Description>
-      Below is an overview of my key roles and achievements during my internships, where I gained valuable hands-on experience in software development, system testing, and IT training. These opportunities helped me apply my academic knowledge to practical projects, collaborate with professionals, and grow my technical expertise.
+        Below is an overview of my key roles and achievements during my internships, where I gained valuable hands-on experience in software development, system testing, and IT training. These opportunities helped me apply my academic knowledge to practical projects, collaborate with professionals, and grow my technical expertise.
       </Description>
 
       <TimelineSection>

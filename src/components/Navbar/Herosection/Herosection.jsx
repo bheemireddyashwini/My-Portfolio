@@ -47,7 +47,7 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 80px 30px;
+  padding: 130px 40px;
 
   @media screen and (max-width: 960px) {
     padding: 66px 16px;
@@ -341,7 +341,7 @@ function Herosection() {
             </ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>
-            {/* <Img src="profile.jpg" alt="profilepic" /> */}
+            {/*  <img src="profile.jpg" alt="profilepic"  style={{ width: '300px', height: 'auto', borderRadius: '20px' }} />  */}
           </HeroRightContainer>
         </HeroInner>
       </HeroContainer>

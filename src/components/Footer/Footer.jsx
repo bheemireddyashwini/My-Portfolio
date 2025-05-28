@@ -4,148 +4,146 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { FaGithub } from "react-icons/fa";
 
-// Keyframes for footer animations
-const slideIn = keyframes`
-  0% {
-    transform: translateY(100%);
+// Animations
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  100% {
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
 `;
 
-const pulse = keyframes`
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-`;
-
-const waveMotion = keyframes`
-  0% {
+const waveAnimation = keyframes`
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-50%);
   }
 `;
 
-// Footer container
-const FooterContainer = styled.div`
+// Container
+const FooterContainer = styled.footer`
   position: relative;
-  width: 100%;
-  padding: 2rem 1rem;
   background: rgb(90, 115, 146);
   color: white;
-  text-align: center;
+  padding: 4rem 2rem 2rem;
   overflow: hidden;
-  animation: ${slideIn} 1s ease-out;
 `;
 
-// Footer content wrapper
-const FooterWrapper = styled.div`
-  position: relative;
-  z-index: 1;
+// Inner layout
+const FooterGrid = styled.div`
   max-width: 1200px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center;
+  animation: ${fadeInUp} 0.8s ease-out;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr auto;
+    text-align: left;
+    align-items: center;
+  }
 `;
 
-// Logo with subtle animation
+// Logo
 const Logo = styled.h1`
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  animation: ${pulse} 3s infinite;
+  color: white;
 `;
 
-// Social media icons container
+// Social icons
 const SocialIcons = styled.div`
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 1rem;
+
+  @media (min-width: 640px) {
+    justify-content: flex-end;
+  }
 `;
 
-const SocialIcon = styled.a`
+const IconLink = styled.a`
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 0.6rem;
   color: white;
-  font-size: 1.8rem;
-  transition: transform 0.3s, color 0.3s;
-  
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
   &:hover {
-    transform: scale(1.2);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     color: #ffae42;
   }
 `;
 
-// Copyright text
-const CopyrightText = styled.p`
-  font-size: 0.9rem;
+// Copyright
+const Copyright = styled.p`
+  font-size: 0.85rem;
   color: #d1d5db;
+  text-align: center;
+  margin-top: 2rem;
 `;
 
-// Wave animation wrapper
-const WaveContainer = styled.div`
+// Waves
+const WaveWrapper = styled.div`
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 200%;
-  height: 120px;
+  height: 80px;
   overflow: hidden;
-  line-height: 0;
+  pointer-events: none;
 `;
 
 const Wave = styled.svg`
   position: absolute;
   width: 200%;
   height: 100%;
-  animation: ${waveMotion} 8s linear infinite;
+  animation: ${waveAnimation} 20s linear infinite;
 `;
 
+// Component
 function Footer() {
   return (
     <FooterContainer>
-      <FooterWrapper>
+      <FooterGrid>
         <Logo>Ashwini Bheemireddy</Logo>
-
         <SocialIcons>
-          <SocialIcon href="#" target="_blank" aria-label="Facebook">
+          <IconLink href="#" aria-label="Facebook" target="_blank">
             <FacebookIcon />
-          </SocialIcon>
-          <SocialIcon href="#" target="_blank" aria-label="Twitter">
+          </IconLink>
+          <IconLink href="#" aria-label="Twitter" target="_blank">
             <TwitterIcon />
-          </SocialIcon>
-          <SocialIcon href="https://www.linkedin.com/in/ashwini2127/" target="_blank" aria-label="LinkedIn">
+          </IconLink>
+          <IconLink href="https://www.linkedin.com/in/ashwini2127/" aria-label="LinkedIn" target="_blank">
             <LinkedInIcon />
-          </SocialIcon>
-          <SocialIcon href="https://github.com/bheemireddyashwini" target="_blank" aria-label="GitHub">
+          </IconLink>
+          <IconLink href="https://github.com/bheemireddyashwini" aria-label="GitHub" target="_blank">
             <FaGithub />
-          </SocialIcon>
+          </IconLink>
         </SocialIcons>
+      </FooterGrid>
 
-        <CopyrightText>
-          Copyright © 2024 Ashwini Bheemireddy.
-        </CopyrightText>
-      </FooterWrapper>
+      <Copyright>
+        &copy; 2025 Ashwini Bheemireddy. All rights reserved.
+      </Copyright>
 
-      <WaveContainer>
-        <Wave xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 28" preserveAspectRatio="none">
-          <path
-            d="M0 0 C30 15, 60 0, 90 10 C120 20, 120 0, 120 0 Z"
-            fill="#1c3d5c"
-          />
+      <WaveWrapper>
+        <Wave viewBox="0 0 120 28" preserveAspectRatio="none">
+          <path d="M0 0 C30 15, 60 0, 90 10 C120 20, 120 0, 120 0 Z" fill="#1c3d5c" />
         </Wave>
-        <Wave xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 28" preserveAspectRatio="none" style={{ top: '10px', opacity: 0.7 }}>
-          <path
-            d="M0 0 C30 15, 60 0, 90 10 C120 20, 120 0, 120 0 Z"
-            fill="#16324f"
-          />
+        <Wave viewBox="0 0 120 28" preserveAspectRatio="none" style={{ top: '20px', opacity: 0.6 }}>
+          <path d="M0 0 C30 15, 60 0, 90 10 C120 20, 120 0, 120 0 Z" fill="#16324f" />
         </Wave>
-      </WaveContainer>
+      </WaveWrapper>
     </FooterContainer>
   );
 }
