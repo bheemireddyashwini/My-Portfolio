@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import styled from "styled-components";
 import { FiChevronDown } from "react-icons/fi"; // For arrow icon
 import Skilldata from "./Skilldata";

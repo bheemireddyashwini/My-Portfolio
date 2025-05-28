@@ -95,7 +95,7 @@ const ResumeButton = styled.a`
   justify-content: center;
   gap: 8px;
   text-decoration: none;
-  padding: 8px 16px; /* Reduced padding */
+  padding: 5px 19px; 
   background-color: #6598ce;
   color: ${({ theme }) => theme.white};
   border-radius: 15px;
@@ -336,8 +336,8 @@ function Herosection() {
               <span>{Bio.roles[currentRoleIndex]}</span>
             </TextLoop>
             <Subtitle>{Bio.description}</Subtitle>
-            <ResumeButton href={Bio.resume} target="_blank">
-              Resume
+            <ResumeButton href={Bio.github} target="_blank">
+             Github
             </ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>

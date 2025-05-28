@@ -360,18 +360,8 @@ function Navbar() {
         <OverviewContent showNav={showNav}>
           <h2>Overview</h2>
           <p>
-            Welcome to my portfolio! I am an aspiring web developer currently
-            undertaking comprehensive training at Digital Career Institute
-            (DCI). With a passion for building dynamic and responsive web
-            applications, I have developed a strong foundation in both front-end
-            and back-end technologies. My skill set includes proficiency in
-            HTML, CSS, JavaScript, and a variety of web development frameworks.
-            I am committed to continuous learning, refining my skills through
-            hands-on projects, collaboration with peers, and staying up-to-date
-            with industry best practices. I look forward to applying my
-            expertise in a professional setting and contributing to innovative
-            web solutions. I expect to complete my certification by March 2025.
-          </p>
+          Certified web developer with a focus on modern front-end technologies and hands-on experience in back-end development. Strong skills in HTML5, CSS3, JavaScript, TypeScript, React, and modern CSS frameworks like Tailwind CSS and CSS Modules.Proficient in Python, Flask, MongoDB, and API testing.Familiar with tools such as Docker, Jenkins, Bitbucket (Git) and development environments like IntelliJ IDEA and Eclipse.Experienced with AI-assisted coding tools like GitHub Copilot to boost productivity.Passionate about writing clean, maintainable code, optimizing performance, ensuring accessibility, and collaborating within cross-functional teams.Successfully completed training at Digital Career Institute (DCI) and now fully prepared to contribute to real-world development projects.
+           </p>
         </OverviewContent>
       </OverviewSection>
     </>
