@@ -4,7 +4,7 @@ const EducationData = [
     img: "/dcilogo.png",
     school: "Digital Career Institute",
     date: "Expected 2025",
-    desc: "Currently pursuing a Full Stack Web Developer (MERN) program at Digital Career Institute, where I am gaining hands-on experience in front-end and back-end development, database management, and web application design. The program covers a range of technologies, including HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB, preparing me for a career in web development.",
+    desc: "Successfully completed the Full Stack Web Developer (MERN) program at Digital Career Institute, where I gained practical experience in front-end and back-end development, database management, and web application design. The program covered key technologies including HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Additionally, I earned a certification in Tailwind CSS, further strengthening my ability to create responsive and modern web interfaces. This comprehensive training has prepared me for a professional career in web development.",
     degree: "Full Stack Web Developer (MERN)",
   },
   {
