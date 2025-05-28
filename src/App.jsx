@@ -1,11 +1,11 @@
- import "./App.css";
+import "./App.css";
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/Themes";
- import Navbar from "./components/Navbar/Navbar";
- import Herosection from "./components/Navbar/Herosection/Herosection";
+import Navbar from "./components/Navbar/Navbar";
+import Herosection from "./components/Navbar/Herosection/Herosection";
 import Skills from "./components/Navbar/skills/Skills";
 import Education from "./components/Navbar/Education/Education";
-import ExperienceTimeLine from "./components/experience/ExperienceTimeLine";
+import Experience from "./components/experience/ExperienceTimeLine";
 import Projects from "./components/Project/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -33,7 +33,7 @@ function App() {
           <Projects />
         </Wrapper>
         <Wrapper>
-          <ExperienceTimeLine />
+          <Experience />
           <Contact />
         </Wrapper>
         <Footer />
@@ -43,6 +43,3 @@ function App() {
 }
 
 export default App;
- 
-
-

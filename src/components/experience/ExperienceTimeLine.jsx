@@ -1,18 +1,7 @@
-
 import Experiencedata from "./Experiencedata";
-import { keyframes } from "styled-components";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const slideHorizontal = keyframes`
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-`;
-
-const fadeIn = keyframes`
+const fadeInUp = keyframes`
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -24,64 +13,78 @@ const fadeIn = keyframes`
 `;
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  margin-bottom: 50px;
-  background:#191924;
+  background: #191924;
+  padding: 60px 20px;
 `;
 
 const Title = styled.h2`
   text-align: center;
-  margin: 25px 0;
   color: white;
   font-size: 34px;
+  margin-bottom: 10px;
 `;
 
 const Description = styled.p`
-  text-align: center;
-  margin: 0 auto 15px;
+  max-width: 600px;
+  margin: 0 auto 40px;
   color: rgb(152, 155, 161);
   font-size: 18px;
-  max-width: 600px;
+  text-align: center;
 `;
 
 const TimelineSection = styled.div`
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 30px 0;
-  flex-wrap: nowrap;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #5c7898; 
+    border-radius: 2px;
+  }
 `;
 
 const Card = styled.div`
-  width: 600px;
-  max-width: 100%;
-  border: 0.1px solid white;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  padding: 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  animation: ${slideHorizontal} 1s ease-out forwards;
   background: rgb(176, 191, 206);
   color: black;
+  padding: 20px 30px;
+  margin: 20px 0 20px 60px;
+  position: relative;
   border-radius: 60px;
-  overflow: hidden;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  animation: ${fadeInUp} 0.8s ease forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    box-shadow: rgba(23, 92, 230, 0.3) 0px 8px 30px;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -46px;
+    top: 25px;
+    width: 16px;
+    height: 16px;
+    background:  #5c7898; 
+    border-radius: 50%;
+    border: 3px solid rgb(176, 191, 206);
+  }
 `;
 
 const Top = styled.div`
   display: flex;
   gap: 12px;
+  align-items: center;
 `;
 
 const Image = styled.img`
@@ -89,6 +92,7 @@ const Image = styled.img`
   height: 80px;
   background-color: #000;
   border-radius: 50%;
+  object-fit: cover;
 `;
 
 const Body = styled.div`
@@ -106,27 +110,41 @@ const Role = styled.h3`
 const Company = styled.h4`
   margin-bottom: 8px;
   font-size: 14px;
+  color: black;
 `;
 
 const Duration = styled.p`
   font-size: 14px;
+  color: black;
 `;
 
 const DescriptionList = styled.ul`
   font-size: 13px;
-  list-style: none;
+  list-style: disc inside;
   padding-left: 20px;
+  margin-top: 12px;
+  color: black;
 `;
 
 const Skills = styled.div`
-  margin-top: 10px;
-  animation: ${fadeIn} 0.8s ease-in-out;
+  margin-top: 12px;
 `;
 
 const SkillList = styled.ul`
   list-style: none;
-  padding-left: 20px;
+  padding-left: 0;
   font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+`;
+
+const Skill = styled.li`
+  background:  #5c7898; 
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
 `;
 
 function ExperienceTimeline() {
@@ -134,16 +152,12 @@ function ExperienceTimeline() {
     <Container id="experience">
       <Title>Experience</Title>
       <Description>
-        Below is a summary of my key roles and accomplishments during my 6-month
-        internship, where I gained hands-on experience in software development,
-        system testing, and IT instruction. This experience allowed me to apply
-        academic knowledge in real-world projects and collaborate with
-        professionals to enhance my technical skills.
+      Below is an overview of my key roles and achievements during my internships, where I gained valuable hands-on experience in software development, system testing, and IT training. These opportunities helped me apply my academic knowledge to practical projects, collaborate with professionals, and grow my technical expertise.
       </Description>
 
       <TimelineSection>
-        {Experiencedata.map((data) => (
-          <Card key={data.id}>
+        {Experiencedata.map((data, index) => (
+          <Card key={data.id} style={{ animationDelay: `${index * 0.2}s` }}>
             <Top>
               <Image src={data.img} alt={`${data.company} logo`} />
               <Body>
@@ -154,8 +168,8 @@ function ExperienceTimeline() {
             </Top>
             {data.desc && (
               <DescriptionList>
-                {data.desc.map((item, index) => (
-                  <li key={index}>{item}</li>
+                {data.desc.map((item, idx) => (
+                  <li key={idx}>{item}</li>
                 ))}
               </DescriptionList>
             )}
@@ -164,8 +178,8 @@ function ExperienceTimeline() {
               <Skills>
                 <strong>Skills:</strong>
                 <SkillList>
-                  {data.skills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
+                  {data.skills.map((skill, idx) => (
+                    <Skill key={idx}>{skill}</Skill>
                   ))}
                 </SkillList>
               </Skills>
