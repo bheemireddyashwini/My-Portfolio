@@ -17,7 +17,7 @@ const Experiencedata = [
     img: "https://upload.wikimedia.org/wikipedia/commons/1/1d/ARAG_Logo_2016.png", 
     role: "Python Automation Intern (Internship)",
     company: "ARAG IT, Düsseldorf",
-    date: "Mar 2025 – May 2024",
+    date: "Mar 2025 – May 2025",
     desc: [
       "Worked in the ARAG IT department focusing on web and API automation testing.",
       "Developed and maintained automated test scripts using Selenium WebDriver and Pytest.",
