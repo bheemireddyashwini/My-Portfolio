@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import Bio from "./Bio";
 import HeroAnimation from "./HeroAnimation";
 import { useState, useEffect } from "react";
+
 const glowAnimation = `
   @keyframes glowAnimation {
     0% {
@@ -95,7 +96,7 @@ const ResumeButton = styled.a`
   justify-content: center;
   gap: 8px;
   text-decoration: none;
-  padding: 5px 19px; 
+  padding: 5px 19px;
   background-color: #6598ce;
   color: ${({ theme }) => theme.white};
   border-radius: 15px;
@@ -229,7 +230,6 @@ const HeroRightContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-bottom: 40px;
-  
   }
 
   @media screen and (max-width: 640px) {
@@ -307,7 +307,6 @@ const Subtitle = styled.div`
     font-size: 16px;
     line-height: 24px;
   }
-    
 `;
 
 function Herosection() {
@@ -337,11 +336,25 @@ function Herosection() {
             </TextLoop>
             <Subtitle>{Bio.description}</Subtitle>
             <ResumeButton href={Bio.github} target="_blank">
-             Github
+              Github
             </ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>
-            {/*  <img src="profile.jpg" alt="profilepic"  style={{ width: '300px', height: 'auto', borderRadius: '20px' }} />  */}
+            <div
+              style={{
+                width: "320px",
+                padding: "20px",
+                borderRadius: "30px",
+                background: "#e0e0e0",
+                boxShadow: "10px 10px 20px #bebebe, -10px -10px 20px #ffffff",
+              }}
+            >
+              <img
+                src="profile.jpg"
+                alt="profilepic"
+                style={{ width: "100%", borderRadius: "20px" }}
+              />
+            </div>
           </HeroRightContainer>
         </HeroInner>
       </HeroContainer>

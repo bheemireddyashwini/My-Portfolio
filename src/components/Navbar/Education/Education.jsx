@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import EducationData from "./EducationData";
 
@@ -81,13 +81,13 @@ const EducationCard = styled.div`
   opacity: 0;
   animation: ${slideInFromLeft} 0.6s ease-out forwards;
   animation-delay: ${({ delay }) => delay || "0s"};
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  transition: box-shadow 0.3s ease; /* removed transform transition */
+  cursor: default;
   user-select: none;
 
   &:hover,
   &:focus {
-    transform: scale(1.03);
+    /* Removed scale effect */
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3),
       0 0 15px 5px rgba(0, 255, 255, 0.3);
     outline: none;
@@ -129,24 +129,9 @@ const Description = styled.p`
   letter-spacing: -0.3px;
   word-spacing: -0.3px;
 
-  max-height: ${({ expanded }) => (expanded ? "1000px" : "60px")};
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  position: relative;
-
-  ${({ expanded }) =>
-    !expanded &&
-    `
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 25px;
-      background: linear-gradient(transparent, #12121a);
-    }
-  `}
+  max-height: none;
+  overflow: visible;
+  position: static;
 `;
 
 const Degree = styled.p`
@@ -177,25 +162,11 @@ function Education() {
 
       <CardGrid>
         {EducationData.map((data, index) => (
-          <EducationCard
-            key={data.id}
-            delay={`${index * 0.2}s`}
-            expanded={expandedIndex === index}
-            onClick={() => toggleExpand(index)}
-            tabIndex={0}
-            role="button"
-            aria-expanded={expandedIndex === index}
-            aria-controls={`education-desc-${data.id}`}
-          >
+          <EducationCard key={data.id} delay={`${index * 0.2}s`}>
             <SchoolLogo src={data.img} alt={`${data.school} logo`} />
             <SchoolName>{data.school}</SchoolName>
             <DateText>{data.date}</DateText>
-            <Description
-              id={`education-desc-${data.id}`}
-              expanded={expandedIndex === index}
-            >
-              {data.desc}
-            </Description>
+            <Description>{data.desc}</Description>
             <Degree>{data.degree}</Degree>
           </EducationCard>
         ))}
