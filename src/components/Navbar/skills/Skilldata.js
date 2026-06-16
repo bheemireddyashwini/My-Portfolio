@@ -48,6 +48,10 @@ const Skilldata = [
           name: "WordPress",
           image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1024px-WordPress_blue_logo.svg.png",
         },
+        {
+          name: "Next.js",
+          image: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+        },
        
       ],
     },
@@ -77,6 +81,10 @@ const Skilldata = [
           name: "MySQL",
           image:
             "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg",
+        },
+        {
+          name: "CMS",
+          image: "https://cdn-icons-png.flaticon.com/512/1006/1006555.png",
         },
        
       ],

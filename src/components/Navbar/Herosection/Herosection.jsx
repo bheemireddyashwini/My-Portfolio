@@ -1,365 +1,141 @@
-/* eslint-disable react/no-unescaped-entities */
-import styled, { keyframes } from "styled-components";
 import Bio from "./Bio";
-import HeroAnimation from "./HeroAnimation";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const glowAnimation = `
-  @keyframes glowAnimation {
-    0% {
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3);
-    }
-    50% {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.7);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-    }
-    100% {
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3);
-    }
-  }
-`;
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-`;
-
-const HeroContainer = styled.div`
-  background-color: ${({ theme }) => theme.card_light};
-  display: flex;
-  justify-content: center;
-  position: relative;
-  padding: 130px 40px;
-
-  @media screen and (max-width: 960px) {
-    padding: 66px 16px;
-  }
-
-  @media screen and (max-width: 640px) {
-    padding: 32px 16px;
-  }
-  z-index: 1;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
-`;
-
-const HeroBackground = styled.div`
-  background: radial-gradient(circle, #1a1a2e, #16213e, #0f3460);
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: end;
-  width: 100%;
-  height: 100%;
-  padding: 0 30px;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-`;
-
-const HeroInner = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1100px;
-
-  @media screen and (max-width: 960px) {
-    flex-direction: column;
-  }
-`;
-const ResumeButton = styled.a`
-  display: flex;
-  width: fit-content;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-decoration: none;
-  padding: 5px 19px;
-  background-color: #6598ce;
-  color: ${({ theme }) => theme.white};
-  border-radius: 15px;
-  font-size: 18px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
-  /* Glowing effect animation */
-  animation: ${glowAnimation} 1.5s infinite ease-in-out;
-
-  /* Hover effect with scaling, glowing, and background change */
-  &:hover {
-    transform: scale(1.1); /* Slightly enlarge button on hover */
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow */
-    background: linear-gradient(
-      45deg,
-      ${({ theme }) => theme.secondary},
-      ${({ theme }) => theme.primary}
-    ); /* Gradient background */
-    color: ${({ theme }) => theme.white}; /* Keep text color consistent */
-    animation: pulse 1.2s ease-in-out infinite,
-      glowAnimation 1.5s infinite ease-in-out; /* Pulse + Glow */
-  }
-
-  /* Active state with shrink effect */
-  &:active {
-    transform: scale(0.95); /* Shrink slightly on click */
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    animation: bounce 0.5s ease, glowAnimation 1.5s infinite ease-in-out; /* Bounce + Glow */
-  }
-
-  /* Pulse animation */
-  @keyframes pulse {
-    0% {
-      transform: scale(1.1);
-    }
-    50% {
-      transform: scale(1.15);
-    }
-    100% {
-      transform: scale(1.1);
-    }
-  }
-
-  /* Bounce animation */
-  @keyframes bounce {
-    0% {
-      transform: scale(1);
-    }
-    20% {
-      transform: scale(1.1);
-    }
-    40% {
-      transform: scale(0.9);
-    }
-    60% {
-      transform: scale(1.05);
-    }
-    80% {
-      transform: scale(0.98);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  /* Glow effect animation */
-  @keyframes glowAnimation {
-    0% {
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-        0 0 10px rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
-        0 0 10px rgba(255, 255, 255, 0.3);
-    }
-    50% {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-        0 0 20px rgba(255, 255, 255, 0.7);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
-        0 0 20px rgba(255, 255, 255, 0.5);
-    }
-    100% {
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-        0 0 10px rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
-        0 0 10px rgba(255, 255, 255, 0.3);
-    }
-  }
-
-  /* Mobile responsiveness */
-  @media (max-width: 640px) {
-    font-size: 16px;
-    padding: 6px 12px; /* Even smaller for mobile */
-  }
-`;
-
-const HeroLeftContainer = styled.div`
-  width: 100%;
-  order: 1;
-
-  @media screen and (max-width: 960px) {
-    order: 2;
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  @media screen and (max-width: 640px) {
-    order: 2;
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-`;
-
-const HeroRightContainer = styled.div`
-  width: 90%;
-  order: 2;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-
-  @media screen and (max-width: 960px) {
-    order: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-
-  @media screen and (max-width: 640px) {
-    order: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-`;
-
-const Title = styled.div`
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48px;
-  color: ${({ theme }) => theme.white};
-
-  @media screen and (max-width: 960px) {
-    text-align: center;
-  }
-
-  @media screen and (max-width: 640px) {
-    font-size: 40px;
-    line-height: 42px;
-    margin-bottom: 8px;
-  }
-
-  span {
-    color: ${({ theme }) => theme.white};
-  }
-`;
-
-const TextLoop = styled.div`
-  font-size: 32px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  height: 40px;
-
-  span {
-    position: absolute;
-    color: transparent;
-    background: linear-gradient(45deg, #ffa500, #32cd32, #1e90ff, #ff1493);
-    -webkit-background-clip: text;
-    animation: ${fadeIn} 3s ease-in-out infinite alternate,
-      ${fadeOut} 3s ease-in-out infinite alternate-reverse;
-    transform: scale(1.2);
-  }
-
-  @media screen and (max-width: 960px) {
-    text-align: center;
-  }
-
-  @media screen and (max-width: 640px) {
-    font-size: 24px;
-    line-height: 42px;
-  }
-`;
-
-const Subtitle = styled.div`
-  font-size: 20px;
-  color: ${({ theme }) => theme.text_primary + "95"};
-  line-height: 32px;
-  margin-bottom: 32px;
-  animation: ${fadeIn} 1s ease-out forwards;
-  font-weight: 500;
-
-  @media screen and (max-width: 960px) {
-    text-align: center;
-  }
-
-  @media screen and (max-width: 640px) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-`;
-
-function Herosection() {
+export default function Herosection() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % Bio.roles.length);
-    }, 8000);
+    }, 3000);
+
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div id="about">
-      <HeroContainer>
-        <HeroBackground>
-          <HeroAnimation />
-        </HeroBackground>
+    <section id="about" className="relative w-full px-5 py-8 overflow-hidden md:px-5 md:py-16 lg:py-20">
+      {/* Glow Shape - Top Right */}
+      <div className="absolute w-[520px] h-[520px] rounded-full -top-56 -right-44 bg-gradient-to-b from-blue-400/20 to-transparent pointer-events-none blur-3xl"></div>
+      
+      {/* Glow Shape - Bottom Left */}
+      <div className="absolute w-[400px] h-[400px] rounded-full -bottom-32 -left-40 bg-gradient-to-t from-blue-500/10 to-transparent pointer-events-none blur-3xl"></div>
 
-        <HeroInner>
-          <HeroLeftContainer>
-            <Title>
-              Hi, I'm <br /> <span>{Bio.name}</span>
-            </Title>
-            <TextLoop>
-              <span>{Bio.roles[currentRoleIndex]}</span>
-            </TextLoop>
-            <Subtitle>{Bio.description}</Subtitle>
-            <ResumeButton href={Bio.github} target="_blank">
-              Github
-            </ResumeButton>
-          </HeroLeftContainer>
-          <HeroRightContainer>
-            <div
-              style={{
-                width: "320px",
-                padding: "20px",
-                borderRadius: "30px",
-                background: "#e0e0e0",
-                boxShadow: "10px 10px 20px #bebebe, -10px -10px 20px #ffffff",
-              }}
+      {/* Main Content */}
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.9fr] gap-12 lg:gap-16 items-start relative z-10">
+        {/* Left Column - Intro */}
+        <div className="animate-fadeUp space-y-6 lg:space-y-8">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/30 backdrop-blur-md hover:bg-blue-500/15 transition-all duration-300 w-fit">
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span className="text-xs lg:text-sm font-semibold text-blue-300 tracking-wider uppercase">
+              Open to opportunities
+            </span>
+          </div>
+
+          {/* Title */}
+          <div className="space-y-4">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
+              Building{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10">beautiful</span>
+                <span className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg blur opacity-50 group-hover:opacity-75 transition duration-300"></span>
+              </span>
+              {" "}digital products
+            </h1>
+          </div>
+
+          {/* Animated Role */}
+          <div className="h-12 lg:h-14">
+            <p className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent animate-fadeUp">
+              {Bio.roles[currentRoleIndex]}
+            </p>
+          </div>
+
+          {/* Description */}
+          <p className="text-base lg:text-lg text-gray-300 leading-relaxed max-w-2xl font-light">
+            I craft responsive web experiences with{" "}
+            <span className="text-blue-300 font-semibold">clean, modern code</span>. 
+            Specialized in React, JavaScript, and building interfaces that users love.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4 pt-4">
+            <a
+              href={Bio.github}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative px-8 py-3.5 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
             >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 group-hover:from-blue-600 group-hover:to-blue-700 transition-all duration-300"></div>
+              <div className="relative flex items-center gap-2">
+                <span>View My Work</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </div>
+            </a>
+
+            <a
+              href={Bio.resume}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative px-8 py-3.5 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 backdrop-blur-md"
+            >
+              <div className="absolute inset-0 border border-blue-400/50 group-hover:border-blue-300 rounded-lg transition-colors"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent group-hover:from-blue-500/10"></div>
+              <div className="relative flex items-center gap-2">
+                <span>Download CV</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19v-7m0 0V5m0 7H5m7 0h7" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex gap-6 pt-4 text-gray-400">
+            <a href={Bio.github} target="_blank" rel="noreferrer" className="hover:text-blue-400 transition-colors">
+              <span className="sr-only">GitHub</span>
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <a href={Bio.linkedin} target="_blank" rel="noreferrer" className="hover:text-blue-400 transition-colors">
+              <span className="sr-only">LinkedIn</span>
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        {/* Right Column - Portrait Card */}
+        <div className="hidden lg:flex justify-end w-full animate-fadeUp [animation-delay:0.2s]">
+          <div className="relative group">
+            {/* Gradient Border Effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/50 to-blue-600/50 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            
+            {/* Card */}
+            <div className="relative rounded-2xl overflow-hidden border border-blue-400/20 bg-gradient-to-br from-blue-900/20 to-blue-950/20 backdrop-blur-md shadow-2xl hover:border-blue-400/40 transition-all duration-500">
               <img
-                src="profile.jpg"
-                alt="profilepic"
-                style={{ width: "100%", borderRadius: "20px" }}
+                src="/profilepic.avif"
+                alt={`${Bio.name} portrait`}
+                className="w-full h-auto aspect-[3/4] object-cover"
               />
+              
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-          </HeroRightContainer>
-        </HeroInner>
-      </HeroContainer>
-    </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="flex justify-center mt-16 lg:mt-24 animate-bounce">
+        <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </section>
   );
 }
-
-export default Herosection;
