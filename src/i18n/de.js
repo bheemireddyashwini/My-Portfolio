@@ -8,11 +8,18 @@ const de = {
     contact: "Kontakt",
   },
   hero: {
-    greeting: "Hallo,",
-    intro: "ich bin",
-    rolePrefix: "Ich bin",
+    headline: "Hallo, ich bin",
+    description:
+      "Als Full Stack Entwicklerin entwickle ich leidenschaftlich responsive, leistungsstarke Webanwendungen vom Frontend bis zum Backend.",
     contactMe: "Kontakt aufnehmen",
     getResume: "Lebenslauf",
+    rotatingRoles: [
+      "Fließend Englisch",
+      "Deutsch zertifiziert (B2-Niveau)",
+    ],
+  },
+  logo: {
+    subtitle: "Fullstack Entwicklerin",
   },
   skills: {
     label: "Skills",
@@ -26,17 +33,14 @@ const de = {
     whoAmI: "Wer bin ich?",
     description:
       "Ich bin eine proaktive und anpassungsfähige Fachkraft mit starkem Engagement für persönliches und berufliches Wachstum. Mit Leidenschaft fürs Lernen strebe ich nach Qualität in meiner Arbeit und bin motiviert durch neue Herausforderungen. Ich bringe eine positive Einstellung und einen ergebnisorientierten Ansatz in jede Aufgabe ein und möchte echten Mehrwert schaffen.",
-    whatIBuild: "Was ich entwickle",
-    whatIBuildText:
-      "Responsive Oberflächen mit semantischem HTML5, modernem CSS3 (Flexbox, Grid, Variablen) und ES6+ JavaScript für saubere, produktionsreife UI.",
     whatIValue: "Was mir wichtig ist",
     whatIValueText:
       "Klarheit, flüssige Interaktionen und visueller Rhythmus. Designentscheidungen, die bewusst wirken und nicht überladen sind.",
-    currentDirection: "Aktuelle Ausrichtung",
+    currentDirection: "Aktuelle Rolle",
     currentDirectionSubtitle:
-      "Entwicklung mit modernen Frontend-Stacks und erste Schritte in Richtung KI in der Softwareentwicklung.",
+      "Frontend Developer mit Full-stack-Erfahrung bei net mobile Minick GmbH.",
     currentDirectionNote:
-      "Ich lerne noch die Grundlagen von KI. Aktuell verschaffe ich mir einen ersten Überblick, wie KI-Tools und APIs zukünftig echte Projekte unterstützen könnten.",
+      "Ich entwickle Benutzeroberflächen mit React, Next.js und TypeScript, gestalte responsive Layouts mit Tailwind CSS, integriere REST-APIs und arbeite bei Bedarf mit CMS (Directus). Frontend-first mit praktischer Backend-Erfahrung.",
     experienceRoles: "Berufserfahrungen",
     projectsShipped: "Umgesetzte Projekte",
     skillGroups: "Skill-Gruppen",
@@ -63,11 +67,11 @@ const de = {
     pill: "Erfahrungen",
     items: {
       0: {
-        role: "Frontend Developer · Praktikum",
+        role: "Frontend Developer · Full-stack exposure",
         desc: [
-          "JavaScript-Entwicklung moderner Webanwendungen mit React und Next.js.",
-          "Erfahrung mit Headless CMS (Directus), inklusive Collection-Setup, Datenmodellierung und Integration von CMS-Inhalten in Frontend-Anwendungen.",
-          "Sicher im Umgang mit APIs, skalierbaren Komponenten und performanten, benutzerfreundlichen Oberflächen.",
+          "Frontend Developer mit Full-stack-Erfahrung — frontend-first mit praktischer Backend-Erfahrung.",
+          "Entwicklung von Benutzeroberflächen mit React, Next.js und TypeScript, gestaltet mit Tailwind CSS für responsive Layouts.",
+          "Integration von REST-APIs und Arbeit mit Headless CMS (Directus) für content-getriebene Anwendungen.",
         ],
         specialization: "Frontend-Entwicklung, Headless-CMS-Integration, UI-Architektur",
       },

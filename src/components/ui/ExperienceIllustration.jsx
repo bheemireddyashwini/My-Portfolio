@@ -24,7 +24,7 @@ export default function ExperienceIllustration({ variant = "workspace" }) {
           src={illustration.src}
           alt={illustration.alt}
           className="h-auto w-full drop-shadow-[0_24px_48px_rgba(124,58,237,0.22)]"
-          loading="lazy"
+          loading="eager"
           decoding="async"
         />
       </div>

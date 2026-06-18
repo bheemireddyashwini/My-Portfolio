@@ -8,11 +8,18 @@ const en = {
     contact: "Contact",
   },
   hero: {
-    greeting: "Hello,",
-    intro: "This is",
-    rolePrefix: "I'm a Professional",
+    headline: "Hi, I'm",
+    description:
+      "A Full Stack Developer passionate about creating responsive, high-performance web applications from front end to back end.",
     contactMe: "Contact me",
     getResume: "Get Resume",
+    rotatingRoles: [
+      "Fluent in English",
+      "Certified in German (B2 Level)",
+    ],
+  },
+  logo: {
+    subtitle: "Fullstack Developer",
   },
   skills: {
     label: "Skills",
@@ -26,17 +33,14 @@ const en = {
     whoAmI: "Who I am?",
     description:
       "I'm a proactive and adaptable professional with a strong commitment to personal and professional growth. Driven by a passion for learning, I strive to achieve excellence in all my work and am energized by new challenges. I bring a positive outlook and a results-focused approach to every task, always aiming to add real value and make a lasting impact.",
-    whatIBuild: "What I build",
-    whatIBuildText:
-      "Responsive interfaces with semantic HTML5, modern CSS3 (Flexbox, Grid, variables), and ES6+ JavaScript for clean, production-ready UI.",
     whatIValue: "What I value",
     whatIValueText:
       "Clarity, smooth interactions, and layout rhythm. Design choices that feel intentional, not noisy.",
-    currentDirection: "Current direction",
+    currentDirection: "Current role",
     currentDirectionSubtitle:
-      "Building with modern frontend stacks and starting to explore AI in development.",
+      "Frontend Developer with full-stack exposure at net mobile Minick GmbH.",
     currentDirectionNote:
-      "I am still learning the basics of AI. Right now I am getting a first look at how AI tools and APIs could support real projects in the future.",
+      "I build user interfaces with React, Next.js, and TypeScript, style with Tailwind CSS for responsive layouts, integrate REST APIs, and work with CMS (Directus) when needed. Frontend-first with hands-on backend exposure.",
     experienceRoles: "Experience roles",
     projectsShipped: "Projects shipped",
     skillGroups: "Skill groups",
@@ -63,11 +67,11 @@ const en = {
     pill: "Experiences",
     items: {
       0: {
-        role: "Frontend Developer · Internship",
+        role: "Frontend Developer · Full-stack exposure",
         desc: [
-          "JavaScript developer building modern web applications with React and Next.js.",
-          "Experience with Headless CMS (Directus), including collection setup, data modeling, and integrating CMS content into frontend applications.",
-          "Skilled in working with APIs, building scalable components, and delivering performant, user-friendly interfaces.",
+          "Frontend Developer with full-stack exposure — frontend-first with hands-on backend experience.",
+          "Build user interfaces with React, Next.js, and TypeScript, styled with Tailwind CSS for responsive layouts.",
+          "Integrate REST APIs and work with headless CMS (Directus) when needed for content-driven applications.",
         ],
         specialization: "Frontend development, headless CMS integration, UI architecture",
       },

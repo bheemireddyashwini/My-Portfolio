@@ -42,7 +42,7 @@
     <rect x="0" y="0" width="132" height="88" rx="14" fill="#4338ca" stroke="#c4b5fd" stroke-opacity="0.35"/>
     <rect x="12" y="12" width="108" height="52" rx="8" fill="#0f172a"/>
     <text x="22" y="34" fill="#a78bfa" font-family="ui-monospace, monospace" font-size="10">npm run dev</text>
-    <text x="22" y="50" fill="#34d399" font-family="ui-monospace, monospace" font-size="10">ready </text>
+    <text x="22" y="50" fill="#34d399" font-family="ui-monospace, monospace" font-size="10">ready</text>
     <rect x="12" y="68" width="108" height="8" rx="2" fill="#6d28d9"/>
   </g>
 

@@ -211,22 +211,101 @@ body {
 
 .site-logo {
   display: inline-flex;
-  min-width: 0;
-  max-width: min(100%, 18rem);
+  flex-direction: column;
   align-items: center;
-  gap: 0.7rem;
+  min-width: 0;
+  max-width: min(100%, 10rem);
+  gap: 0.2rem;
   color: var(--text-heading);
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
 .site-logo:hover {
-  opacity: 0.94;
+  opacity: 1;
 }
 
 .site-logo-mark {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 5rem;
+  height: 3.15rem;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.logo-mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: transparent;
+}
+
+.logo-mark-a {
+  font-family: var(--font-logo-a), "Allura", cursive;
+  font-size: 58px;
+  font-weight: 400;
+}
+
+.logo-mark-b {
+  font-family: var(--font-logo-script), "Great Vibes", cursive;
+  font-size: 52px;
+  font-weight: 400;
+}
+
+.logo-mark-animated {
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.35));
+  animation: logo-mark-glow 4s ease-in-out infinite 0.7s;
+}
+
+.site-logo:hover .logo-mark-animated,
+.logo-mark-wrap:hover .logo-mark-animated {
+  filter: drop-shadow(0 0 14px rgba(236, 72, 153, 0.5)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.4));
+  animation: logo-mark-glow-hover 2s ease-in-out infinite;
+}
+
+@keyframes logo-mark-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.25));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 14px rgba(236, 72, 153, 0.45)) drop-shadow(0 0 18px rgba(168, 85, 247, 0.35));
+  }
+}
+
+@keyframes logo-mark-glow-hover {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.4)) drop-shadow(0 0 16px rgba(168, 85, 247, 0.32));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 16px rgba(236, 72, 153, 0.55)) drop-shadow(0 0 24px rgba(168, 85, 247, 0.42));
+  }
+}
+
+[data-theme="light"] .logo-mark-animated {
+  filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.28));
+}
+
+.logo-mark-wrap {
+  position: relative;
+  display: inline-flex;
+  shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-mark-animated {
+    animation: none;
+  }
+
+  .site-logo:hover .logo-mark-animated,
+  .site-logo:hover .site-logo-mark {
+    animation: none;
+  }
 }
 
 .site-logo-copy {
@@ -244,35 +323,55 @@ body {
 .site-logo-subtitle {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
-  margin-top: 0.2rem;
-  font-size: 0.5rem;
-  font-weight: 600;
-  letter-spacing: 0.24em;
-  color: #38bdf8;
+  gap: 0.15rem;
+}
+
+.site-logo-subtitle-text {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: #c084fc;
+  text-align: center;
   white-space: nowrap;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.site-logo:hover .site-logo-subtitle-text {
+  color: #ec4899;
+  text-shadow: 0 0 12px rgba(236, 72, 153, 0.35);
 }
 
 .site-logo-subtitle-line {
   display: block;
   height: 1px;
-  width: 0.85rem;
-  background: linear-gradient(90deg, transparent, #38bdf8);
+  width: 0.65rem;
+  flex-shrink: 0;
+  background: linear-gradient(90deg, transparent, #a855f7);
+  transition: background 0.3s ease;
 }
 
 .site-logo-subtitle-line:last-child {
-  background: linear-gradient(90deg, #38bdf8, transparent);
+  background: linear-gradient(90deg, #a855f7, transparent);
+}
+
+.site-logo:hover .site-logo-subtitle-line {
+  background: linear-gradient(90deg, transparent, #ec4899);
+}
+
+.site-logo:hover .site-logo-subtitle-line:last-child {
+  background: linear-gradient(90deg, #ec4899, transparent);
 }
 
 @media (min-width: 640px) {
   .site-logo {
     max-width: none;
-    gap: 0.8rem;
+    gap: 0.2rem;
   }
 
   .site-logo-mark {
-    width: 2.875rem;
-    height: 2.875rem;
+    width: 5.5rem;
+    height: 3.35rem;
   }
 
   .site-logo-name {
@@ -280,19 +379,116 @@ body {
     letter-spacing: 0.18em;
   }
 
-  .site-logo-subtitle {
-    font-size: 0.54rem;
-    gap: 0.55rem;
+  .site-logo-subtitle-text {
+    font-size: 0.6875rem;
+    letter-spacing: 0.03em;
   }
 
   .site-logo-subtitle-line {
-    width: 1rem;
+    width: 0.85rem;
   }
 }
 
-@media (max-width: 420px) {
-  .site-logo-subtitle {
-    display: none;
+@media (max-width: 380px) {
+  .site-logo-name {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .site-logo-subtitle-text {
+    font-size: 0.5625rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+.hero-section {
+  position: relative;
+}
+
+.hero-copy {
+  margin: 0;
+}
+
+.hero-title {
+  margin: 0;
+}
+
+.hero-description {
+  margin-bottom: 0;
+}
+
+.hero-role-loop {
+  position: relative;
+  height: 2.5rem;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.hero-role-loop-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 2.75rem;
+  background: linear-gradient(90deg, #38bdf8, #818cf8, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  width: 100%;
+}
+
+.hero-visual-inner {
+  width: 100%;
+}
+
+.hero-visual-inner .experience-illustration-wrap {
+  min-height: 280px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero-visual-inner .experience-illustration-float {
+  max-width: 460px;
+}
+
+.hero-illustration-loading {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 520 / 440;
+  min-height: 240px;
+  margin: 0 auto;
+  border-radius: 1.75rem;
+  background: radial-gradient(circle at 50% 45%, rgba(124, 58, 237, 0.12), transparent 70%);
+}
+
+@media (min-width: 1024px) {
+  .hero-visual-inner .experience-illustration-wrap {
+    min-height: 360px;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-role-loop {
+    height: 2.75rem;
+    margin-top: 1.15rem;
+  }
+
+  .hero-role-loop-text {
+    font-size: 1.6rem;
+    line-height: 3rem;
   }
 }
 
@@ -724,6 +920,8 @@ body {
 
 .experience-role {
   color: var(--text-heading);
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .experience-company {

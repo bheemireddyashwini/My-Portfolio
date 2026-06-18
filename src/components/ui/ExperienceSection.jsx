@@ -35,7 +35,7 @@ function formatDate(date) {
 }
 
 function roleLabel(role) {
-  return role.split("·")[0].trim().toUpperCase();
+  return role.split("·")[0].trim();
 }
 
 function ExperienceCard({ item, role }) {
@@ -57,7 +57,7 @@ function ExperienceCard({ item, role }) {
         </div>
 
         <div className="min-w-0 pt-1">
-          <h3 className="experience-role text-sm font-bold tracking-wide sm:text-base">
+          <h3 className="experience-role text-sm sm:text-base">
             {roleLabel(role)}
           </h3>
           <p className="experience-company mt-2 text-sm sm:text-[0.95rem]">{item.company}</p>

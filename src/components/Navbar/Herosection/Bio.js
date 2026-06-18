@@ -2,7 +2,6 @@ const Bio = {
   name: "Ashwini Bheemireddy",
   roles: [
     "Full Stack Developer",
-    "Mobile app developer",
     "Fluent in English",
     "Certified in German (B2 Level)",
   ],

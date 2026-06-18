@@ -1,6 +1,10 @@
 export const Bio = {
   name: "Ashwini Bheemireddy",
-  roles: ["Full Stack Developer"],
+  roles: [
+    "Full Stack Developer",
+    "Fluent in English",
+    "Certified in German (B2 Level)",
+  ],
   description:
     "I'm a proactive and adaptable professional with a strong commitment to personal and professional growth. Driven by a passion for learning, I strive to achieve excellence in all my work and am energized by new challenges. I bring a positive outlook and a results-focused approach to every task, always aiming to add real value and make a lasting impact.",
   github: "https://github.com/bheemireddyashwini",

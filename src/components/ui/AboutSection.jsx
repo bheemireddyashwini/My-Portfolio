@@ -8,7 +8,6 @@ import Skilldata from "../Navbar/skills/Skilldata";
 import { useLanguage } from "./LanguageProvider";
 import {
   FiCode,
-  FiCpu,
   FiGithub,
   FiLayers,
   FiLinkedin,
@@ -17,22 +16,18 @@ import {
 } from "react-icons/fi";
 
 const stackTags = [
-  { label: "HTML5", type: "stack" },
-  { label: "CSS3", type: "stack" },
-  { label: "ES6+", type: "stack" },
   { label: "React", type: "stack" },
   { label: "Next.js", type: "stack" },
+  { label: "TypeScript", type: "stack" },
   { label: "Tailwind CSS", type: "stack" },
+  { label: "Directus", type: "stack" },
+  { label: "REST APIs", type: "stack" },
 ];
 
 export function AboutSection() {
   const { t } = useLanguage();
 
-  const directionTags = [
-    ...stackTags,
-    { label: t.about.exploringAi, type: "ai" },
-    { label: t.about.learningAi, type: "ai" },
-  ];
+  const directionTags = stackTags;
 
   const stats = [
     { value: `${Experiencedata.length}+`, label: t.about.experienceRoles },
@@ -58,32 +53,20 @@ export function AboutSection() {
             </p>
           </article>
 
-          <div className="about-build-value-grid">
-            <article className="about-highlight-card about-highlight-build">
-              <div className="about-highlight-icon" aria-hidden="true">
-                <FiCode className="h-4 w-4" />
-              </div>
-              <div className="about-highlight-content">
-                <p className="about-highlight-title">{t.about.whatIBuild}</p>
-                <p className="about-highlight-text">{t.about.whatIBuildText}</p>
-              </div>
-            </article>
-
-            <article className="about-highlight-card about-highlight-value">
-              <div className="about-highlight-icon" aria-hidden="true">
-                <FiHeart className="h-4 w-4" />
-              </div>
-              <div className="about-highlight-content">
-                <p className="about-highlight-title">{t.about.whatIValue}</p>
-                <p className="about-highlight-text">{t.about.whatIValueText}</p>
-              </div>
-            </article>
-          </div>
+          <article className="about-highlight-card about-highlight-value">
+            <div className="about-highlight-icon" aria-hidden="true">
+              <FiHeart className="h-4 w-4" />
+            </div>
+            <div className="about-highlight-content">
+              <p className="about-highlight-title">{t.about.whatIValue}</p>
+              <p className="about-highlight-text">{t.about.whatIValueText}</p>
+            </div>
+          </article>
 
           <article className="about-direction-card">
             <div className="about-direction-header">
-              <div className="about-direction-icon about-direction-icon-ai" aria-hidden="true">
-                <FiCpu className="h-4 w-4" />
+              <div className="about-direction-icon" aria-hidden="true">
+                <FiCode className="h-4 w-4" />
               </div>
               <div>
                 <p className="about-direction-title">{t.about.currentDirection}</p>
@@ -97,11 +80,8 @@ export function AboutSection() {
               {directionTags.map((tag) => (
                 <span
                   key={tag.label}
-                  className={`about-direction-tag${
-                    tag.type === "ai" ? " about-direction-tag-ai" : ""
-                  }`}
+                  className="about-direction-tag"
                 >
-                  {tag.type === "ai" ? <span className="about-direction-spark" aria-hidden="true" /> : null}
                   {tag.label}
                 </span>
               ))}

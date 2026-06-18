@@ -1,4 +1,4 @@
-import { Manrope, JetBrains_Mono } from "next/font/google";
+import { Manrope, JetBrains_Mono, Great_Vibes, Allura } from "next/font/google";
 import Script from "next/script";
 import { ThemeProvider } from "../components/ui/ThemeProvider";
 import { LanguageProvider } from "../components/ui/LanguageProvider";
@@ -15,20 +15,32 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
 });
 
+const greatVibes = Great_Vibes({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-logo-script",
+});
+
+const allura = Allura({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-logo-a",
+});
+
 export const metadata = {
   title: "Ashwini Bheemireddy | Portfolio",
   description:
     "A modern portfolio built with Next.js and Tailwind CSS, showcasing experience, skills, education, and projects.",
   metadataBase: new URL("https://my-portfolio-ky55.onrender.com"),
   icons: {
-    icon: "/logo-mark.png",
-    apple: "/logo-mark.png",
+    icon: "/logo-mark.svg",
+    apple: "/logo-mark.svg",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${manrope.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${manrope.variable} ${jetbrainsMono.variable} ${greatVibes.variable} ${allura.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <Script
           id="theme-init"
