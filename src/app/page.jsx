@@ -5,6 +5,7 @@ import Skilldata from "../components/Navbar/skills/Skilldata";
 import Experiencedata from "../components/experience/Experiencedata";
 import CodeBlock from "../components/ui/CodeBlock";
 import SkillsMarquee from "../components/ui/SkillsMarquee";
+import ProjectsSection from "../components/ui/ProjectsSection";
 import { AboutSection } from "../components/ui/AboutSection";
 import { ExperienceSection } from "../components/ui/ExperienceSection";
 import { EducationSection } from "../components/ui/EducationSection";
@@ -69,32 +70,6 @@ function CoderSnippet() {
   );
 }
 
-function ProjectSnippet({ project }) {
-  const role = project.category === "react" ? "Full Stack Developer" : "Frontend Developer";
-  const description = project.description.replace(/'/g, " ").slice(0, 220);
-
-  return (
-    <>
-      <span className="text-violet-400">const</span> project = {"{"}
-      {"\n  "}name: <span className="text-emerald-400">&apos;{project.title}&apos;</span>,
-      {"\n  "}tools: [
-      {project.technologies.map((tool) => (
-        <span key={tool}>
-          {"\n    "}
-          <span className="text-emerald-400">&apos;{tool}&apos;</span>,
-        </span>
-      ))}
-      {"\n  "}],
-      {"\n  "}myRole: <span className="text-emerald-400">&apos;{role}&apos;</span>,
-      {"\n  "}Description:{" "}
-      <span className="text-emerald-400">&apos;{description}&apos;</span>,
-      {"\n  "}live: <span className="text-emerald-400">&apos;{project.link}&apos;</span>,
-      {"\n  "}github: <span className="text-emerald-400">&apos;{project.github}&apos;</span>,
-      {"\n}"};
-    </>
-  );
-}
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-page">
@@ -137,41 +112,9 @@ export default function Home() {
           <SkillsMarquee skills={marqueeSkills} />
         </section>
 
-        <section id="projects" className="mt-20 scroll-mt-24 sm:mt-28">
-          <span className="section-label">Projects</span>
-          <h2 className="text-heading mt-3 text-3xl font-bold sm:text-4xl">Projects</h2>
-
-          <div className="mt-8 space-y-8">
-            {ProjectData.map((project) => (
-              <div key={project.id}>
-                <h3 className="text-accent-label mb-3 text-lg font-semibold">{project.title}</h3>
-                <CodeBlock title={`${project.title.toLowerCase().replace(/\s+/g, "-")}.js`}>
-                  <ProjectSnippet project={project} />
-                </CodeBlock>
-                <div className="mt-3 flex flex-wrap gap-3">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-primary text-sm"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-outline text-sm"
-                  >
-                    <FiGithub /> GitHub
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         <EducationSection items={EducationData} />
+
+        <ProjectsSection projects={ProjectData} />
 
         <section id="contact" className="mt-20 scroll-mt-24 sm:mt-28">
           <span className="section-label">Contact</span>
