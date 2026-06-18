@@ -14,19 +14,21 @@ import {
 } from "react-icons/fi";
 
 const directionTags = [
+  { label: "HTML5", type: "stack" },
+  { label: "CSS3", type: "stack" },
+  { label: "ES6+", type: "stack" },
   { label: "React", type: "stack" },
   { label: "Next.js", type: "stack" },
   { label: "Tailwind CSS", type: "stack" },
   { label: "Exploring AI", type: "ai" },
   { label: "Learning AI tools", type: "ai" },
-  { label: "Automation", type: "stack" },
 ];
 
 const strengths = [
-  "Clean, responsive UI systems",
-  "React / Next.js product delivery",
-  "API and headless CMS integration",
-  "Testing, automation, and debugging",
+  "Semantic HTML5 and accessible markup",
+  "Modern CSS3 layouts (Flexbox, Grid, responsive design)",
+  "ES6+ JavaScript and React / Next.js delivery",
+  "API, headless CMS, and automation workflows",
 ];
 
 export function AboutSection() {
@@ -62,8 +64,8 @@ export function AboutSection() {
               <div className="about-highlight-content">
                 <p className="about-highlight-title">What I build</p>
                 <p className="about-highlight-text">
-                  Responsive interfaces, reusable components, and production-ready UI that feels
-                  polished on every screen size.
+                  Responsive interfaces with semantic HTML5, modern CSS3 (Flexbox, Grid, variables),
+                  and ES6+ JavaScript for clean, production-ready UI.
                 </p>
               </div>
             </article>

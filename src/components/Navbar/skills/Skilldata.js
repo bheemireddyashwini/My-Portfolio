@@ -2,9 +2,9 @@ const Skilldata = [
   {
     title: "Frontend Expertise",
     skills: [
-      { name: "HTML", image: "/skills/html5.svg" },
-      { name: "CSS", image: "/skills/css3.svg" },
-      { name: "JavaScript", image: "/skills/javascript.svg" },
+      { name: "HTML5", image: "/skills/html5.svg" },
+      { name: "CSS3", image: "/skills/css3.svg" },
+      { name: "Modern JavaScript (ES6+)", image: "/skills/javascript.svg" },
       { name: "React Js", image: "/skills/react.svg" },
       { name: "TypeScript", image: "/skills/typescript.svg" },
       { name: "Bootstrap", image: "/skills/bootstrap.svg" },

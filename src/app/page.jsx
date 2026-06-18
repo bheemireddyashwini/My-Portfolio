@@ -22,9 +22,9 @@ const navigation = [
 ];
 
 const coderSkills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
+  "HTML5",
+  "CSS3",
+  "Modern JavaScript (ES6+)",
   "React Js",
   "TypeScript",
   "Bootstrap",
