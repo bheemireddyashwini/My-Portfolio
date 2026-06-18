@@ -3,9 +3,7 @@ services:
     name: my-portfolio
     runtime: static
     buildCommand: npm install && npm run build
-    staticPublishPath: ./out
+    staticPublishPath: ./dist
     envVars:
       - key: NODE_VERSION
         value: "20"
-      - key: NPM_CONFIG_PRODUCTION
-        value: "false"
