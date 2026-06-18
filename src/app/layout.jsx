@@ -1,4 +1,6 @@
-import { Manrope, Space_Grotesk } from "next/font/google";
+import { Manrope, JetBrains_Mono } from "next/font/google";
+import { ThemeProvider } from "../components/ui/ThemeProvider";
+import { themeInitScript } from "./theme-script";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -6,9 +8,9 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-jetbrains",
 });
 
 export const metadata = {
@@ -20,8 +22,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${manrope.variable} ${spaceGrotesk.variable}`}>
-      <body suppressHydrationWarning>{children}</body>
+    <html lang="en" className={`${manrope.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body suppressHydrationWarning>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
