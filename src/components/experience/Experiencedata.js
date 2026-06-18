@@ -38,7 +38,7 @@ const Experiencedata = [
     img: "/logos/arag.svg", 
     role: "Python Automation Intern",
     company: "ARAG IT, Düsseldorf",
-    date: "Mar 2025 – May 2025",
+    date: "Mar 2025 - May 2025",
     location: "Düsseldorf, Germany",
     desc: [
       "Worked on web and API automation testing in the IT department.",

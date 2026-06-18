@@ -6,6 +6,7 @@ export const Bio = {
   github: "https://github.com/bheemireddyashwini",
   resume: "https://drive.google.com/file/d/1ComMxy2zK4tDKCHTyq3Omh8dVo2oopAw/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/ashwini2127/",
+  profileImage: "/profile.jpg",
 };
 
 export const Skills = [

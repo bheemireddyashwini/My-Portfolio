@@ -1,4 +1,5 @@
 import { Manrope, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import { ThemeProvider } from "../components/ui/ThemeProvider";
 import { themeInitScript } from "./theme-script";
 import "./globals.css";
@@ -23,10 +24,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${manrope.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
       <body suppressHydrationWarning>
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

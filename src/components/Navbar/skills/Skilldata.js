@@ -23,6 +23,7 @@ const Skilldata = [
       { name: "Python", image: "/skills/python.svg" },
       { name: "MySQL", image: "/skills/mysql.svg" },
       { name: "Directus", image: "/skills/directus.svg" },
+      { name: "PHP", image: "/skills/php.svg" },
     ],
   },
   {
