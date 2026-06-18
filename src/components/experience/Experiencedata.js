@@ -1,7 +1,7 @@
 const Experiencedata = [
   {
     id: 0,
-    img: "https://placehold.co/96x96/1b2943/ffffff?text=NM",
+    img: "/logos/netmobile.svg",
     company: "net mobile Minick GmbH",
     role: "Frontend Developer · Internship",
     date: "Jan 2026 - Present · 6 mos",
@@ -17,7 +17,7 @@ const Experiencedata = [
   },
   {
     id: 1,
-    img: "https://placehold.co/96x96/7c4dff/ffffff?text=UG",
+    img: "/logos/uglow.svg",
     company: "U-Glow",
     role: "Frontend Developer · Internship",
     date: "Sep 2025 - Dec 2025 · 4 mos",
@@ -35,7 +35,7 @@ const Experiencedata = [
   
   {
     id: 2,
-    img: "https://upload.wikimedia.org/wikipedia/commons/1/1d/ARAG_Logo_2016.png", 
+    img: "/logos/arag.svg", 
     role: "Python Automation Intern",
     company: "ARAG IT, Düsseldorf",
     date: "Mar 2025 – May 2025",
@@ -55,8 +55,8 @@ const Experiencedata = [
     ]
   },
   {
-    id: 2,
-    img: "https://m.media-amazon.com/images/I/61m-liCSH2L.png",
+    id: 3,
+    img: "/logos/ubisys.svg",
     company: "Ubisys GmbH, Düsseldorf",
     role: "Mobile Application Developer",
     date: "Sep 2023 - Feb 2024",

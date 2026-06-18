@@ -3,6 +3,8 @@ import ProjectData from "../components/Project/ProjectData";
 import EducationData from "../components/Navbar/Education/EducationData";
 import Skilldata from "../components/Navbar/skills/Skilldata";
 import Experiencedata from "../components/experience/Experiencedata";
+import AnimatedLogo from "../components/ui/AnimatedLogo";
+import ScrollReveal from "../components/ui/ScrollReveal";
 import {
   FiArrowUpRight,
   FiBookOpen,
@@ -10,6 +12,7 @@ import {
   FiGithub,
   FiLinkedin,
   FiLayers,
+  FiMenu,
   FiStar,
 } from "react-icons/fi";
 
@@ -37,19 +40,19 @@ const coreStrengths = [
 ];
 
 const panelClass =
-  "rounded-[1.75rem] border border-white/10 bg-white/[0.06] p-6 shadow-[0_30px_100px_rgba(2,6,23,0.45)] backdrop-blur-2xl ring-1 ring-white/5";
+  "rounded-2xl border border-white/10 bg-white/[0.06] p-4 shadow-[0_30px_100px_rgba(2,6,23,0.45)] backdrop-blur-2xl ring-1 ring-white/5 sm:rounded-[1.75rem] sm:p-6";
 
 const chipClass =
   "inline-flex items-center rounded-full border border-sky-400/15 bg-sky-400/10 px-3 py-1 text-xs font-medium text-sky-100 transition hover:border-sky-300/30 hover:bg-sky-300/15";
 
 function SectionHeading({ eyebrow, title, description, icon: Icon }) {
   return (
-    <div className="mb-10 max-w-3xl">
+    <div className="mb-8 max-w-3xl sm:mb-10">
       <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-sky-200">
         {Icon ? <Icon className="h-4 w-4" /> : null}
         <span>{eyebrow}</span>
       </div>
-      <h2 className="font-display max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-[2.75rem] lg:leading-[1.05]">
+      <h2 className="font-display max-w-2xl text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.05]">
         {title}
       </h2>
       {description ? (
@@ -90,11 +93,11 @@ function ExperienceCard({ data, index }) {
       style={{ animationDelay: `${index * 90}ms` }}
     >
       <div className="flex flex-col gap-5 lg:flex-row lg:items-start">
-        <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-slate-900 shadow-lg shadow-sky-950/20 lg:h-20 lg:w-20">
+        <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-slate-900 p-2 shadow-lg shadow-sky-950/20 lg:h-20 lg:w-20">
           <img
             src={data.img}
             alt={`${data.company} logo`}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
           />
         </div>
 
@@ -158,7 +161,7 @@ function ProjectCard({ project }) {
         <img
           src={project.image}
           alt={project.title}
-          className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+          className="h-44 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-52 md:h-56"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/15 to-transparent" />
         <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-100 backdrop-blur">
@@ -215,8 +218,6 @@ function ProjectCard({ project }) {
 }
 
 export default function Home() {
-  const totalSkills = Skilldata.reduce((count, group) => count + group.skills.length, 0);
-
   return (
     <main className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-80">
@@ -226,10 +227,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:80px_80px] opacity-25" />
       </div>
 
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-slate-950/55 backdrop-blur-2xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <a href="#home" className="font-display text-xl font-semibold tracking-tight text-white sm:text-2xl">
-            A.Portfolio
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-slate-950/70 backdrop-blur-2xl transition-all duration-300">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+          <a href="#home" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
+            <AnimatedLogo />
+            <span className="truncate font-display text-base font-semibold tracking-tight text-white sm:text-xl">
+              Ashwini
+            </span>
           </a>
 
           <nav className="hidden items-center gap-6 md:flex">
@@ -240,25 +244,47 @@ export default function Home() {
             ))}
           </nav>
 
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition hover:-translate-y-0.5 hover:brightness-110"
-          >
-            View Work
-            <FiArrowUpRight />
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="#contact"
+              className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition hover:-translate-y-0.5 hover:brightness-110 sm:inline-flex"
+            >
+              View Work
+              <FiArrowUpRight />
+            </a>
+
+            <details className="relative md:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-center rounded-full border border-white/10 bg-white/5 p-3 text-white transition hover:border-sky-400/30 hover:bg-white/10 [&::-webkit-details-marker]:hidden">
+                <FiMenu className="h-5 w-5" />
+              </summary>
+              <div className="absolute right-0 mt-3 w-56 rounded-2xl border border-white/10 bg-slate-950/95 p-3 shadow-2xl backdrop-blur-xl">
+                <nav className="flex flex-col gap-1">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="rounded-xl px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/5 hover:text-white"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            </details>
+          </div>
         </div>
       </header>
 
-      <div className="mx-auto max-w-7xl px-4 pb-24 pt-[88px] sm:px-6 lg:px-8">
-        <section id="home" className="grid items-center gap-12 pt-10 lg:grid-cols-[1.15fr_0.85fr] lg:pt-16">
+      <div className="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 sm:pb-24 sm:pt-[88px] lg:px-8">
+        <ScrollReveal>
+        <section id="home" className="grid items-center gap-10 pt-6 sm:gap-12 sm:pt-10 lg:grid-cols-[1.15fr_0.85fr] lg:pt-16">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-sky-200">
               <FiBriefcase className="h-4 w-4" />
               {Bio.roles?.[0] || "Full Stack Developer"}
             </div>
 
-            <h1 className="font-display max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl lg:leading-[0.95]">
+            <h1 className="font-display max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[0.95]">
               Building practical digital products with <span className="bg-gradient-to-r from-sky-300 via-cyan-200 to-blue-300 bg-clip-text text-transparent">clean code</span>
             </h1>
 
@@ -266,12 +292,12 @@ export default function Home() {
               {Bio.description.trim()}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href={Bio.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:brightness-110"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:brightness-110 sm:w-auto"
               >
                 GitHub
                 <FiGithub />
@@ -280,7 +306,7 @@ export default function Home() {
                 href={Bio.resume}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:border-sky-400/30 hover:bg-white/10"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:border-sky-400/30 hover:bg-white/10 sm:w-auto"
               >
                 Resume
                 <FiArrowUpRight />
@@ -289,7 +315,7 @@ export default function Home() {
                 href={Bio.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-sky-400/30 hover:bg-white/10"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-sky-400/30 hover:bg-white/10 sm:w-auto"
               >
                 LinkedIn
                 <FiLinkedin />
@@ -304,7 +330,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
               {stats.map((stat) => (
                 <StatCard key={stat.label} {...stat} />
               ))}
@@ -314,8 +340,8 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -left-6 top-10 h-24 w-24 rounded-full bg-sky-400/20 blur-3xl" />
             <div className={`${panelClass} relative overflow-hidden p-0`}>
-              <div className="border-b border-white/10 bg-gradient-to-br from-sky-500/20 via-white/5 to-transparent p-6">
-                <div className="flex items-center justify-between gap-4">
+              <div className="border-b border-white/10 bg-gradient-to-br from-sky-500/20 via-white/5 to-transparent p-4 sm:p-6">
+                <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center sm:gap-4">
                   <div>
                     <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Profile</p>
                     <h2 className="mt-2 font-display text-2xl font-semibold text-white">
@@ -328,13 +354,16 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid gap-6 p-6">
-                <div className="mx-auto overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl shadow-sky-950/20 ring-1 ring-white/5">
-                  <img
-                    src="/profilepic.avif"
-                    alt="Ashwini Bheemireddy portrait"
-                    className="h-[20rem] w-full object-cover sm:h-[24rem]"
-                  />
+              <div className="grid gap-4 p-4 sm:gap-6 sm:p-6">
+                <div className="relative mx-auto w-full max-w-sm">
+                  <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-r from-sky-500/35 via-cyan-400/25 to-violet-500/25 blur-md animate-glow" />
+                  <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl shadow-sky-950/20 ring-1 ring-white/5">
+                    <img
+                      src="/profilepic.avif"
+                      alt="Ashwini Bheemireddy portrait"
+                      className="h-64 w-full object-cover sm:h-80 md:h-[24rem]"
+                    />
+                  </div>
                 </div>
 
                 <div className="grid gap-3 sm:grid-cols-2">
@@ -367,8 +396,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
-        <section id="about" className="mt-24 scroll-mt-28 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <ScrollReveal>
+        <section id="about" className="mt-16 scroll-mt-24 grid gap-6 sm:mt-20 lg:mt-24 lg:scroll-mt-28 lg:grid-cols-[0.9fr_1.1fr]">
           <div className={panelClass}>
             <SectionHeading
               eyebrow="About"
@@ -406,8 +437,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
-        <section id="skills" className="mt-24 scroll-mt-28">
+        <ScrollReveal>
+        <section id="skills" className="mt-16 scroll-mt-24 sm:mt-20 lg:mt-24 lg:scroll-mt-28">
           <SectionHeading
             eyebrow="Skills"
             title="A broad stack organized by real usage"
@@ -415,7 +448,7 @@ export default function Home() {
             icon={FiLayers}
           />
 
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Skilldata.map((group) => (
               <div key={group.title} className={panelClass}>
                 <div className="flex items-center justify-between gap-4">
@@ -437,8 +470,10 @@ export default function Home() {
             ))}
           </div>
         </section>
+        </ScrollReveal>
 
-        <section id="education" className="mt-24 scroll-mt-28">
+        <ScrollReveal>
+        <section id="education" className="mt-16 scroll-mt-24 sm:mt-20 lg:mt-24 lg:scroll-mt-28">
           <SectionHeading
             eyebrow="Education"
             title="Academic and professional foundation"
@@ -446,8 +481,8 @@ export default function Home() {
             icon={FiBookOpen}
           />
 
-          <div className="relative mx-auto max-w-5xl pl-8 sm:pl-10">
-            <div className="absolute left-3 top-0 bottom-0 w-[2px] rounded-full bg-gradient-to-b from-transparent via-sky-400/80 to-transparent sm:left-4" />
+          <div className="relative mx-auto max-w-5xl pl-6 sm:pl-8 md:pl-10">
+            <div className="absolute left-2 top-0 bottom-0 w-[2px] rounded-full bg-gradient-to-b from-transparent via-sky-400/80 to-transparent sm:left-3 md:left-4" />
 
             <div className="space-y-6">
               {EducationData.map((item) => (
@@ -455,7 +490,7 @@ export default function Home() {
                   key={item.id}
                   className={`${panelClass} relative transition duration-300 hover:-translate-y-1 hover:border-sky-400/30`}
                 >
-                  <span className="absolute -left-6 top-6 h-4 w-4 rounded-full border-2 border-slate-950 bg-sky-400 shadow-[0_0_0_6px_rgba(56,189,248,0.12)] sm:-left-7 sm:top-7" />
+                  <span className="absolute -left-[1.35rem] top-6 h-3.5 w-3.5 rounded-full border-2 border-slate-950 bg-sky-400 shadow-[0_0_0_6px_rgba(56,189,248,0.12)] sm:-left-6 sm:top-7 sm:h-4 sm:w-4 md:-left-7" />
 
                   <div className="flex flex-col gap-5 lg:flex-row lg:items-start">
                     <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-slate-900 shadow-lg shadow-sky-950/20">
@@ -483,8 +518,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
-        <section id="experience" className="mt-24 scroll-mt-28">
+        <ScrollReveal>
+        <section id="experience" className="mt-16 scroll-mt-24 sm:mt-20 lg:mt-24 lg:scroll-mt-28">
           <SectionHeading
             eyebrow="Experience"
             title="A concise view of my internships and roles"
@@ -494,12 +531,14 @@ export default function Home() {
 
           <div className="grid gap-6">
             {Experiencedata.map((item, index) => (
-              <ExperienceCard key={`${item.company}-${index}`} data={item} index={index} />
+              <ExperienceCard key={item.id} data={item} index={index} />
             ))}
           </div>
         </section>
+        </ScrollReveal>
 
-        <section id="projects" className="mt-24 scroll-mt-28">
+        <ScrollReveal>
+        <section id="projects" className="mt-16 scroll-mt-24 sm:mt-20 lg:mt-24 lg:scroll-mt-28">
           <SectionHeading
             eyebrow="Projects"
             title="Selected work with practical UI and product focus"
@@ -507,14 +546,16 @@ export default function Home() {
             icon={FiStar}
           />
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {ProjectData.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </section>
+        </ScrollReveal>
 
-        <section id="contact" className="mt-24 scroll-mt-28">
+        <ScrollReveal>
+        <section id="contact" className="mt-16 scroll-mt-24 sm:mt-20 lg:mt-24 lg:scroll-mt-28">
           <div className={`${panelClass} overflow-hidden`}>
             <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
               <div>
@@ -522,7 +563,7 @@ export default function Home() {
                   <FiLinkedin className="h-4 w-4" />
                   Contact
                 </div>
-                <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                <h2 className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
                   Let&apos;s work together on a clean, responsive product.
                 </h2>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
@@ -530,12 +571,12 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-3 lg:justify-end">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
                 <a
                   href={Bio.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-sky-400/30 hover:bg-white/10"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-sky-400/30 hover:bg-white/10 sm:w-auto"
                 >
                   GitHub
                   <FiGithub />
@@ -544,7 +585,7 @@ export default function Home() {
                   href={Bio.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-sky-400/30 hover:bg-white/10"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-sky-400/30 hover:bg-white/10 sm:w-auto"
                 >
                   LinkedIn
                   <FiLinkedin />
@@ -553,7 +594,7 @@ export default function Home() {
                   href={Bio.resume}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-400"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-400 sm:w-auto"
                 >
                   Resume
                   <FiArrowUpRight />
@@ -562,8 +603,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
-        <footer className="mt-16 pb-8 text-center text-sm text-slate-500">
+        <footer className="mt-12 pb-6 text-center text-xs text-slate-500 sm:mt-16 sm:pb-8 sm:text-sm">
           Built with Next.js and Tailwind CSS.
         </footer>
       </div>

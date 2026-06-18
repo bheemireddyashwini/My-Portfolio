@@ -17,7 +17,7 @@ const ProjectData = [
     title: "DiceeChallenge",
     date: "16 october 2024",
     description:
-      "A simple and fun dice game built with [your technologies, e.g., HTML, CSS, JavaScript]. Roll the dice, test your luck, and enjoy the thrill of chance! Perfect for learning about randomization, interactive UI, and game mechanics.",
+      "A simple and fun dice game built with HTML, CSS, and JavaScript. Roll the dice, test your luck, and enjoy the thrill of chance. Perfect for learning about randomization, interactive UI, and game mechanics.",
     image: "/dicee.png",
     technologies: ["HTML", "JavaScript", "CSS"],
     category: "javascript",

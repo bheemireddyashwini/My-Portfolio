@@ -10,7 +10,7 @@ const EducationData = [
   {
     id: 2,
     img: "/JNTU_logo.png",
-    school:"Jawaharlal Nehru Technological University JNTU Hyderabad India",
+    school: "Jawaharlal Nehru Technological University JNTU Hyderabad India",
     date: "July 2014",
     desc: "Graduated with a Master of Technology (M.Tech) in Power Electronics and Electric Drives, with an in-depth focus on advanced power conversion techniques, motor control, and energy-efficient systems. This program emphasized theoretical understanding and hands-on application in areas such as power semiconductor devices, electric drive systems, and renewable energy integration.",
     degree: "Master of Power Electronics and Electric Drives",
@@ -20,7 +20,7 @@ const EducationData = [
     id: 3,
     img: "/JNTU_logo.png",
     school: "Jawaharlal Nehru Technological University JNTU Hyderabad India",
-    date: " May 2013",
+    date: "May 2013",
     desc: "Graduated with a Bachelor of Engineering (B.E.) degree in Electrical and Electronics Engineering, gaining in-depth knowledge of electrical networks, digital systems, and power generation. With coursework in areas like machine design, electronic circuits, and instrumentation, this program equipped graduates with a strong foundation for applications in fields ranging from renewable energy to advanced electronics.",
     degree: "Bachelor of Engineering (B.E.) - Electrical and Electronics Engineering",
   },

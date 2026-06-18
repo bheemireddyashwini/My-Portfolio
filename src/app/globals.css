@@ -10,6 +10,7 @@ html {
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: var(--font-manrope), sans-serif;
   color: #f5f7fa;
   background:

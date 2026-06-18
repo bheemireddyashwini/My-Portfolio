@@ -2,9 +2,9 @@ export const Bio = {
   name: "Ashwini Bheemireddy",
   roles: ["Full Stack Developer"],
   description:
-    " I’m a proactive and adaptable professional with a strong commitment to personal and professional growth. Driven by a passion for learning, I strive to achieve excellence in all my work and am energized by new challenges. I bring a positive outlook and a results-focused approach to every task, always aiming to add real value and make a lasting impact.",
+    "I'm a proactive and adaptable professional with a strong commitment to personal and professional growth. Driven by a passion for learning, I strive to achieve excellence in all my work and am energized by new challenges. I bring a positive outlook and a results-focused approach to every task, always aiming to add real value and make a lasting impact.",
   github: "https://github.com/bheemireddyashwini",
-  resume: "https://docs.google.com/document/d/1c8hVdJNiMpT1hsCRwIJWQmotNniqIMWCTmHfxL4LCFc/edit?tab=t.0",
+  resume: "https://drive.google.com/file/d/1ComMxy2zK4tDKCHTyq3Omh8dVo2oopAw/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/ashwini2127/",
 };
 
