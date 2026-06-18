@@ -1,6 +1,7 @@
 import { Manrope, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { ThemeProvider } from "../components/ui/ThemeProvider";
+import { LanguageProvider } from "../components/ui/LanguageProvider";
 import { themeInitScript } from "./theme-script";
 import "./globals.css";
 
@@ -19,6 +20,10 @@ export const metadata = {
   description:
     "A modern portfolio built with Next.js and Tailwind CSS, showcasing experience, skills, education, and projects.",
   metadataBase: new URL("https://my-portfolio-ky55.onrender.com"),
+  icons: {
+    icon: "/logo-mark.png",
+    apple: "/logo-mark.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +35,9 @@ export default function RootLayout({ children }) {
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: themeInitScript }}
         />
-        <ThemeProvider>{children}</ThemeProvider>
+        <LanguageProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

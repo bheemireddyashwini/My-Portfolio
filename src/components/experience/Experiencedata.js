@@ -18,7 +18,7 @@ const Experiencedata = [
   {
     id: 1,
     img: "/logos/uglow.svg",
-    company: "U-Glow",
+    company: "U-Glow GmbH",
     role: "Frontend Developer · Internship",
     date: "Sep 2025 - Dec 2025 · 4 mos",
     location: "Mülheim an der Ruhr, Nordrhein-Westfalen · Remote",

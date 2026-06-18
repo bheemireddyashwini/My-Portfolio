@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FiBookOpen } from "react-icons/fi";
+import { useLanguage } from "./LanguageProvider";
 
 function EducationIcon({ src, alt }) {
   const [failed, setFailed] = useState(false);
@@ -30,7 +31,7 @@ function degreeLabel(degree) {
   return degree.trim().toUpperCase();
 }
 
-function EducationCard({ item }) {
+function EducationCard({ item, degree }) {
   const isCurrent = item.current;
 
   return (
@@ -50,7 +51,7 @@ function EducationCard({ item }) {
 
         <div className="min-w-0 pt-1">
           <h3 className="experience-role text-sm font-bold tracking-wide sm:text-base">
-            {degreeLabel(item.degree)}
+            {degreeLabel(degree)}
           </h3>
           <p className="experience-company mt-2 text-sm sm:text-[0.95rem]">{item.school}</p>
         </div>
@@ -77,10 +78,12 @@ function EducationIllustration() {
 }
 
 export function EducationSection({ items }) {
+  const { t } = useLanguage();
+
   return (
     <section id="education" className="experience-section relative mt-20 scroll-mt-24 sm:mt-28">
       <div className="mb-10 flex justify-center">
-        <span className="experience-pill">Educations</span>
+        <span className="experience-pill">{t.education.pill}</span>
       </div>
 
       <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
@@ -88,7 +91,11 @@ export function EducationSection({ items }) {
 
         <div className="space-y-5">
           {items.map((item) => (
-            <EducationCard key={item.id} item={item} />
+            <EducationCard
+              key={item.id}
+              item={item}
+              degree={t.education.items[item.id]?.degree ?? item.degree}
+            />
           ))}
         </div>
       </div>

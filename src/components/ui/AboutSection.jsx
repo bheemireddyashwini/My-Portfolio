@@ -1,8 +1,11 @@
+"use client";
+
 import { Bio } from "../../data/constants";
 import AboutProfilePhoto from "./AboutProfilePhoto";
 import Experiencedata from "../experience/Experiencedata";
 import ProjectData from "../Project/ProjectData";
 import Skilldata from "../Navbar/skills/Skilldata";
+import { useLanguage } from "./LanguageProvider";
 import {
   FiCode,
   FiCpu,
@@ -13,46 +16,45 @@ import {
   FiHeart,
 } from "react-icons/fi";
 
-const directionTags = [
+const stackTags = [
   { label: "HTML5", type: "stack" },
   { label: "CSS3", type: "stack" },
   { label: "ES6+", type: "stack" },
   { label: "React", type: "stack" },
   { label: "Next.js", type: "stack" },
   { label: "Tailwind CSS", type: "stack" },
-  { label: "Exploring AI", type: "ai" },
-  { label: "Learning AI tools", type: "ai" },
-];
-
-const strengths = [
-  "Semantic HTML5 and accessible markup",
-  "Modern CSS3 layouts (Flexbox, Grid, responsive design)",
-  "ES6+ JavaScript and React / Next.js delivery",
-  "API, headless CMS, and automation workflows",
 ];
 
 export function AboutSection() {
+  const { t } = useLanguage();
+
+  const directionTags = [
+    ...stackTags,
+    { label: t.about.exploringAi, type: "ai" },
+    { label: t.about.learningAi, type: "ai" },
+  ];
+
   const stats = [
-    { value: `${Experiencedata.length}+`, label: "Experience roles" },
-    { value: `${ProjectData.length}+`, label: "Projects shipped" },
-    { value: `${Skilldata.length}`, label: "Skill groups" },
+    { value: `${Experiencedata.length}+`, label: t.about.experienceRoles },
+    { value: `${ProjectData.length}+`, label: t.about.projectsShipped },
+    { value: `${Skilldata.length}`, label: t.about.skillGroups },
   ];
 
   return (
     <section id="about" className="experience-section relative mt-20 scroll-mt-24 sm:mt-28">
       <div className="mb-10 flex justify-center">
-        <span className="experience-pill">About me</span>
+        <span className="experience-pill">{t.about.pill}</span>
       </div>
 
       <div className="about-layout-grid">
         <div className="about-left-column">
           <article className="about-intro-card">
-            <span className="about-role-badge">{Bio.roles[0].toUpperCase()}</span>
+            <span className="about-role-badge">{t.about.roleBadge}</span>
             <h2 className="text-heading mt-4 text-3xl font-bold leading-tight sm:text-4xl">
-              Who I am?
+              {t.about.whoAmI}
             </h2>
             <p className="text-body mt-5 text-base leading-8 sm:text-lg">
-              {Bio.description.trim()}
+              {t.about.description}
             </p>
           </article>
 
@@ -62,11 +64,8 @@ export function AboutSection() {
                 <FiCode className="h-4 w-4" />
               </div>
               <div className="about-highlight-content">
-                <p className="about-highlight-title">What I build</p>
-                <p className="about-highlight-text">
-                  Responsive interfaces with semantic HTML5, modern CSS3 (Flexbox, Grid, variables),
-                  and ES6+ JavaScript for clean, production-ready UI.
-                </p>
+                <p className="about-highlight-title">{t.about.whatIBuild}</p>
+                <p className="about-highlight-text">{t.about.whatIBuildText}</p>
               </div>
             </article>
 
@@ -75,11 +74,8 @@ export function AboutSection() {
                 <FiHeart className="h-4 w-4" />
               </div>
               <div className="about-highlight-content">
-                <p className="about-highlight-title">What I value</p>
-                <p className="about-highlight-text">
-                  Clarity, smooth interactions, and layout rhythm. Design choices that feel
-                  intentional, not noisy.
-                </p>
+                <p className="about-highlight-title">{t.about.whatIValue}</p>
+                <p className="about-highlight-text">{t.about.whatIValueText}</p>
               </div>
             </article>
           </div>
@@ -90,17 +86,12 @@ export function AboutSection() {
                 <FiCpu className="h-4 w-4" />
               </div>
               <div>
-                <p className="about-direction-title">Current direction</p>
-                <p className="about-direction-subtitle">
-                  Building with modern frontend stacks and starting to explore AI in development.
-                </p>
+                <p className="about-direction-title">{t.about.currentDirection}</p>
+                <p className="about-direction-subtitle">{t.about.currentDirectionSubtitle}</p>
               </div>
             </div>
 
-            <p className="about-direction-note">
-              I am still learning the basics of AI. Right now I am getting a first look at how AI
-              tools and APIs could support real projects in the future.
-            </p>
+            <p className="about-direction-note">{t.about.currentDirectionNote}</p>
 
             <div className="about-direction-tags">
               {directionTags.map((tag) => (
@@ -131,7 +122,7 @@ export function AboutSection() {
               <FiGithub /> GitHub
             </a>
             <a href={Bio.resume} target="_blank" rel="noreferrer" className="btn-outline">
-              Resume
+              {t.about.resume}
             </a>
             <a href={Bio.linkedin} target="_blank" rel="noreferrer" className="btn-outline">
               <FiLinkedin /> LinkedIn
@@ -142,13 +133,13 @@ export function AboutSection() {
         <aside className="about-profile-card">
           <div className="about-profile-header">
             <div>
-              <p className="about-profile-label">Profile</p>
+              <p className="about-profile-label">{t.about.profile}</p>
               <h3 className="text-heading text-xl font-bold sm:text-2xl">{Bio.name}</h3>
             </div>
             <div className="about-status-badge" aria-label="Open to opportunities">
               <span className="about-status-glow" aria-hidden="true" />
               <span className="about-status-dot" aria-hidden="true" />
-              <span className="about-status-text">Open to opportunities</span>
+              <span className="about-status-text">{t.about.openToOpportunities}</span>
             </div>
           </div>
 
@@ -160,11 +151,8 @@ export function AboutSection() {
                 <FiTarget className="h-4 w-4" />
               </div>
               <div className="about-highlight-content">
-                <p className="about-highlight-title">Focus</p>
-                <p className="about-highlight-text">
-                  Frontend systems, interface polish, CMS workflows, and collaboration with product
-                  and backend teams.
-                </p>
+                <p className="about-highlight-title">{t.about.focus}</p>
+                <p className="about-highlight-text">{t.about.focusText}</p>
               </div>
             </div>
 
@@ -173,19 +161,16 @@ export function AboutSection() {
                 <FiLayers className="h-4 w-4" />
               </div>
               <div className="about-highlight-content">
-                <p className="about-highlight-title">Style</p>
-                <p className="about-highlight-text">
-                  Practical, responsive, and intentionally detailed, with clear structure and no
-                  visual noise.
-                </p>
+                <p className="about-highlight-title">{t.about.style}</p>
+                <p className="about-highlight-text">{t.about.styleText}</p>
               </div>
             </div>
           </div>
 
           <div className="about-info-box">
-            <p className="about-info-title">Core strengths</p>
+            <p className="about-info-title">{t.about.coreStrengths}</p>
             <ul className="about-strengths">
-              {strengths.map((item) => (
+              {t.about.strengths.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>

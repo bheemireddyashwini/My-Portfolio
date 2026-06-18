@@ -13,26 +13,7 @@ import {
   FiSend,
   FiUser,
 } from "react-icons/fi";
-
-const contactDetails = [
-  {
-    icon: FiMapPin,
-    label: "Location",
-    value: "Düsseldorf, Germany",
-  },
-  {
-    icon: FiBriefcase,
-    label: "Open to",
-    value: "Hybrid and remote opportunities",
-  },
-  {
-    icon: FiClock,
-    label: "Response time",
-    value: "Usually within 24 to 48 hours",
-  },
-];
-
-const availabilityTags = ["Full-time roles", "Freelance", "Collaboration"];
+import { useLanguage } from "./LanguageProvider";
 
 function ContactDetail({ icon: Icon, label, value }) {
   return (
@@ -49,10 +30,17 @@ function ContactDetail({ icon: Icon, label, value }) {
 }
 
 export default function ContactSection() {
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(true);
   const [isSent, setIsSent] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const contactDetails = [
+    { icon: FiMapPin, label: t.contact.location, value: t.contact.locationValue },
+    { icon: FiBriefcase, label: t.contact.openTo, value: t.contact.openToValue },
+    { icon: FiClock, label: t.contact.responseTime, value: t.contact.responseTimeValue },
+  ];
 
   useEffect(() => {
     const node = sectionRef.current;
@@ -114,7 +102,7 @@ export default function ContactSection() {
       <div className="contact-glow" aria-hidden="true" />
 
       <div className="mb-10 flex justify-center">
-        <span className="experience-pill">Contact</span>
+        <span className="experience-pill">{t.contact.pill}</span>
       </div>
 
       <div className="contact-layout">
@@ -131,11 +119,8 @@ export default function ContactSection() {
           </div>
 
           <div className="contact-intro-copy">
-            <h2 className="contact-heading">Let&apos;s build something great</h2>
-            <p className="contact-lead">
-              Have a project in mind or a role to discuss? I would love to hear from you. Share a few
-              details and I will get back to you soon.
-            </p>
+            <h2 className="contact-heading">{t.contact.heading}</h2>
+            <p className="contact-lead">{t.contact.lead}</p>
           </div>
 
           <div className="contact-details">
@@ -145,7 +130,7 @@ export default function ContactSection() {
           </div>
 
           <div className="contact-tags">
-            {availabilityTags.map((tag) => (
+            {t.contact.tags.map((tag) => (
               <span key={tag} className="contact-tag">
                 {tag}
               </span>
@@ -160,11 +145,9 @@ export default function ContactSection() {
                 <FiSend className="h-5 w-5" />
               </div>
               <h3 className="contact-form-heading">
-                Let&apos;s work <span>together</span>
+                {t.contact.formHeading} <span>{t.contact.formHeadingAccent}</span>
               </h3>
-              <p className="contact-form-subtext">
-                Have a project in mind or just want to say hi? Feel free to reach out!
-              </p>
+              <p className="contact-form-subtext">{t.contact.formSubtext}</p>
             </div>
 
             {isSent ? (
@@ -172,16 +155,14 @@ export default function ContactSection() {
                 <div className="contact-success-icon" aria-hidden="true">
                   <FiSend className="h-5 w-5" />
                 </div>
-                <h3 className="contact-success-title">Message ready to send</h3>
-                <p className="contact-success-text">
-                  Your email app should open shortly. You can also reach me directly on LinkedIn.
-                </p>
+                <h3 className="contact-success-title">{t.contact.successTitle}</h3>
+                <p className="contact-success-text">{t.contact.successText}</p>
                 <div className="contact-success-actions">
                   <a href={Bio.linkedin} target="_blank" rel="noreferrer" className="contact-send-btn">
-                    Open LinkedIn <FiArrowRight className="h-4 w-4" />
+                    {t.contact.openLinkedIn} <FiArrowRight className="h-4 w-4" />
                   </a>
                   <button type="button" className="contact-send-secondary" onClick={() => setIsSent(false)}>
-                    Send another
+                    {t.contact.sendAnother}
                   </button>
                 </div>
               </div>
@@ -190,7 +171,7 @@ export default function ContactSection() {
                 <form className="contact-form" onSubmit={handleSubmit}>
                   <div className="contact-field">
                     <label htmlFor="contact-name" className="contact-label">
-                      Your Name
+                      {t.contact.yourName}
                     </label>
                     <div className="contact-input-wrap">
                       <input
@@ -200,7 +181,7 @@ export default function ContactSection() {
                         required
                         value={form.name}
                         onChange={handleChange}
-                        placeholder="John Doe"
+                        placeholder={t.contact.namePlaceholder}
                         className="contact-input"
                       />
                       <FiUser className="contact-input-icon" aria-hidden="true" />
@@ -209,7 +190,7 @@ export default function ContactSection() {
 
                   <div className="contact-field">
                     <label htmlFor="contact-email" className="contact-label">
-                      Your Email
+                      {t.contact.yourEmail}
                     </label>
                     <div className="contact-input-wrap">
                       <input
@@ -219,7 +200,7 @@ export default function ContactSection() {
                         required
                         value={form.email}
                         onChange={handleChange}
-                        placeholder="john@example.com"
+                        placeholder={t.contact.emailPlaceholder}
                         className="contact-input"
                       />
                       <FiMail className="contact-input-icon" aria-hidden="true" />
@@ -228,7 +209,7 @@ export default function ContactSection() {
 
                   <div className="contact-field">
                     <label htmlFor="contact-message" className="contact-label">
-                      Message
+                      {t.contact.message}
                     </label>
                     <textarea
                       id="contact-message"
@@ -237,19 +218,19 @@ export default function ContactSection() {
                       rows={5}
                       value={form.message}
                       onChange={handleChange}
-                      placeholder="Write your message here..."
+                      placeholder={t.contact.messagePlaceholder}
                       className="contact-input contact-textarea resize-y"
                     />
                   </div>
 
                   <button type="submit" className="contact-send-btn">
                     <FiSend className="h-4 w-4" />
-                    Send Message
+                    {t.contact.sendMessage}
                   </button>
                 </form>
 
                 <div className="contact-form-divider">
-                  <span>OR</span>
+                  <span>{t.contact.or}</span>
                 </div>
 
                 <div className="contact-form-socials">
@@ -276,7 +257,7 @@ export default function ContactSection() {
                     target="_blank"
                     rel="noreferrer"
                     className="contact-form-social-btn"
-                    aria-label="Resume"
+                    aria-label={t.contact.resume}
                   >
                     <FiMail className="h-4 w-4" />
                   </a>

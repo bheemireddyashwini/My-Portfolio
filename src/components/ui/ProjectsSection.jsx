@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import ProjectSnippet from "./ProjectSnippet";
+import { useLanguage } from "./LanguageProvider";
 
 function ProjectAccordionItem({ project, index, isOpen, onToggle, itemRef }) {
   const fileName = `${project.title.toLowerCase().replace(/\s+/g, "-")}.js`;
@@ -67,6 +68,7 @@ function ProjectAccordionItem({ project, index, isOpen, onToggle, itemRef }) {
 
 export default function ProjectsSection({ projects }) {
   const sectionRef = useRef(null);
+  const { t } = useLanguage();
   const itemRefs = useRef({});
   const [isVisible, setIsVisible] = useState(false);
   const [openId, setOpenId] = useState(null);
@@ -125,7 +127,7 @@ export default function ProjectsSection({ projects }) {
       }`}
     >
       <div className="mb-10 flex justify-center">
-        <span className="experience-pill">Projects</span>
+        <span className="experience-pill">{t.projects.pill}</span>
       </div>
 
       <div className="projects-accordion">
