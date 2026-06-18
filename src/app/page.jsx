@@ -6,12 +6,12 @@ import Experiencedata from "../components/experience/Experiencedata";
 import CodeBlock from "../components/ui/CodeBlock";
 import SkillsMarquee from "../components/ui/SkillsMarquee";
 import ProjectsSection from "../components/ui/ProjectsSection";
+import ContactSection from "../components/ui/ContactSection";
 import { AboutSection } from "../components/ui/AboutSection";
 import { ExperienceSection } from "../components/ui/ExperienceSection";
 import { EducationSection } from "../components/ui/EducationSection";
 import ScrollToTop from "../components/ui/ScrollToTop";
 import SiteHeader from "../components/ui/SiteHeader";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 const navigation = [
   { href: "#about", label: "About" },
@@ -116,56 +116,7 @@ export default function Home() {
 
         <ProjectsSection projects={ProjectData} />
 
-        <section id="contact" className="mt-20 scroll-mt-24 sm:mt-28">
-          <span className="section-label">Contact</span>
-          <h2 className="text-heading mt-3 text-3xl font-bold sm:text-4xl">Contact with me</h2>
-          <p className="text-muted mt-4 max-w-2xl">
-            If you have any questions or work opportunities, feel free to reach out. I am open to
-            roles that match my skills and interests.
-          </p>
-
-          <div className="mt-8 grid gap-8 lg:grid-cols-2">
-            <div className="card-surface space-y-4 p-5 sm:p-6">
-              <div>
-                <label className="text-body mb-2 block text-sm">Your Name:</label>
-                <input type="text" placeholder="Your name" className="input-field" />
-              </div>
-              <div>
-                <label className="text-body mb-2 block text-sm">Your Email:</label>
-                <input type="email" placeholder="you@email.com" className="input-field" />
-              </div>
-              <div>
-                <label className="text-body mb-2 block text-sm">Your Message:</label>
-                <textarea
-                  rows={5}
-                  placeholder="Write your message..."
-                  className="input-field resize-y"
-                />
-              </div>
-              <a href={Bio.linkedin} target="_blank" rel="noreferrer" className="btn-primary inline-flex w-full sm:w-auto">
-                Send Message
-              </a>
-            </div>
-
-            <div className="card-surface flex flex-col justify-between gap-6 p-5 sm:p-6">
-              <div className="text-body space-y-3">
-                <p>Düsseldorf, Germany</p>
-                <p>Open to hybrid and remote opportunities</p>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <a href={Bio.github} target="_blank" rel="noreferrer" className="btn-outline">
-                  <FiGithub /> GitHub
-                </a>
-                <a href={Bio.linkedin} target="_blank" rel="noreferrer" className="btn-outline">
-                  <FiLinkedin /> LinkedIn
-                </a>
-                <a href={Bio.resume} target="_blank" rel="noreferrer" className="btn-primary">
-                  Resume
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ContactSection />
 
         <footer className="footer-border text-muted mt-16 border-t pt-8 text-center text-sm">
           © Developer Portfolio by {Bio.name}
