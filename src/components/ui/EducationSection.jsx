@@ -28,7 +28,7 @@ function EducationIcon({ src, alt }) {
 }
 
 function degreeLabel(degree) {
-  return degree.trim().toUpperCase();
+  return degree.trim();
 }
 
 function EducationCard({ item, degree }) {
@@ -50,7 +50,7 @@ function EducationCard({ item, degree }) {
         </div>
 
         <div className="min-w-0 pt-1">
-          <h3 className="experience-role text-sm font-bold tracking-wide sm:text-base">
+          <h3 className="experience-role text-sm sm:text-base">
             {degreeLabel(degree)}
           </h3>
           <p className="experience-company mt-2 text-sm sm:text-[0.95rem]">{item.school}</p>

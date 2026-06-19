@@ -59,7 +59,7 @@ export function AboutSection() {
             </div>
             <div className="about-highlight-content">
               <p className="about-highlight-title">{t.about.whatIValue}</p>
-              <p className="about-highlight-text">{t.about.whatIValueText}</p>
+              <p className="about-highlight-text about-card-text">{t.about.whatIValueText}</p>
             </div>
           </article>
 
@@ -74,7 +74,7 @@ export function AboutSection() {
               </div>
             </div>
 
-            <p className="about-direction-note">{t.about.currentDirectionNote}</p>
+            <p className="about-direction-note about-card-text">{t.about.currentDirectionNote}</p>
 
             <div className="about-direction-tags">
               {directionTags.map((tag) => (
@@ -132,7 +132,7 @@ export function AboutSection() {
               </div>
               <div className="about-highlight-content">
                 <p className="about-highlight-title">{t.about.focus}</p>
-                <p className="about-highlight-text">{t.about.focusText}</p>
+                <p className="about-highlight-text about-card-text">{t.about.focusText}</p>
               </div>
             </div>
 
@@ -142,7 +142,7 @@ export function AboutSection() {
               </div>
               <div className="about-highlight-content">
                 <p className="about-highlight-title">{t.about.style}</p>
-                <p className="about-highlight-text">{t.about.styleText}</p>
+                <p className="about-highlight-text about-card-text">{t.about.styleText}</p>
               </div>
             </div>
           </div>
