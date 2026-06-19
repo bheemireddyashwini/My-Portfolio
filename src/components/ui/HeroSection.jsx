@@ -41,6 +41,8 @@ function RotatingRole({ roles }) {
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const [firstName, ...lastNameParts] = Bio.name.split(" ");
+  const lastName = lastNameParts.join(" ");
 
   return (
     <section id="home" className="hero-section scroll-mt-24 grid items-start gap-8 lg:grid-cols-2 lg:gap-10">
@@ -56,14 +58,18 @@ export default function HeroSection() {
         }}
       >
         <motion.h1
-          className="hero-title text-heading text-3xl font-bold leading-tight sm:text-4xl md:text-5xl"
+          className="hero-title text-heading text-3xl font-bold sm:text-4xl md:text-5xl"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
           }}
         >
-          {t.hero.headline}{" "}
-          <span className="text-accent">{Bio.name}</span>.
+          <span className="hero-headline-line">{t.hero.headline}</span>
+          <span className="hero-name-line">
+            <span className="hero-name-first">{firstName}</span>
+            {lastName ? <span className="hero-name-last">{lastName}</span> : null}
+            <span className="hero-name-period">.</span>
+          </span>
         </motion.h1>
 
         <motion.p
