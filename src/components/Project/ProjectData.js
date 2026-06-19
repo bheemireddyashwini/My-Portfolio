@@ -2,6 +2,7 @@ const ProjectData = [
   {
     id: 1,
     title: "QuizMaster",
+    hidden: true,
     date: "5 january 2025",
     image: "/quizmaster.png",
     description:
@@ -15,6 +16,7 @@ const ProjectData = [
   {
     id: 2,
     title: "DiceeChallenge",
+    hidden: true,
     date: "16 october 2024",
     description:
       "A simple and fun dice game built with HTML, CSS, and JavaScript. Roll the dice, test your luck, and enjoy the thrill of chance. Perfect for learning about randomization, interactive UI, and game mechanics.",

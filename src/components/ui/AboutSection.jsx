@@ -31,7 +31,7 @@ export function AboutSection() {
 
   const stats = [
     { value: `${Experiencedata.length}+`, label: t.about.experienceRoles },
-    { value: `${ProjectData.length}+`, label: t.about.projectsShipped },
+    { value: `${ProjectData.filter((project) => !project.hidden).length}+`, label: t.about.projectsShipped },
     { value: `${Skilldata.length}`, label: t.about.skillGroups },
   ];
 

@@ -69,8 +69,8 @@ const de = {
       0: {
         role: "Frontend Developer · Full-stack exposure",
         desc: [
-          "Verantwortlich für die Frontend-Entwicklung von Fanody.com, einer Live-Events- und Fan-Video-Plattform, inklusive CMS-gestützter Content-Workflows und zweisprachiger (DE/EN) Nutzererfahrung.",
-          "Konzeption und Umsetzung von Directus-CMS-Modellen, Post-Composer, Banner-Upload, Fan-Einreichungen sowie einer dynamischen Events-Sektion mit Übersicht, Detailansichten und Autocomplete-Suche.",
+          "Mitwirkung an der Frontend-Entwicklung von Fanody.com, einer Live-Events- und Fan-Video-Plattform, mit CMS-gestützten Content-Workflows und zweisprachiger (DE/EN) Nutzererfahrung.",
+          "Umsetzung zentraler Frontend-Features wie Directus-CMS-Modelle, Post-Composer, Banner-Upload, Fan-Einreichungen sowie einer dynamischen Events-Sektion mit Übersicht, Detailansichten und Autocomplete-Suche.",
           "Entwicklung produktionsreifer UI mit React, Next.js, TypeScript und Tailwind CSS; Integration von REST-APIs mit Fokus auf responsive Gestaltung, Performance und wartbare Komponentenarchitektur.",
         ],
         specialization: "Frontend-Entwicklung, Directus CMS, Events-Plattform-UI, REST-API-Integration, i18n",
@@ -211,9 +211,9 @@ const de = {
         title: "Fanody.com",
         date: "Jan 2026 – Jun 2026",
         bullets: [
-          "Frontend-Entwicklung für Fanody.com, eine Live-Events- und Fan-Video-Plattform für Entertainment-Zielgruppen.",
+          "Mitwirkung an der Frontend-Entwicklung für Fanody.com, eine Live-Events- und Fan-Video-Plattform für Entertainment-Zielgruppen.",
           "Umsetzung von Directus-CMS-Modellen, Post-Composer, Banner-Upload, Fan-Einreichungen sowie einer dynamischen Events-Sektion mit Übersicht, Detailansichten und Autocomplete-Suche.",
-          "Vollständige zweisprachige (DE/EN) Internationalisierung für CMS-gestützte Inhalte und nutzerseitige Oberflächen mit React, Next.js und Tailwind CSS.",
+          "Umsetzung der zweisprachigen (DE/EN) Internationalisierung für CMS-gestützte Inhalte und nutzerseitige Oberflächen mit React, Next.js und Tailwind CSS.",
         ],
       },
       {

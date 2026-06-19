@@ -17,6 +17,7 @@ const marqueeSkills = Skilldata.flatMap((group) => group.skills);
 
 export default function Home() {
   return (
+    <>
     <main className="min-h-screen bg-page">
       <SiteHeader />
 
@@ -37,8 +38,8 @@ export default function Home() {
 
         <SiteFooter />
       </div>
-
-      <ScrollToTop />
     </main>
+    <ScrollToTop />
+  </>
   );
 }

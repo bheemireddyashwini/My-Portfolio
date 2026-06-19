@@ -131,7 +131,9 @@ export default function ProjectsSection({ projects }) {
       </div>
 
       <div className="projects-accordion">
-        {projects.map((project, index) => (
+        {projects
+          .filter((project) => !project.hidden)
+          .map((project, index) => (
           <ProjectAccordionItem
             key={project.id}
             project={project}

@@ -1,28 +1,40 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { FiArrowUp } from "react-icons/fi";
+
+function getScrollY() {
+  return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+}
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 400);
+    setMounted(true);
+
+    const onScroll = () => setVisible(getScrollY() > 200);
     onScroll();
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (!visible) return null;
+  if (!mounted) return null;
 
-  return (
+  return createPortal(
     <button
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-pink-500 to-violet-600 text-white shadow-[0_8px_30px_rgba(236,72,153,0.45)] transition hover:scale-105"
+      className={`scroll-to-top-btn${visible ? " is-visible" : ""}`}
       aria-label="Scroll to top"
+      aria-hidden={!visible}
+      tabIndex={visible ? 0 : -1}
     >
-      <FiArrowUp className="h-5 w-5" />
-    </button>
+      <FiArrowUp className="scroll-to-top-icon" aria-hidden="true" />
+    </button>,
+    document.body,
   );
 }
