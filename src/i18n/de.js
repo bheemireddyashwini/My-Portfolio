@@ -22,10 +22,9 @@ const de = {
     subtitle: "Fullstack Entwicklerin",
   },
   skills: {
-    label: "Skills",
-    title: "Skills",
+    pill: "Fähigkeiten",
     description:
-      "Technologien und Tools, die ich in Frontend, Backend und Projektarbeit einsetze.",
+      "Mein Stack für moderne Full-Stack-Webanwendungen.",
   },
   about: {
     pill: "Über mich",

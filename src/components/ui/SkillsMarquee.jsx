@@ -39,10 +39,7 @@ export default function SkillsMarquee({ skills }) {
   const track = [...skills, ...skills];
 
   return (
-    <div className="skills-marquee relative mt-8 overflow-hidden">
-      <div className="skills-marquee-fade-left pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-24" />
-      <div className="skills-marquee-fade-right pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-24" />
-
+    <div className="skills-marquee relative">
       <div className="skills-marquee-track flex w-max gap-4 sm:gap-5">
         {track.map((skill, index) => (
           <SkillItem key={`${skill.name}-${index}`} skill={skill} />

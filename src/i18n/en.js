@@ -22,10 +22,9 @@ const en = {
     subtitle: "Fullstack Developer",
   },
   skills: {
-    label: "Skills",
-    title: "Skills",
+    pill: "Skills",
     description:
-      "Technologies and tools I use across frontend, backend, and delivery work.",
+      "The stack I use to build modern, full-stack web applications.",
   },
   about: {
     pill: "About me",
