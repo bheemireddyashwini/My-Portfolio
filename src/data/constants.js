@@ -3,7 +3,7 @@ export const Bio = {
   roles: [
     "Full Stack Developer",
     "Fluent in English",
-    "Certified in German (B2 Level)",
+    "German B2 completed (Lingoda)",
   ],
   description:
     "I'm a proactive and adaptable professional with a strong commitment to personal and professional growth. Driven by a passion for learning, I strive to achieve excellence in all my work and am energized by new challenges. I bring a positive outlook and a results-focused approach to every task, always aiming to add real value and make a lasting impact.",

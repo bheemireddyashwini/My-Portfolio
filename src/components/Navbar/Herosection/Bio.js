@@ -3,7 +3,7 @@ const Bio = {
   roles: [
     "Full Stack Developer",
     "Fluent in English",
-    "Certified in German (B2 Level)",
+    "German B2 completed (Lingoda)",
   ],
 
   github: "https://github.com/bheemireddyashwini",

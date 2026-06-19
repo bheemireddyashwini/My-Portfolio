@@ -1,21 +1,41 @@
 "use client";
 
+import Link from "next/link";
 import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
 import SiteLogo from "./SiteLogo";
 import { useLanguage } from "./LanguageProvider";
 
-const navHrefs = [
-  { href: "#about", key: "about" },
-  { href: "#experience", key: "experience" },
-  { href: "#skills", key: "skills" },
-  { href: "#education", key: "education" },
-  { href: "#projects", key: "projects" },
-  { href: "#contact", key: "contact" },
+const navItems = [
+  { href: "#about", key: "about", type: "anchor" },
+  { href: "#experience", key: "experience", type: "anchor" },
+  { href: "#skills", key: "skills", type: "anchor" },
+  { href: "#education", key: "education", type: "anchor" },
+  { href: "#projects", key: "projects", type: "anchor" },
+  { href: "#contact", key: "contact", type: "anchor" },
+  { href: "/resume", key: "resume", type: "page" },
 ];
 
 export default function SiteHeader() {
   const { t } = useLanguage();
+
+  const renderNavLink = (item, className) => {
+    const label = t.nav[item.key];
+
+    if (item.type === "page") {
+      return (
+        <Link key={item.href} href={item.href} className={className}>
+          {label}
+        </Link>
+      );
+    }
+
+    return (
+      <a key={item.href} href={item.href} className={className}>
+        {label}
+      </a>
+    );
+  };
 
   return (
     <header className="site-header fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md">
@@ -24,11 +44,12 @@ export default function SiteHeader() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <nav className="hidden items-center gap-5 md:flex lg:gap-6">
-            {navHrefs.map((item) => (
-              <a key={item.href} href={item.href} className="nav-link">
-                {t.nav[item.key]}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              renderNavLink(
+                item,
+                item.type === "page" ? "nav-link nav-link-resume" : "nav-link",
+              ),
+            )}
           </nav>
 
           <div className="header-utilities flex items-center gap-1 sm:gap-2">
@@ -44,11 +65,12 @@ export default function SiteHeader() {
               </svg>
             </summary>
             <div className="mobile-menu-panel absolute right-0 mt-2 w-52 rounded-xl p-2 shadow-xl">
-              {navHrefs.map((item) => (
-                <a key={item.href} href={item.href} className="mobile-nav-link">
-                  {t.nav[item.key]}
-                </a>
-              ))}
+              {navItems.map((item) =>
+                renderNavLink(
+                  item,
+                  item.type === "page" ? "mobile-nav-link mobile-nav-link-resume" : "mobile-nav-link",
+                ),
+              )}
             </div>
           </details>
         </div>

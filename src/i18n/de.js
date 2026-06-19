@@ -6,6 +6,7 @@ const de = {
     education: "Ausbildung",
     projects: "Projekte",
     contact: "Kontakt",
+    resume: "Lebenslauf",
   },
   hero: {
     headline: "Hallo, ich bin",
@@ -15,7 +16,7 @@ const de = {
     getResume: "Lebenslauf",
     rotatingRoles: [
       "Fließend Englisch",
-      "Deutsch zertifiziert (B2-Niveau)",
+      "Deutsch B2 abgeschlossen (Lingoda)",
     ],
   },
   logo: {
@@ -180,7 +181,7 @@ const de = {
       linkedinLabel: "LinkedIn",
     },
     availability: "Verfügbar ab Juli 2026",
-    languageList: ["Englisch — Fließend", "Deutsch — B2 zertifiziert (TELC / Lingoda)"],
+    languageList: ["Englisch — Fließend", "Deutsch — B2 abgeschlossen (Lingoda)"],
     skillGroups: [
       {
         title: "Frontend & Web",
@@ -202,7 +203,7 @@ const de = {
     ],
     certifications: [
       { name: "Web- und Softwareentwickler Zertifikat", issuer: "Digital Career Institute", date: "Mai 2025" },
-      { name: "B2 Deutschkurs", issuer: "Lingoda", date: "März 2025" },
+      { name: "B2 Deutschkurs — Abgeschlossen", issuer: "Lingoda", date: "März 2025" },
       { name: "B1 Deutschzertifikat", issuer: "TELC", date: "August 2016" },
     ],
     featuredProjects: [

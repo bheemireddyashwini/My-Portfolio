@@ -300,6 +300,21 @@ body {
   color: var(--accent-soft);
 }
 
+.nav-link-resume {
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, var(--btn-primary-start), var(--btn-primary-mid), var(--btn-primary-end));
+  color: var(--btn-primary-text) !important;
+  box-shadow: var(--btn-primary-shadow);
+  letter-spacing: 0.1em;
+}
+
+.nav-link-resume:hover {
+  color: var(--btn-primary-text) !important;
+  filter: brightness(1.06);
+}
+
 .site-header {
   border-color: var(--border-subtle);
   background: var(--bg-header);
@@ -872,6 +887,20 @@ body {
 .mobile-nav-link:hover {
   background: var(--toggle-bg);
   color: var(--accent-soft);
+}
+
+.mobile-nav-link-resume {
+  margin-top: 0.35rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--btn-primary-start), var(--btn-primary-mid), var(--btn-primary-end));
+  color: var(--btn-primary-text) !important;
+  box-shadow: var(--btn-primary-shadow);
+}
+
+.mobile-nav-link-resume:hover {
+  background: linear-gradient(135deg, var(--btn-primary-start), var(--btn-primary-mid), var(--btn-primary-end));
+  color: var(--btn-primary-text) !important;
+  filter: brightness(1.06);
 }
 
 .card-surface {

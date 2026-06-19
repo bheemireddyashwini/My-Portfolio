@@ -6,6 +6,7 @@ const en = {
     education: "Education",
     projects: "Projects",
     contact: "Contact",
+    resume: "Resume",
   },
   hero: {
     headline: "Hi, I'm",
@@ -15,7 +16,7 @@ const en = {
     getResume: "Get Resume",
     rotatingRoles: [
       "Fluent in English",
-      "Certified in German (B2 Level)",
+      "German B2 completed (Lingoda)",
     ],
   },
   logo: {
@@ -179,7 +180,7 @@ const en = {
       linkedinLabel: "LinkedIn",
     },
     availability: "Available from July 2026",
-    languageList: ["English — Fluent", "German — B2 certified (TELC / Lingoda)"],
+    languageList: ["English — Fluent", "German — B2 completed (Lingoda)"],
     skillGroups: [
       {
         title: "Frontend & Web",
@@ -201,7 +202,7 @@ const en = {
     ],
     certifications: [
       { name: "Web & Software Developer Certificate", issuer: "Digital Career Institute", date: "May 2025" },
-      { name: "German B2 Course", issuer: "Lingoda", date: "March 2025" },
+      { name: "German B2 Course — Completed", issuer: "Lingoda", date: "March 2025" },
       { name: "German B1 Certificate", issuer: "TELC", date: "August 2016" },
     ],
     featuredProjects: [
