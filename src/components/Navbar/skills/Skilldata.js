@@ -32,6 +32,8 @@ const Skilldata = [
       { name: "Git", image: "/skills/git.svg" },
       { name: "GitHub", image: "/skills/github.svg" },
       { name: "VS Code", image: "/skills/vscode.svg" },
+      { name: "Cursor", image: "/skills/cursor.svg" },
+      { name: "GitHub Copilot", image: "/skills/github-copilot.svg" },
       { name: "Figma", image: "/skills/figma.svg" },
       { name: "PyCharm", image: "/skills/pycharm.svg" },
       { name: "Selenium", image: "/skills/selenium.svg" },

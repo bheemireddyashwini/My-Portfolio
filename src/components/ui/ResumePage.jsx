@@ -51,7 +51,7 @@ export default function ResumePage() {
             </li>
             <li>
               <a href={portfolioUrl} target="_blank" rel="noreferrer">
-                {r.contact.portfolioLabel}: {portfolioUrl.replace("https://", "")}
+                {r.contact.portfolioLabel}
               </a>
             </li>
             <li>
@@ -94,11 +94,6 @@ export default function ResumePage() {
                       <li key={line}>{line}</li>
                     ))}
                   </ul>
-                  {item.skills?.length ? (
-                    <p className="resume-tags">
-                      <strong>{locale === "de" ? "Technologien:" : "Tech:"}</strong> {item.skills.join(", ")}
-                    </p>
-                  ) : null}
                 </div>
               );
             })}

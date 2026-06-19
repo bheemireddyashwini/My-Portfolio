@@ -67,10 +67,10 @@ const en = {
     pill: "Experiences",
     items: {
       0: {
-        role: "Frontend Developer · Full-stack exposure",
+        role: "Frontend Developer · Full stack exposure",
         desc: [
-          "Contributed to frontend development for Fanody.com, a live events and fan-video platform, building CMS-backed content workflows and bilingual (DE/EN) user experiences.",
-          "Implemented key frontend features including Directus CMS models, post composer, banner upload, fan submission flows, and a dynamic events section with listings, detail views, and autocomplete search.",
+          "Contributed to frontend development for Fanody.com, a live events and fan video platform, building CMS backed content workflows and bilingual (DE/EN) user experiences.",
+          "Implemented key frontend features including Directus CMS models, post composer, banner upload, fan submission flows, custom verification badges for artists, and a dynamic events section with listings, detail views, and autocomplete search.",
           "Built production UI with React, Next.js, TypeScript, and Tailwind CSS; integrated REST APIs with emphasis on responsive design, performance, and maintainable component architecture.",
         ],
         specialization: "Frontend development, Directus CMS, events platform UI, REST API integration, i18n",
@@ -78,10 +78,10 @@ const en = {
       1: {
         role: "Frontend Developer · Internship",
         desc: [
-          "Developed and maintained responsive React.js applications using modern JavaScript (ES6+), contributing to production-ready agricultural workflow tooling.",
-          "Designed and optimized crop-and-scan user journeys with real-time previews, status feedback, and intuitive multi-step interfaces.",
-          "Refactored core UI modules—map layers, panels, and notification systems—to improve usability, consistency, and long-term maintainability.",
-          "Implemented geospatial visualization with GeoJSON and KML, including custom styling, layer controls, and interactive map-driven workflows.",
+          "Developed and maintained responsive React.js applications using modern JavaScript (ES6+), contributing to production ready agricultural workflow tooling.",
+          "Designed and optimized crop and scan user journeys with real time previews, status feedback, and intuitive multi step interfaces.",
+          "Refactored core UI modules including map layers, panels, and notification systems to improve usability, consistency, and long term maintainability.",
+          "Implemented geospatial visualization with GeoJSON and KML, including custom styling, layer controls, and interactive map driven workflows.",
           "Established centralized German/English i18n architecture to support scalable multilingual product delivery.",
         ],
         specialization: "UI/UX optimization, geospatial mapping, frontend architecture, i18n",
@@ -98,9 +98,9 @@ const en = {
       3: {
         role: "Mobile Application Developer",
         desc: [
-          "Developed cross-platform mobile applications with Flutter and Dart, delivering responsive interfaces for iOS and Android targets.",
+          "Developed cross platform mobile applications with Flutter and Dart, delivering responsive interfaces for iOS and Android targets.",
           "Implemented adaptive layouts and component patterns optimized for varied screen sizes and device capabilities.",
-          "Conducted simulator and device-based testing to validate usability, stability, and release readiness prior to deployment.",
+          "Conducted simulator and device based testing to validate usability, stability, and release readiness prior to deployment.",
         ],
       },
     },
@@ -197,7 +197,7 @@ const en = {
       },
       {
         title: "Tools",
-        items: "Git, GitHub, Bitbucket, VS Code, Figma, PyCharm",
+        items: "Git, GitHub, Bitbucket, VS Code, Cursor, GitHub Copilot, Figma, PyCharm",
       },
     ],
     certifications: [
@@ -210,9 +210,8 @@ const en = {
         title: "Fanody.com",
         date: "Jan 2026 – Jun 2026",
         bullets: [
-          "Contributed to frontend development for Fanody.com, a live events and fan-video platform for entertainment audiences.",
-          "Implemented Directus CMS models, post composer, banner upload, fan submission workflows, and a dynamic events section with listings, detail views, and autocomplete search.",
-          "Implemented bilingual (DE/EN) internationalization across CMS-driven content and user-facing interfaces using React, Next.js, and Tailwind CSS.",
+          "Live events and fan-video platform with Directus CMS, post composer, banner upload, and fan submissions.",
+          "Events module with search, user navigation menu, and DE/EN i18n; React, Next.js, TypeScript, Tailwind CSS, REST APIs.",
         ],
       },
       {

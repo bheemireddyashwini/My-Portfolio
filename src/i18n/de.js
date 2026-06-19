@@ -67,40 +67,40 @@ const de = {
     pill: "Erfahrungen",
     items: {
       0: {
-        role: "Frontend Developer · Full-stack exposure",
+        role: "Frontend Developer · Full stack exposure",
         desc: [
-          "Mitwirkung an der Frontend-Entwicklung von Fanody.com, einer Live-Events- und Fan-Video-Plattform, mit CMS-gestützten Content-Workflows und zweisprachiger (DE/EN) Nutzererfahrung.",
-          "Umsetzung zentraler Frontend-Features wie Directus-CMS-Modelle, Post-Composer, Banner-Upload, Fan-Einreichungen sowie einer dynamischen Events-Sektion mit Übersicht, Detailansichten und Autocomplete-Suche.",
-          "Entwicklung produktionsreifer UI mit React, Next.js, TypeScript und Tailwind CSS; Integration von REST-APIs mit Fokus auf responsive Gestaltung, Performance und wartbare Komponentenarchitektur.",
+          "Mitwirkung an der Frontend Entwicklung von Fanody.com, einer Live Events und Fan Video Plattform, mit CMS gestützten Content Workflows und zweisprachiger (DE/EN) Nutzererfahrung.",
+          "Umsetzung zentraler Frontend Features wie Directus CMS Modelle, Post Composer, Banner Upload, Fan Einreichungen, individuelle Verifizierungs Badges für Artists sowie einer dynamischen Events Sektion mit Übersicht, Detailansichten und Autocomplete Suche.",
+          "Entwicklung produktionsreifer UI mit React, Next.js, TypeScript und Tailwind CSS; Integration von REST APIs mit Fokus auf responsive Gestaltung, Performance und wartbare Komponentenarchitektur.",
         ],
         specialization: "Frontend-Entwicklung, Directus CMS, Events-Plattform-UI, REST-API-Integration, i18n",
       },
       1: {
         role: "Frontend Developer · Praktikum",
         desc: [
-          "Entwicklung und Pflege responsiver React.js-Anwendungen mit modernem JavaScript (ES6+) für produktionsnahe Agrar-Workflow-Tools.",
-          "Konzeption und Optimierung von Crop-and-Scan-Nutzerflows mit Echtzeit-Vorschau, Status-Feedback und intuitiven mehrstufigen Oberflächen.",
-          "Refactoring zentraler UI-Module—Map-Layer, Panels und Benachrichtigungssysteme—für bessere Usability, Konsistenz und langfristige Wartbarkeit.",
-          "Geodaten-Visualisierung mit GeoJSON und KML inklusive eigenem Styling, Layer-Steuerung und interaktiven kartenbasierten Workflows.",
-          "Aufbau einer zentralen DE/EN-i18n-Architektur für skalierbare mehrsprachige Produktauslieferung.",
+          "Entwicklung und Pflege responsiver React.js Anwendungen mit modernem JavaScript (ES6+) für produktionsnahe Agrar Workflow Tools.",
+          "Konzeption und Optimierung von Crop and Scan Nutzerflows mit Echtzeit Vorschau, Status Feedback und intuitiven mehrstufigen Oberflächen.",
+          "Refactoring zentraler UI Module einschließlich Map Layer, Panels und Benachrichtigungssysteme für bessere Usability, Konsistenz und langfristige Wartbarkeit.",
+          "Geodaten Visualisierung mit GeoJSON und KML inklusive eigenem Styling, Layer Steuerung und interaktiven kartenbasierten Workflows.",
+          "Aufbau einer zentralen DE/EN i18n Architektur für skalierbare mehrsprachige Produktauslieferung.",
         ],
         specialization: "UI/UX-Optimierung, Geodaten-Karten, Frontend-Architektur, i18n",
       },
       2: {
         role: "Python Automation Praktikant",
         desc: [
-          "Mitwirkung an Web- und API-Testautomatisierung bei ARAG IT zur Stärkung interner Qualitätssicherungsprozesse.",
-          "Entwicklung und Pflege von Selenium-WebDriver- und Pytest-Testsuites für Regression und Integrationsabdeckung.",
-          "Entwicklung leichtgewichtiger Flask-REST-APIs zur Unterstützung interner Automatisierungs- und Test-Workflows.",
-          "Enge Zusammenarbeit mit QA-Engineers zur Optimierung der Testausführung, Erhöhung der Abdeckung und Reduzierung manueller Prüfaufwände.",
+          "Mitwirkung an Web und API Testautomatisierung bei ARAG IT zur Stärkung interner Qualitätssicherungsprozesse.",
+          "Entwicklung und Pflege von Selenium WebDriver und Pytest Testsuites für Regression und Integrationsabdeckung.",
+          "Entwicklung leichtgewichtiger Flask REST APIs zur Unterstützung interner Automatisierungs und Test Workflows.",
+          "Enge Zusammenarbeit mit QA Engineers zur Optimierung der Testausführung, Erhöhung der Abdeckung und Reduzierung manueller Prüfaufwände.",
         ],
       },
       3: {
         role: "Mobile Application Developer",
         desc: [
-          "Entwicklung plattformübergreifender mobiler Anwendungen mit Flutter und Dart für iOS- und Android-Zielplattformen.",
+          "Entwicklung plattformübergreifender mobiler Anwendungen mit Flutter und Dart für iOS und Android Zielplattformen.",
           "Umsetzung adaptiver Layouts und Komponentenmuster für unterschiedliche Bildschirmgrößen und Gerätefähigkeiten.",
-          "Simulator- und gerätebasierte Tests zur Validierung von Usability, Stabilität und Release-Reife vor dem Deployment.",
+          "Simulator und gerätebasierte Tests zur Validierung von Usability, Stabilität und Release Reife vor dem Deployment.",
         ],
       },
     },
@@ -198,7 +198,7 @@ const de = {
       },
       {
         title: "Tools",
-        items: "Git, GitHub, Bitbucket, VS Code, Figma, PyCharm",
+        items: "Git, GitHub, Bitbucket, VS Code, Cursor, GitHub Copilot, Figma, PyCharm",
       },
     ],
     certifications: [
@@ -211,9 +211,8 @@ const de = {
         title: "Fanody.com",
         date: "Jan 2026 – Jun 2026",
         bullets: [
-          "Mitwirkung an der Frontend-Entwicklung für Fanody.com, eine Live-Events- und Fan-Video-Plattform für Entertainment-Zielgruppen.",
-          "Umsetzung von Directus-CMS-Modellen, Post-Composer, Banner-Upload, Fan-Einreichungen sowie einer dynamischen Events-Sektion mit Übersicht, Detailansichten und Autocomplete-Suche.",
-          "Umsetzung der zweisprachigen (DE/EN) Internationalisierung für CMS-gestützte Inhalte und nutzerseitige Oberflächen mit React, Next.js und Tailwind CSS.",
+          "Live-Events- und Fan-Video-Plattform mit Directus CMS, Post-Composer, Banner-Upload und Fan-Einreichungen.",
+          "Events-Modul mit Suche, Benutzer-Navigationsmenü und DE/EN-i18n; React, Next.js, TypeScript, Tailwind CSS, REST-APIs.",
         ],
       },
       {
