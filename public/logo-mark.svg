@@ -4,11 +4,11 @@
       @import url("https://fonts.googleapis.com/css2?family=Allura&amp;family=Great+Vibes&amp;display=swap");
     </style>
     <linearGradient id="ab-grad" x1="34" y1="6" x2="82" y2="50" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ec4899" />
-      <stop offset="0.55" stop-color="#a855f7" />
-      <stop offset="1" stop-color="#e879f9" />
+      <stop stop-color="#1e40af" />
+      <stop offset="0.55" stop-color="#2563eb" />
+      <stop offset="1" stop-color="#3b82f6" />
     </linearGradient>
   </defs>
-  <text x="32" y="44" text-anchor="middle" fill="#ec4899" font-family="'Allura', cursive" font-size="58">A</text>
+  <text x="32" y="44" text-anchor="middle" fill="#1e3a8a" font-family="'Allura', cursive" font-size="58">A</text>
   <text x="58" y="44" text-anchor="middle" fill="url(#ab-grad)" font-family="'Great Vibes', cursive" font-size="52">B</text>
 </svg>

@@ -45,64 +45,32 @@ export default function HeroSection() {
   const lastName = lastNameParts.join(" ");
 
   return (
-    <section id="home" className="hero-section scroll-mt-24 grid items-start gap-8 lg:grid-cols-2 lg:gap-10">
-      <motion.div
-        className="hero-copy"
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: {},
-          visible: {
-            transition: { staggerChildren: 0.12, delayChildren: 0.05 },
-          },
-        }}
-      >
-        <motion.h1
-          className="hero-title text-heading text-3xl font-bold sm:text-4xl md:text-5xl"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-          }}
-        >
-          <span className="hero-headline-line">{t.hero.headline}</span>
+    <section id="home" className="hero-section scroll-mt-[8.5rem] grid items-start gap-8 lg:grid-cols-2 lg:gap-10">
+      <div className="hero-copy">
+        <p className="hero-greeting">{t.hero.headline}</p>
+
+        <h1 className="hero-name-display">
           <span className="hero-name-line">
             <span className="hero-name-first">{firstName}</span>
             {lastName ? <span className="hero-name-last">{lastName}</span> : null}
             <span className="hero-name-period">.</span>
           </span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          className="hero-description text-body mt-4 max-w-xl text-base leading-8 sm:mt-5 sm:text-lg"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-          }}
-        >
+        <p className="hero-description text-body mt-4 max-w-xl text-base leading-8 sm:mt-5 sm:text-lg">
           {t.hero.description}
-        </motion.p>
+        </p>
 
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 16 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
-          }}
-        >
+        <div className="hero-role-wrap">
           <RotatingRole roles={t.hero.rotatingRoles} />
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row"
-          variants={{
-            hidden: { opacity: 0, y: 16 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
-          }}
-        >
+        <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
           <a href="#contact" className="btn-primary hero-btn">
             {t.hero.contactMe}
           </a>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       <motion.div
         className="hero-visual"

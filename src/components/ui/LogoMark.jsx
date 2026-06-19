@@ -23,12 +23,12 @@ export default function LogoMark({ className = "", animated = true }) {
     >
       <defs>
         <linearGradient id={gradId} x1="34" y1="6" x2="82" y2="50" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#ec4899" />
-          <stop offset="0.55" stopColor="#a855f7" />
-          <stop offset="1" stopColor="#e879f9" />
+          <stop stopColor="#1e40af" />
+          <stop offset="0.55" stopColor="#2563eb" />
+          <stop offset="1" stopColor="#3b82f6" />
         </linearGradient>
       </defs>
-      <text x="32" y="44" textAnchor="middle" className="logo-mark-a" fill="#ec4899">
+      <text x="32" y="44" textAnchor="middle" className="logo-mark-a" fill="var(--logo-a-color, #1e3a8a)">
         A
       </text>
       <text x="58" y="44" textAnchor="middle" className="logo-mark-b" fill={`url(#${gradId})`}>
