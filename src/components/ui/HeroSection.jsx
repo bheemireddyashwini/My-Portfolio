@@ -95,9 +95,6 @@ export default function HeroSection() {
           <a href="#contact" className="btn-primary hero-btn">
             {t.hero.contactMe}
           </a>
-          <a href={Bio.resume} target="_blank" rel="noreferrer" className="btn-outline hero-btn">
-            {t.hero.getResume}
-          </a>
         </motion.div>
       </motion.div>
 

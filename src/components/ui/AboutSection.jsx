@@ -101,9 +101,6 @@ export function AboutSection() {
             <a href={Bio.github} target="_blank" rel="noreferrer" className="btn-primary">
               <FiGithub /> GitHub
             </a>
-            <a href={Bio.resume} target="_blank" rel="noreferrer" className="btn-outline">
-              {t.about.resume}
-            </a>
             <a href={Bio.linkedin} target="_blank" rel="noreferrer" className="btn-outline">
               <FiLinkedin /> LinkedIn
             </a>

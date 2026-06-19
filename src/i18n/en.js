@@ -11,7 +11,7 @@ const en = {
     headline: "Hi, I'm",
     description:
       "A Full Stack Developer passionate about creating responsive, high-performance web applications from front end to back end.",
-    contactMe: "Contact me",
+    contactMe: "Get in touch",
     getResume: "Get Resume",
     rotatingRoles: [
       "Fluent in English",

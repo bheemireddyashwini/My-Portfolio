@@ -252,15 +252,6 @@ export default function ContactSection() {
                   >
                     <FiLinkedin className="h-4 w-4" />
                   </a>
-                  <a
-                    href={Bio.resume}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="contact-form-social-btn"
-                    aria-label={t.contact.resume}
-                  >
-                    <FiMail className="h-4 w-4" />
-                  </a>
                 </div>
               </>
             )}
