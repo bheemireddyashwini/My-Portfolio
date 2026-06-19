@@ -68,38 +68,38 @@ const de = {
       0: {
         role: "Frontend Developer · Full-stack exposure",
         desc: [
-          "Frontend Developer mit Full-stack-Erfahrung — frontend-first mit praktischer Backend-Erfahrung.",
-          "Entwicklung von Benutzeroberflächen mit React, Next.js und TypeScript, gestaltet mit Tailwind CSS für responsive Layouts.",
-          "Integration von REST-APIs und Arbeit mit Headless CMS (Directus) für content-getriebene Anwendungen.",
+          "Verantwortlich für die Frontend-Entwicklung von Fanody.com, einer Live-Events- und Fan-Video-Plattform, inklusive CMS-gestützter Content-Workflows und zweisprachiger (DE/EN) Nutzererfahrung.",
+          "Konzeption und Umsetzung von Directus-CMS-Modellen, Post-Composer, Banner-Upload, Fan-Einreichungen sowie einer dynamischen Events-Sektion mit Übersicht, Detailansichten und Autocomplete-Suche.",
+          "Entwicklung produktionsreifer UI mit React, Next.js, TypeScript und Tailwind CSS; Integration von REST-APIs mit Fokus auf responsive Gestaltung, Performance und wartbare Komponentenarchitektur.",
         ],
-        specialization: "Frontend-Entwicklung, Headless-CMS-Integration, UI-Architektur",
+        specialization: "Frontend-Entwicklung, Directus CMS, Events-Plattform-UI, REST-API-Integration, i18n",
       },
       1: {
         role: "Frontend Developer · Praktikum",
         desc: [
-          "Entwicklung und Pflege responsiver React.js-Anwendungen mit modernem JavaScript (ES6+).",
-          "Konzeption und Verbesserung von Nutzer-Workflows für Crop-and-Scan mit Echtzeit-Vorschau und Status-Feedback.",
-          "Refactoring von UI-Komponenten wie Map-Layern, Panels und Benachrichtigungssystemen für bessere Usability.",
-          "Geodaten-Visualisierung mit GeoJSON und KML inklusive eigenem Styling und Layer-Steuerung.",
-          "Mehrsprachigkeit für Deutsch und Englisch mit i18n und zentralem Übersetzungssystem.",
+          "Entwicklung und Pflege responsiver React.js-Anwendungen mit modernem JavaScript (ES6+) für produktionsnahe Agrar-Workflow-Tools.",
+          "Konzeption und Optimierung von Crop-and-Scan-Nutzerflows mit Echtzeit-Vorschau, Status-Feedback und intuitiven mehrstufigen Oberflächen.",
+          "Refactoring zentraler UI-Module—Map-Layer, Panels und Benachrichtigungssysteme—für bessere Usability, Konsistenz und langfristige Wartbarkeit.",
+          "Geodaten-Visualisierung mit GeoJSON und KML inklusive eigenem Styling, Layer-Steuerung und interaktiven kartenbasierten Workflows.",
+          "Aufbau einer zentralen DE/EN-i18n-Architektur für skalierbare mehrsprachige Produktauslieferung.",
         ],
-        specialization: "UI/UX-Optimierung, Geodaten-Karten, Frontend-Architektur",
+        specialization: "UI/UX-Optimierung, Geodaten-Karten, Frontend-Architektur, i18n",
       },
       2: {
         role: "Python Automation Praktikant",
         desc: [
-          "Web- und API-Automatisierungstests in der IT-Abteilung.",
-          "Entwicklung und Pflege automatisierter Testskripte mit Selenium WebDriver und Pytest.",
-          "Leichte REST-APIs mit Flask für interne Automatisierungsaufgaben.",
-          "Zusammenarbeit mit QA-Teams zur Verbesserung von Testeffizienz und Abdeckung.",
+          "Mitwirkung an Web- und API-Testautomatisierung bei ARAG IT zur Stärkung interner Qualitätssicherungsprozesse.",
+          "Entwicklung und Pflege von Selenium-WebDriver- und Pytest-Testsuites für Regression und Integrationsabdeckung.",
+          "Entwicklung leichtgewichtiger Flask-REST-APIs zur Unterstützung interner Automatisierungs- und Test-Workflows.",
+          "Enge Zusammenarbeit mit QA-Engineers zur Optimierung der Testausführung, Erhöhung der Abdeckung und Reduzierung manueller Prüfaufwände.",
         ],
       },
       3: {
         role: "Mobile Application Developer",
         desc: [
-          "Entwicklung mobiler Anwendungen mit Flutter für plattformübergreifende Auslieferung.",
-          "Responsive Oberflächen und Layouts für unterschiedliche Bildschirmgrößen.",
-          "Tests auf Simulator und physischen Geräten zur Prüfung von Usability und Stabilität.",
+          "Entwicklung plattformübergreifender mobiler Anwendungen mit Flutter und Dart für iOS- und Android-Zielplattformen.",
+          "Umsetzung adaptiver Layouts und Komponentenmuster für unterschiedliche Bildschirmgrößen und Gerätefähigkeiten.",
+          "Simulator- und gerätebasierte Tests zur Validierung von Usability, Stabilität und Release-Reife vor dem Deployment.",
         ],
       },
     },
@@ -155,8 +155,87 @@ const de = {
     sendAnother: "Weitere Nachricht",
     resume: "Lebenslauf",
   },
+  resume: {
+    documentTitle: "Lebenslauf — Ashwini Bheemireddy",
+    pageTitle: "Lebenslauf",
+    subtitle: "Softwareentwicklerin (Full Stack) · Frontend (React / Next.js)",
+    print: "Drucken / Als PDF speichern",
+    printHint: "Im Druckdialog „Als PDF speichern“ wählen.",
+    backToSite: "Zurück zum Portfolio",
+    summary:
+      "Frontend-orientierte Full-Stack-Entwicklerin mit Erfahrung in produktionsnahen Webanwendungen mit React.js, Next.js, JavaScript/TypeScript und Tailwind CSS. Schwerpunkte: responsive UI, CMS-gestützte Features (Directus), Mehrsprachigkeit (i18n) und Formular-/Workflow-Optimierung. Ergänzt durch Erfahrung in Python-Testautomatisierung, Flutter und Versionskontrolle mit Git. Fokus auf wartbaren Code, Performance und barrierefreie Oberflächen.",
+    sections: {
+      experience: "Berufserfahrung",
+      skills: "Fähigkeiten",
+      projects: "Projekte",
+      education: "Ausbildung",
+      certifications: "Zertifikate",
+      languages: "Sprachen",
+    },
+    contact: {
+      email: "bheemireddyashwini@gmail.com",
+      location: "Düsseldorf, Deutschland",
+      portfolioLabel: "Portfolio",
+      githubLabel: "GitHub",
+      linkedinLabel: "LinkedIn",
+    },
+    availability: "Verfügbar ab Juli 2026",
+    languageList: ["Englisch — Fließend", "Deutsch — B2 zertifiziert (TELC / Lingoda)"],
+    skillGroups: [
+      {
+        title: "Frontend & Web",
+        items:
+          "JavaScript (ES6+), TypeScript, React.js, Next.js, HTML5, CSS3, Tailwind CSS, Bootstrap, CSS Modules",
+      },
+      {
+        title: "CMS & Backend",
+        items: "Directus (Headless CMS), WordPress, Node.js, Express.js, MongoDB, REST APIs",
+      },
+      {
+        title: "Mobile & Testing",
+        items: "Flutter, Dart, Python, Pytest, Selenium WebDriver, Flask",
+      },
+      {
+        title: "Tools",
+        items: "Git, GitHub, Bitbucket, VS Code, Figma, PyCharm",
+      },
+    ],
+    certifications: [
+      { name: "Web- und Softwareentwickler Zertifikat", issuer: "Digital Career Institute", date: "Mai 2025" },
+      { name: "B2 Deutschkurs", issuer: "Lingoda", date: "März 2025" },
+      { name: "B1 Deutschzertifikat", issuer: "TELC", date: "August 2016" },
+    ],
+    featuredProjects: [
+      {
+        title: "Fanody.com",
+        date: "Jan 2026 – Jun 2026",
+        bullets: [
+          "Frontend-Entwicklung für Fanody.com, eine Live-Events- und Fan-Video-Plattform für Entertainment-Zielgruppen.",
+          "Umsetzung von Directus-CMS-Modellen, Post-Composer, Banner-Upload, Fan-Einreichungen sowie einer dynamischen Events-Sektion mit Übersicht, Detailansichten und Autocomplete-Suche.",
+          "Vollständige zweisprachige (DE/EN) Internationalisierung für CMS-gestützte Inhalte und nutzerseitige Oberflächen mit React, Next.js und Tailwind CSS.",
+        ],
+      },
+      {
+        title: "Four Flavors Express",
+        date: "Feb 2025",
+        bullets: [
+          "Responsive Food-Delivery-App mit React, Tailwind CSS und MongoDB.",
+          "Moderner UI-Flow mit nahtlosem Bestellerlebnis.",
+        ],
+      },
+      {
+        title: "TukTuk Yoga",
+        date: "Jan 2025",
+        bullets: [
+          "Yoga-Blog und Wellness-Plattform mit responsivem Layout.",
+          "Umgesetzt mit React und komponentenbasierter Architektur.",
+        ],
+      },
+    ],
+  },
   footer: {
     copyright: "Developer Portfolio von",
+    resumeLink: "Druckbaren Lebenslauf ansehen",
   },
   language: {
     en: "Englisch",

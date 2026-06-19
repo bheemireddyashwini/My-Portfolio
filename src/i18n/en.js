@@ -68,38 +68,38 @@ const en = {
       0: {
         role: "Frontend Developer · Full-stack exposure",
         desc: [
-          "Frontend Developer with full-stack exposure — frontend-first with hands-on backend experience.",
-          "Build user interfaces with React, Next.js, and TypeScript, styled with Tailwind CSS for responsive layouts.",
-          "Integrate REST APIs and work with headless CMS (Directus) when needed for content-driven applications.",
+          "Led frontend delivery for Fanody.com, a live events and fan-video platform, including CMS-backed content workflows and bilingual (DE/EN) user experiences.",
+          "Designed and implemented Directus CMS schema, post composer, banner upload pipeline, fan submission flows, and a dynamic events section with listings, detail views, and autocomplete search.",
+          "Built production UI with React, Next.js, TypeScript, and Tailwind CSS; integrated REST APIs with emphasis on responsive design, performance, and maintainable component architecture.",
         ],
-        specialization: "Frontend development, headless CMS integration, UI architecture",
+        specialization: "Frontend development, Directus CMS, events platform UI, REST API integration, i18n",
       },
       1: {
         role: "Frontend Developer · Internship",
         desc: [
-          "Built and maintained responsive React.js applications using modern JavaScript (ES6+).",
-          "Designed and improved user workflows for crop and scan with real-time previews and status feedback.",
-          "Refactored UI components including map layers, panels, and notification systems for better usability.",
-          "Implemented geospatial visualization using GeoJSON and KML with custom styling and layer controls.",
-          "Added multilingual support for German and English using i18n with a centralized translation system.",
+          "Developed and maintained responsive React.js applications using modern JavaScript (ES6+), contributing to production-ready agricultural workflow tooling.",
+          "Designed and optimized crop-and-scan user journeys with real-time previews, status feedback, and intuitive multi-step interfaces.",
+          "Refactored core UI modules—map layers, panels, and notification systems—to improve usability, consistency, and long-term maintainability.",
+          "Implemented geospatial visualization with GeoJSON and KML, including custom styling, layer controls, and interactive map-driven workflows.",
+          "Established centralized German/English i18n architecture to support scalable multilingual product delivery.",
         ],
-        specialization: "UI/UX optimization, geospatial mapping, frontend architecture",
+        specialization: "UI/UX optimization, geospatial mapping, frontend architecture, i18n",
       },
       2: {
         role: "Python Automation Intern",
         desc: [
-          "Worked on web and API automation testing in the IT department.",
-          "Developed and maintained automated test scripts with Selenium WebDriver and Pytest.",
-          "Built lightweight REST APIs with Flask for internal automation tasks.",
-          "Collaborated with QA teams to improve test efficiency and coverage.",
+          "Contributed to web and API test automation within ARAG IT, strengthening reliability of internal quality assurance processes.",
+          "Developed and maintained Selenium WebDriver and Pytest test suites for regression and integration coverage.",
+          "Built lightweight Flask REST APIs to support internal automation and testing workflows.",
+          "Collaborated with QA engineers to streamline test execution, increase coverage, and reduce manual validation effort.",
         ],
       },
       3: {
         role: "Mobile Application Developer",
         desc: [
-          "Developed mobile applications using Flutter for cross-platform delivery.",
-          "Built responsive interfaces and adapted layouts for different screen sizes.",
-          "Tested apps on simulator and physical devices to verify usability and stability.",
+          "Developed cross-platform mobile applications with Flutter and Dart, delivering responsive interfaces for iOS and Android targets.",
+          "Implemented adaptive layouts and component patterns optimized for varied screen sizes and device capabilities.",
+          "Conducted simulator and device-based testing to validate usability, stability, and release readiness prior to deployment.",
         ],
       },
     },
@@ -154,8 +154,87 @@ const en = {
     sendAnother: "Send another",
     resume: "Resume",
   },
+  resume: {
+    documentTitle: "Resume — Ashwini Bheemireddy",
+    pageTitle: "Resume",
+    subtitle: "Full Stack Developer · Frontend (React / Next.js)",
+    print: "Print / Save PDF",
+    printHint: "Use your browser print dialog and choose “Save as PDF”.",
+    backToSite: "Back to portfolio",
+    summary:
+      "Frontend-focused full stack developer with experience shipping production web applications using React.js, Next.js, JavaScript/TypeScript, and Tailwind CSS. Strong in responsive UI, headless CMS workflows (Directus), multilingual apps (i18n), and form/workflow optimization. Background in Python test automation, Flutter, and Git-based collaboration. Focused on maintainable code, performance, and accessible user interfaces.",
+    sections: {
+      experience: "Experience",
+      skills: "Skills",
+      projects: "Projects",
+      education: "Education",
+      certifications: "Certifications",
+      languages: "Languages",
+    },
+    contact: {
+      email: "bheemireddyashwini@gmail.com",
+      location: "Düsseldorf, Germany",
+      portfolioLabel: "Portfolio",
+      githubLabel: "GitHub",
+      linkedinLabel: "LinkedIn",
+    },
+    availability: "Available from July 2026",
+    languageList: ["English — Fluent", "German — B2 certified (TELC / Lingoda)"],
+    skillGroups: [
+      {
+        title: "Frontend & Web",
+        items:
+          "JavaScript (ES6+), TypeScript, React.js, Next.js, HTML5, CSS3, Tailwind CSS, Bootstrap, CSS Modules",
+      },
+      {
+        title: "CMS & Backend",
+        items: "Directus (headless CMS), WordPress, Node.js, Express.js, MongoDB, REST APIs",
+      },
+      {
+        title: "Mobile & Testing",
+        items: "Flutter, Dart, Python, Pytest, Selenium WebDriver, Flask",
+      },
+      {
+        title: "Tools",
+        items: "Git, GitHub, Bitbucket, VS Code, Figma, PyCharm",
+      },
+    ],
+    certifications: [
+      { name: "Web & Software Developer Certificate", issuer: "Digital Career Institute", date: "May 2025" },
+      { name: "German B2 Course", issuer: "Lingoda", date: "March 2025" },
+      { name: "German B1 Certificate", issuer: "TELC", date: "August 2016" },
+    ],
+    featuredProjects: [
+      {
+        title: "Fanody.com",
+        date: "Jan 2026 – Jun 2026",
+        bullets: [
+          "Delivered frontend development for Fanody.com, a live events and fan-video platform for entertainment audiences.",
+          "Implemented Directus CMS models, post composer, banner upload, fan submission workflows, and a dynamic events section with listings, detail views, and autocomplete search.",
+          "Engineered fully bilingual (DE/EN) internationalization across CMS-driven content and user-facing interfaces using React, Next.js, and Tailwind CSS.",
+        ],
+      },
+      {
+        title: "Four Flavors Express",
+        date: "Feb 2025",
+        bullets: [
+          "Responsive food delivery app with React, Tailwind CSS, and MongoDB.",
+          "Streamlined ordering flow with modern UI and seamless checkout experience.",
+        ],
+      },
+      {
+        title: "TukTuk Yoga",
+        date: "Jan 2025",
+        bullets: [
+          "Wellness and yoga blog platform with mindful content and responsive layout.",
+          "Built with React and component-driven architecture.",
+        ],
+      },
+    ],
+  },
   footer: {
     copyright: "Developer Portfolio by",
+    resumeLink: "View printable resume",
   },
   language: {
     en: "English",

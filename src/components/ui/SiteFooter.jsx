@@ -8,7 +8,14 @@ export default function SiteFooter() {
 
   return (
     <footer className="footer-border text-muted mt-16 border-t pt-8 text-center text-sm">
-      © {t.footer.copyright} {Bio.name}
+      <p>
+        <a href="/resume" className="resume-footer-link">
+          {t.footer.resumeLink}
+        </a>
+      </p>
+      <p className="mt-3">
+        © {t.footer.copyright} {Bio.name}
+      </p>
     </footer>
   );
 }
