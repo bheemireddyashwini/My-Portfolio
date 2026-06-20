@@ -4,9 +4,9 @@ const Experiencedata = [
     img: "/logos/netmobile.svg",
     company: "net mobile Minick GmbH",
     role: "Frontend Developer · Full stack exposure",
-    date: "Jan 2026 to Present · 6 mos",
+    date: "Jan 2026 to Jun 2026 · 6 mos",
     location: "Düsseldorf, North Rhine-Westphalia, Germany · Hybrid",
-    current: true,
+    current: false,
     desc: [
       "Contributed to frontend development for Fanody.com, a live events and fan video platform, building CMS backed content workflows and bilingual (DE/EN) user experiences.",
       "Implemented key frontend features including Directus CMS models, post composer, banner upload, fan submission flows, custom verification badges for artists, and a dynamic events section with listings, detail views, and autocomplete search.",
