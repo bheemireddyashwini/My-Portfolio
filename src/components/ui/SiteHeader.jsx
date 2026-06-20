@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
 import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
@@ -18,20 +19,27 @@ const navItems = [
 
 export default function SiteHeader() {
   const { t } = useLanguage();
+  const mobileMenuRef = useRef(null);
 
-  const renderNavLink = (item, className) => {
+  const closeMobileMenu = () => {
+    if (mobileMenuRef.current) {
+      mobileMenuRef.current.open = false;
+    }
+  };
+
+  const renderNavLink = (item, className, onNavigate) => {
     const label = t.nav[item.key];
 
     if (item.type === "page") {
       return (
-        <Link key={item.href} href={item.href} className={className}>
+        <Link key={item.href} href={item.href} className={className} onClick={onNavigate}>
           {label}
         </Link>
       );
     }
 
     return (
-      <a key={item.href} href={item.href} className={className}>
+      <a key={item.href} href={item.href} className={className} onClick={onNavigate}>
         {label}
       </a>
     );
@@ -57,7 +65,7 @@ export default function SiteHeader() {
             <ThemeToggle />
           </div>
 
-          <details className="relative md:hidden">
+          <details ref={mobileMenuRef} className="relative md:hidden">
             <summary className="mobile-menu-trigger flex cursor-pointer list-none items-center justify-center rounded-lg p-2.5 [&::-webkit-details-marker]:hidden">
               <span className="sr-only">Menu</span>
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -69,6 +77,7 @@ export default function SiteHeader() {
                 renderNavLink(
                   item,
                   item.type === "page" ? "mobile-nav-link mobile-nav-link-resume" : "mobile-nav-link",
+                  closeMobileMenu,
                 ),
               )}
             </div>

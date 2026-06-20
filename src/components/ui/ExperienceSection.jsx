@@ -47,19 +47,20 @@ function ExperienceCard({ item, role }) {
         isCurrent ? " experience-card-active" : ""
       }`}
     >
-      <p className="experience-date absolute right-4 top-4 font-mono text-xs sm:right-5 sm:top-5 sm:text-sm">
-        {formatDate(item.date)}
-      </p>
-
-      <div className="flex items-start gap-4 pr-24 sm:gap-5 sm:pr-28">
+      <div className="flex items-start gap-4 sm:gap-5">
         <div className="experience-icon experience-logo-frame flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-lg border sm:h-16 sm:w-16">
           <CompanyLogo src={item.img} alt={item.company} />
         </div>
 
-        <div className="min-w-0 pt-1">
-          <h3 className="experience-role text-sm sm:text-base">
-            {roleLabel(role)}
-          </h3>
+        <div className="min-w-0 flex-1 pt-1">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+            <h3 className="experience-role min-w-0 text-sm leading-snug sm:text-base">
+              {roleLabel(role)}
+            </h3>
+            <p className="experience-date font-mono text-[0.7rem] leading-snug sm:shrink-0 sm:text-right sm:text-sm">
+              {formatDate(item.date)}
+            </p>
+          </div>
           <p className="experience-company mt-2 text-sm sm:text-[0.95rem]">{item.company}</p>
         </div>
       </div>

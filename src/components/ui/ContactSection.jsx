@@ -86,7 +86,7 @@ export default function ContactSection() {
       `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`,
     );
 
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${Bio.email}?subject=${subject}&body=${body}`;
     setIsSent(true);
     setForm({ name: "", email: "", message: "" });
   };
