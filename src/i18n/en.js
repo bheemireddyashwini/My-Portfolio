@@ -244,6 +244,10 @@ const en = {
   theme: {
     light: "Light mode",
     dark: "Dark mode",
+    currentLight: "Light mode on",
+    currentDark: "Dark mode on",
+    switchToLight: "Switch to light mode",
+    switchToDark: "Switch to dark mode",
     switchTo: "Switch theme",
   },
 };

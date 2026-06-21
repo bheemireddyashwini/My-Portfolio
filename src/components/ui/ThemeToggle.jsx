@@ -17,8 +17,8 @@ export default function ThemeToggle() {
       type="button"
       className="header-utility-btn header-theme-btn"
       onClick={toggleTheme}
-      aria-label={t.theme.switchTo}
-      title={isDark ? t.theme.light : t.theme.dark}
+      aria-label={isDark ? t.theme.switchToLight : t.theme.switchToDark}
+      title={isDark ? `${t.theme.currentDark} — ${t.theme.switchToLight}` : `${t.theme.currentLight} — ${t.theme.switchToDark}`}
     >
       {isDark ? (
         <FiSun className="h-5 w-5" aria-hidden="true" />

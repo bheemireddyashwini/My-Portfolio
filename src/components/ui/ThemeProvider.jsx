@@ -21,6 +21,11 @@ function applyTheme(mode) {
   syncThemeColor(mode);
 }
 
+function getSystemTheme() {
+  if (typeof window === "undefined") return "light";
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
 function readStoredTheme() {
   if (typeof window === "undefined") return "light";
 
@@ -31,7 +36,7 @@ function readStoredTheme() {
     // Private browsing can block storage.
   }
 
-  return "light";
+  return getSystemTheme();
 }
 
 function persistTheme(mode) {

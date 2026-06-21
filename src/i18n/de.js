@@ -245,6 +245,10 @@ const de = {
   theme: {
     light: "Hellmodus",
     dark: "Dunkelmodus",
+    currentLight: "Hellmodus aktiv",
+    currentDark: "Dunkelmodus aktiv",
+    switchToLight: "Zu Hellmodus wechseln",
+    switchToDark: "Zu Dunkelmodus wechseln",
     switchTo: "Design wechseln",
   },
 };
