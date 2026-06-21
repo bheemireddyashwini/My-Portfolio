@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useLayoutEffect, useState } from "react";
 
 const ThemeContext = createContext(null);
 
@@ -15,45 +15,57 @@ function syncThemeColor(mode) {
   meta.setAttribute("content", color);
 }
 
-function getPreferredTheme() {
+function applyTheme(mode) {
+  document.documentElement.setAttribute("data-theme", mode);
+  document.documentElement.style.colorScheme = mode;
+  syncThemeColor(mode);
+}
+
+function readStoredTheme() {
   if (typeof window === "undefined") return "light";
-  const stored = localStorage.getItem("theme");
-  if (stored === "light" || stored === "dark") return stored;
+
+  try {
+    const stored = localStorage.getItem("theme");
+    if (stored === "light" || stored === "dark") return stored;
+  } catch {
+    // Private browsing can block storage.
+  }
+
   return "light";
+}
+
+function persistTheme(mode) {
+  try {
+    localStorage.setItem("theme", mode);
+  } catch {
+    // Ignore storage errors; DOM theme still updates.
+  }
 }
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
   const [ready, setReady] = useState(false);
 
-  useEffect(() => {
-    const initial = getPreferredTheme();
+  useLayoutEffect(() => {
+    const initial = readStoredTheme();
+    applyTheme(initial);
     setTheme(initial);
-    document.documentElement.setAttribute("data-theme", initial);
-    syncThemeColor(initial);
     setReady(true);
   }, []);
-
-  useEffect(() => {
-    if (!ready) return;
-    syncThemeColor(theme);
-  }, [theme, ready]);
 
   const toggleTheme = () => {
     setTheme((current) => {
       const next = current === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-      syncThemeColor(next);
+      applyTheme(next);
+      persistTheme(next);
       return next;
     });
   };
 
   const setThemeMode = (mode) => {
     if (mode !== "light" && mode !== "dark") return;
-    document.documentElement.setAttribute("data-theme", mode);
-    localStorage.setItem("theme", mode);
-    syncThemeColor(mode);
+    applyTheme(mode);
+    persistTheme(mode);
     setTheme(mode);
   };
 

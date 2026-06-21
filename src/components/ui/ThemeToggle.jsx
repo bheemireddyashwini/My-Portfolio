@@ -15,16 +15,18 @@ export default function ThemeToggle() {
   return (
     <button
       type="button"
-      className="header-utility-btn header-theme-btn"
+      className={`theme-switch${isDark ? " theme-switch-dark" : " theme-switch-light"}`}
       onClick={toggleTheme}
       aria-label={t.theme.switchTo}
       title={isDark ? t.theme.light : t.theme.dark}
+      role="switch"
+      aria-checked={isDark}
     >
-      {isDark ? (
-        <FiSun className="h-5 w-5" aria-hidden="true" />
-      ) : (
-        <FiMoon className="h-5 w-5" aria-hidden="true" />
-      )}
+      <span className="theme-switch-track">
+        <FiSun className="theme-switch-icon theme-switch-icon-sun" aria-hidden="true" />
+        <FiMoon className="theme-switch-icon theme-switch-icon-moon" aria-hidden="true" />
+        <span className="theme-switch-thumb" aria-hidden="true" />
+      </span>
     </button>
   );
 }

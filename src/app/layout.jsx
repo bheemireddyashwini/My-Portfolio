@@ -1,5 +1,4 @@
 import { Manrope, JetBrains_Mono, Great_Vibes, Allura } from "next/font/google";
-import Script from "next/script";
 import { ThemeProvider } from "../components/ui/ThemeProvider";
 import { LanguageProvider } from "../components/ui/LanguageProvider";
 import { themeInitScript } from "./theme-script";
@@ -40,13 +39,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${manrope.variable} ${jetbrainsMono.variable} ${greatVibes.variable} ${allura.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      data-theme="light"
+      className={`${manrope.variable} ${jetbrainsMono.variable} ${greatVibes.variable} ${allura.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body suppressHydrationWarning>
-        <Script
-          id="theme-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: themeInitScript }}
-        />
         <LanguageProvider>
           <ThemeProvider>{children}</ThemeProvider>
         </LanguageProvider>
