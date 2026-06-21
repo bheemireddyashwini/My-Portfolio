@@ -159,12 +159,12 @@ const de = {
   resume: {
     documentTitle: "Lebenslauf — Ashwini Bheemireddy",
     pageTitle: "Lebenslauf",
-    subtitle: "Softwareentwicklerin (Full Stack) · Frontend (React / Next.js)",
+    subtitle: "Full Stack Entwicklerin · Frontend (React / Next.js)",
     print: "Drucken / Als PDF speichern",
     printHint: "Im Druckdialog „Als PDF speichern“ wählen.",
     backToSite: "Zurück zum Portfolio",
     summary:
-      "Frontend-orientierte Full-Stack-Entwicklerin mit Erfahrung in produktionsnahen Webanwendungen mit React.js, Next.js, JavaScript/TypeScript und Tailwind CSS. Schwerpunkte: responsive UI, CMS-gestützte Features (Directus), Mehrsprachigkeit (i18n) und Formular-/Workflow-Optimierung. Ergänzt durch Erfahrung in Python-Testautomatisierung, Flutter und Versionskontrolle mit Git. Fokus auf wartbaren Code, Performance und barrierefreie Oberflächen.",
+      "Full Stack Entwicklerin mit Fokus auf zuverlässige Weblösungen für produktive Umgebungen. Fundierte Kenntnisse in React, Next.js, JavaScript, TypeScript und Tailwind CSS sowie praktische Erfahrung in responsiver UI Gestaltung, Directus CMS Integration, REST API Entwicklung und mehrsprachiger Anwendungsumsetzung. Zusätzliche Stärken in Python Testautomatisierung, Flutter und kollaborativer Entwicklung mit Git. Ausgerichtet auf wartbaren Code, Performance und barrierefreie Nutzererfahrungen.",
     sections: {
       experience: "Berufserfahrung",
       skills: "Fähigkeiten",

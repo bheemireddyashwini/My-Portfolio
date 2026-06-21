@@ -163,7 +163,7 @@ const en = {
     printHint: "Use your browser print dialog and choose “Save as PDF”.",
     backToSite: "Back to portfolio",
     summary:
-      "Frontend-focused full stack developer with experience shipping production web applications using React.js, Next.js, JavaScript/TypeScript, and Tailwind CSS. Strong in responsive UI, headless CMS workflows (Directus), multilingual apps (i18n), and form/workflow optimization. Background in Python test automation, Flutter, and Git-based collaboration. Focused on maintainable code, performance, and accessible user interfaces.",
+      "Full stack developer delivering reliable web solutions for production environments. Proficient in React, Next.js, JavaScript, TypeScript, and Tailwind CSS, with hands on experience in responsive UI design, Directus CMS integration, REST API development, and multilingual application delivery. Additional strengths include Python test automation, Flutter, and collaborative development using Git. Committed to maintainable code, performance, and accessible user experiences.",
     sections: {
       experience: "Experience",
       skills: "Skills",
