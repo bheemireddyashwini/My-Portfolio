@@ -211,25 +211,18 @@ const de = {
         title: "Fanody.com",
         date: "Jan 2026 – Jun 2026",
         bullets: [
-          "Live-Events- und Fan-Video-Plattform mit Directus CMS, Post-Composer, Banner-Upload und Fan-Einreichungen.",
-          "Events-Modul mit Suche, Benutzer-Navigationsmenü und DE/EN-i18n; React, Next.js, TypeScript, Tailwind CSS, REST-APIs.",
+          "Live Events Plattform: Directus CMS, Events Suche, DE/EN i18n; React, Next.js, TypeScript, Tailwind CSS.",
         ],
       },
       {
         title: "Four Flavors Express",
         date: "Feb 2025",
-        bullets: [
-          "Responsive Food-Delivery-App mit React, Tailwind CSS und MongoDB.",
-          "Moderner UI-Flow mit nahtlosem Bestellerlebnis.",
-        ],
+        bullets: ["Food Delivery App mit React, Tailwind CSS und MongoDB."],
       },
       {
         title: "TukTuk Yoga",
         date: "Jan 2025",
-        bullets: [
-          "Yoga-Blog und Wellness-Plattform mit responsivem Layout.",
-          "Umgesetzt mit React und komponentenbasierter Architektur.",
-        ],
+        bullets: ["Wellness Blog mit React und responsivem Layout."],
       },
     ],
   },
