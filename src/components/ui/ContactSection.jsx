@@ -112,7 +112,7 @@ export default function ContactSection() {
             <img
               src="/illustrations/contact-message.svg"
               alt=""
-              className="contact-illustration"
+              className="contact-illustration portfolio-illustration"
               width={280}
               height={245}
             />

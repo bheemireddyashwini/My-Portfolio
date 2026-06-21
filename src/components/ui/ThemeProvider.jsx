@@ -4,6 +4,17 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext(null);
 
+function syncThemeColor(mode) {
+  const color = mode === "dark" ? "#0f172a" : "#ffffff";
+  let meta = document.querySelector('meta[name="theme-color"]');
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute("name", "theme-color");
+    document.head.appendChild(meta);
+  }
+  meta.setAttribute("content", color);
+}
+
 function getPreferredTheme() {
   if (typeof window === "undefined") return "light";
   const stored = localStorage.getItem("theme");
@@ -19,14 +30,21 @@ export function ThemeProvider({ children }) {
     const initial = getPreferredTheme();
     setTheme(initial);
     document.documentElement.setAttribute("data-theme", initial);
+    syncThemeColor(initial);
     setReady(true);
   }, []);
+
+  useEffect(() => {
+    if (!ready) return;
+    syncThemeColor(theme);
+  }, [theme, ready]);
 
   const toggleTheme = () => {
     setTheme((current) => {
       const next = current === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", next);
       localStorage.setItem("theme", next);
+      syncThemeColor(next);
       return next;
     });
   };
@@ -35,6 +53,7 @@ export function ThemeProvider({ children }) {
     if (mode !== "light" && mode !== "dark") return;
     document.documentElement.setAttribute("data-theme", mode);
     localStorage.setItem("theme", mode);
+    syncThemeColor(mode);
     setTheme(mode);
   };
 

@@ -23,7 +23,7 @@ export default function ExperienceIllustration({ variant = "workspace" }) {
         <img
           src={illustration.src}
           alt={illustration.alt}
-          className="h-auto w-full drop-shadow-[0_24px_48px_rgba(124,58,237,0.22)]"
+          className="portfolio-illustration h-auto w-full drop-shadow-[0_24px_48px_rgba(30,64,175,0.14)]"
           loading="eager"
           decoding="async"
         />

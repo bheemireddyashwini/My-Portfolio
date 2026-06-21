@@ -7,7 +7,10 @@ import { useLanguage } from "./LanguageProvider";
 export default function ThemeToggle() {
   const { theme, toggleTheme, ready } = useTheme();
   const { t } = useLanguage();
-  const isDark = !ready || theme === "dark";
+  const isDark = ready
+    ? theme === "dark"
+    : typeof document !== "undefined" &&
+      document.documentElement.getAttribute("data-theme") === "dark";
 
   return (
     <button
