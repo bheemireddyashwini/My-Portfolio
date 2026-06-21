@@ -2859,7 +2859,9 @@ html[data-theme="dark"] .about-highlight-style {
 
 .resume-bullets {
   margin: 0;
-  padding-left: 1rem;
+  padding-left: 1.15rem;
+  list-style: disc;
+  list-style-position: outside;
   font-size: 0.78rem;
   line-height: 1.45;
   color: #334155;
@@ -3018,6 +3020,11 @@ html[data-theme="dark"] .about-highlight-style {
   .resume-entry-head {
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  .resume-bullets {
+    list-style: disc;
+    list-style-position: outside;
   }
 
   .resume-bullets li {
