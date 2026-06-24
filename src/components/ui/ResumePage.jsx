@@ -42,30 +42,43 @@ export default function ResumePage() {
 
       <article className="resume-sheet" aria-label={r.pageTitle}>
         <header className="resume-header">
-          <h1 className="resume-name">{Bio.name}</h1>
-          <p className="resume-subtitle">{r.subtitle}</p>
-          <ul className="resume-contact">
-            <li>{r.contact.location}</li>
-            <li>
-              <a href={`mailto:${r.contact.email}`}>{r.contact.email}</a>
-            </li>
-            <li>
-              <a href={portfolioUrl} target="_blank" rel="noreferrer">
-                {r.contact.portfolioLabel}
-              </a>
-            </li>
-            <li>
-              <a href={Bio.linkedin} target="_blank" rel="noreferrer">
-                {r.contact.linkedinLabel}
-              </a>
-            </li>
-            <li>
-              <a href={Bio.github} target="_blank" rel="noreferrer">
-                {r.contact.githubLabel}
-              </a>
-            </li>
-            <li>{r.availability}</li>
-          </ul>
+          <div className="resume-header-main">
+            <div className="resume-header-text">
+              <h1 className="resume-name">{Bio.name}</h1>
+              <p className="resume-subtitle">{r.subtitle}</p>
+              <ul className="resume-contact">
+                <li>{r.contact.location}</li>
+                <li>
+                  <a href={`mailto:${r.contact.email}`}>{r.contact.email}</a>
+                </li>
+                <li>
+                  <a href={portfolioUrl} target="_blank" rel="noreferrer">
+                    {r.contact.portfolioLabel}
+                  </a>
+                </li>
+                <li>
+                  <a href={Bio.linkedin} target="_blank" rel="noreferrer">
+                    {r.contact.linkedinLabel}
+                  </a>
+                </li>
+                <li>
+                  <a href={Bio.github} target="_blank" rel="noreferrer">
+                    {r.contact.githubLabel}
+                  </a>
+                </li>
+                <li>{r.availability}</li>
+              </ul>
+            </div>
+            <div className="resume-photo-wrap">
+              <img
+                src={Bio.profileImage}
+                alt={Bio.name}
+                className="resume-photo"
+                width={90}
+                height={112}
+              />
+            </div>
+          </div>
         </header>
 
         <section className="resume-section">
@@ -112,7 +125,7 @@ export default function ResumePage() {
           </div>
         </section>
 
-        <section className="resume-section">
+        <section className="resume-section resume-section-projects">
           <h2 className="resume-section-title">{r.sections.projects}</h2>
           <div className="resume-stack">
             {r.featuredProjects.map((project) => (

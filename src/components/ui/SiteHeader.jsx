@@ -11,8 +11,8 @@ const navItems = [
   { href: "#about", key: "about", type: "anchor" },
   { href: "#experience", key: "experience", type: "anchor" },
   { href: "#skills", key: "skills", type: "anchor" },
-  { href: "#education", key: "education", type: "anchor" },
   { href: "#projects", key: "projects", type: "anchor" },
+  { href: "#education", key: "education", type: "anchor" },
   { href: "#contact", key: "contact", type: "anchor" },
   { href: "/resume", key: "resume", type: "page" },
 ];

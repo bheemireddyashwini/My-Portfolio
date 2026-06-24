@@ -30,9 +30,9 @@ export default function Home() {
 
         <SkillsSection skills={marqueeSkills} />
 
-        <EducationSection items={EducationData} />
-
         <ProjectsSection projects={ProjectData} />
+
+        <EducationSection items={EducationData} />
 
         <ContactSection />
 

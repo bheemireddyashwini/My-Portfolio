@@ -2775,6 +2775,33 @@ html[data-theme="dark"] .about-highlight-style {
   margin-bottom: 0.85rem;
 }
 
+.resume-header-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.resume-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.resume-photo-wrap {
+  flex-shrink: 0;
+}
+
+.resume-photo {
+  display: block;
+  width: 5.625rem;
+  height: 7rem;
+  object-fit: cover;
+  object-position: center 18%;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.25rem;
+  background: #f8fafc;
+}
+
 .resume-name {
   margin: 0;
   font-size: 1.35rem;
@@ -2949,6 +2976,16 @@ html[data-theme="dark"] .about-highlight-style {
     padding: 1rem 0.9rem;
   }
 
+  .resume-header-main {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .resume-photo {
+    width: 4.75rem;
+    height: 6rem;
+  }
+
   .resume-name {
     font-size: 1.2rem;
   }
@@ -2990,6 +3027,18 @@ html[data-theme="dark"] .about-highlight-style {
   .resume-header {
     padding-bottom: 0.35rem;
     margin-bottom: 0.45rem;
+  }
+
+  .resume-header-main {
+    gap: 0.65rem;
+  }
+
+  .resume-photo {
+    width: 24mm;
+    height: 30mm;
+    border-radius: 1mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .resume-name {
@@ -3081,6 +3130,17 @@ html[data-theme="dark"] .about-highlight-style {
   .resume-section-title {
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  .resume-section-projects {
+    break-before: page;
+    page-break-before: always;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .resume-section-projects .resume-section-title {
+    margin-top: 0;
   }
 
   .resume-entry-head {
