@@ -1,30 +1,35 @@
 const ProjectData = [
   {
-    id: 1,
-    title: "QuizMaster",
-    hidden: true,
-    date: "5 january 2025",
-    image: "/quizmaster.png",
+    id: 4,
+    title: "Fanody.com",
+    date: "Jan 2026 – Jun 2026",
     description:
-      "A dataset for a Multiple-Choice Quiz Application featuring diverse questions on topics like geography, science, and history. Ideal for building quiz apps or integrating trivia features into projects.",
-    technologies: ["HTML", "JavaScript", "CSS"],
-    category: "javascript",
-    github: "https://github.com/bheemireddyashwini/QuizMaster", // Placeholder
-    link: "https://quizmaster-98cg.onrender.com/", // Placeholder
+      "Production live events and fan video platform. Built CMS backed content workflows, event listings with autocomplete search, post composer, fan submission flows, and bilingual (DE/EN) UI using React, Next.js, TypeScript, Tailwind CSS, and Directus.",
+    image: "/logos/netmobile.svg",
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Directus",
+      "REST APIs",
+      "i18n",
+    ],
+    category: "react",
+    role: "Frontend Developer",
+    link: "https://fanody.com",
   },
-
   {
-    id: 2,
-    title: "DiceeChallenge",
-    hidden: true,
-    date: "16 october 2024",
+    id: 6,
+    title: "Four Flavuors Express",
+    date: "9 feb 2025",
     description:
-      "A simple and fun dice game built with HTML, CSS, and JavaScript. Roll the dice, test your luck, and enjoy the thrill of chance. Perfect for learning about randomization, interactive UI, and game mechanics.",
-    image: "/dicee.png",
-    technologies: ["HTML", "JavaScript", "CSS"],
-    category: "javascript",
-    github: "https://github.com/bheemireddyashwini/random-dice",
-    link: "https://bheemireddyashwini.github.io/random-dice/",
+      "Four Flavours Express: A modern and responsive food delivery app that offers a variety of cuisines and dishes to satisfy your cravings. Order your favorite meals with just a few clicks and enjoy a seamless delivery experience.",
+    technologies: ["JavaScript", "React", "CSS", "HTML", "Tailwindcss", "MongoDB"],
+    category: "react",
+    image: "/ffe.png",
+    github: "https://github.com/bheemireddyashwini/Food-Delivery-Service-App",
+    link: "https://fourflavoursexpress.onrender.com/",
   },
   {
     id: 3,
@@ -46,19 +51,6 @@ const ProjectData = [
     github: "https://github.com/bheemireddyashwini/Ecommerce-website",
     link: "https://ecommercesite-kgl9.onrender.com",
   },
-
-  {
-    id: 4,
-    title: "Yoga-App",
-    date: "24 december 2024",
-    description:
-      "Tuktuk Yoga: A welcoming space for all, offering accessible yoga classes to build strength, flexibility, and relaxation with experienced instructors.",
-    image: "/tuktuk.png",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "State Management"],
-    category: "react",
-    github: "https://github.com/bheemireddyashwini/Tuktuk-yoga",
-    link: "https://tuktuk-yoga-9slr.onrender.com/",
-  },
   {
     id: 5,
     title: "Todo_App",
@@ -68,24 +60,35 @@ const ProjectData = [
     technologies: ["JavaScript", "React", "CSS", "HTML"],
     category: "react",
     image: "/todo.png",
-    // status: "coming-soon",  // New property to indicate this project is upcoming
-    github: "https://github.com/bheemireddyashwini/Todo_App", // Placeholder
-    link: "https://todo-app-12od.onrender.com/", // Placeholder
+    github: "https://github.com/bheemireddyashwini/Todo_App",
+    link: "https://todo-app-12od.onrender.com/",
   },
   {
-    id: 6,
-    title: "Four Flavuors Express",
-    date: "9 feb 2025",
+    id: 1,
+    title: "QuizMaster",
+    hidden: true,
+    date: "5 january 2025",
+    image: "/quizmaster.png",
     description:
-      "Four Flavours Express: A modern and responsive food delivery app that offers a variety of cuisines and dishes to satisfy your cravings. Order your favorite meals with just a few clicks and enjoy a seamless delivery experience.",
-    technologies: ["JavaScript", "React", "CSS", "HTML", "Tailwindcss","MongoDB"],
-    category: "react",
-    image: "/ffe.png",
-    // status: "coming-soon",  // New property to indicate this project is upcoming
-    github: "https://github.com/bheemireddyashwini/Food-Delivery-Service-App", // Placeholder
-    link: "https://fourflavoursexpress.onrender.com/", // Placeholder
+      "A dataset for a Multiple-Choice Quiz Application featuring diverse questions on topics like geography, science, and history. Ideal for building quiz apps or integrating trivia features into projects.",
+    technologies: ["HTML", "JavaScript", "CSS"],
+    category: "javascript",
+    github: "https://github.com/bheemireddyashwini/QuizMaster",
+    link: "https://quizmaster-98cg.onrender.com/",
   },
-
+  {
+    id: 2,
+    title: "DiceeChallenge",
+    hidden: true,
+    date: "16 october 2024",
+    description:
+      "A simple and fun dice game built with HTML, CSS, and JavaScript. Roll the dice, test your luck, and enjoy the thrill of chance. Perfect for learning about randomization, interactive UI, and game mechanics.",
+    image: "/dicee.png",
+    technologies: ["HTML", "JavaScript", "CSS"],
+    category: "javascript",
+    github: "https://github.com/bheemireddyashwini/random-dice",
+    link: "https://bheemireddyashwini.github.io/random-dice/",
+  },
 ];
 
 export default ProjectData;

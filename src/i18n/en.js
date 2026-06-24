@@ -219,9 +219,9 @@ const en = {
         bullets: ["Food delivery app with React, Tailwind CSS, and MongoDB."],
       },
       {
-        title: "TukTuk Yoga",
-        date: "Jan 2025",
-        bullets: ["Wellness blog platform with React and responsive layout."],
+        title: "Ecommerce App",
+        date: "Nov 2024",
+        bullets: ["React e-commerce storefront with cart flow, state management, and Tailwind CSS."],
       },
     ],
   },

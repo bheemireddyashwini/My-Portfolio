@@ -50,15 +50,17 @@ function ProjectAccordionItem({ project, index, isOpen, onToggle, itemRef }) {
             <a href={project.link} target="_blank" rel="noreferrer" className="btn-primary text-sm">
               Live Demo
             </a>
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-outline text-sm"
-              onClick={(event) => event.stopPropagation()}
-            >
-              <FiGithub /> GitHub
-            </a>
+            {project.github ? (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-outline text-sm"
+                onClick={(event) => event.stopPropagation()}
+              >
+                <FiGithub /> GitHub
+              </a>
+            ) : null}
           </div>
         </div>
       </div>

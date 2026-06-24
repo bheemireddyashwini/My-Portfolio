@@ -220,9 +220,9 @@ const de = {
         bullets: ["Food Delivery App mit React, Tailwind CSS und MongoDB."],
       },
       {
-        title: "TukTuk Yoga",
-        date: "Jan 2025",
-        bullets: ["Wellness Blog mit React und responsivem Layout."],
+        title: "Ecommerce App",
+        date: "Nov 2024",
+        bullets: ["React E-Commerce mit Warenkorb, State Management und Tailwind CSS."],
       },
     ],
   },
