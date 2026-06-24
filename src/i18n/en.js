@@ -69,11 +69,11 @@ const en = {
       0: {
         role: "Frontend Developer · Full stack exposure",
         desc: [
-          "Contributed to frontend development for Fanody.com, a live events and fan video platform, building CMS backed content workflows and bilingual (DE/EN) user experiences.",
-          "Implemented key frontend features including Directus CMS models, post composer, banner upload, fan submission flows, custom verification badges for artists, and a dynamic events section with listings, detail views, and autocomplete search.",
-          "Built production UI with React, Next.js, TypeScript, and Tailwind CSS; integrated REST APIs with emphasis on responsive design, performance, and maintainable component architecture.",
+          "Frontend development for Fanody.com, a live events and fan video platform with bilingual (DE/EN) user experiences.",
+          "Designed Directus data models for the post section and fan submission artist section; built all form input fields and integrated REST APIs with Profinity content validation.",
+          "Delivered post composer, banner upload, verification badges, and events search UI with React, Next.js, TypeScript, and Tailwind CSS.",
         ],
-        specialization: "Frontend development, Directus CMS, events platform UI, REST API integration, i18n",
+        specialization: "Directus modeling, form UI, REST API integration, Profinity validation, i18n",
       },
       1: {
         role: "Frontend Developer · Internship",
@@ -210,7 +210,7 @@ const en = {
         title: "Fanody.com",
         date: "Jan 2026 – Jun 2026",
         bullets: [
-          "Live events platform: Directus CMS, events search, DE/EN i18n; React, Next.js, TypeScript, Tailwind CSS.",
+          "Directus models for post and fan submission artist sections, form fields, REST APIs with Profinity validation; DE/EN i18n; React, Next.js, TypeScript, Tailwind CSS.",
         ],
       },
       {

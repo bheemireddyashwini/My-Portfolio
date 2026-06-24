@@ -69,11 +69,11 @@ const de = {
       0: {
         role: "Frontend Developer · Full stack exposure",
         desc: [
-          "Mitwirkung an der Frontend Entwicklung von Fanody.com, einer Live Events und Fan Video Plattform, mit CMS gestützten Content Workflows und zweisprachiger (DE/EN) Nutzererfahrung.",
-          "Umsetzung zentraler Frontend Features wie Directus CMS Modelle, Post Composer, Banner Upload, Fan Einreichungen, individuelle Verifizierungs Badges für Artists sowie einer dynamischen Events Sektion mit Übersicht, Detailansichten und Autocomplete Suche.",
-          "Entwicklung produktionsreifer UI mit React, Next.js, TypeScript und Tailwind CSS; Integration von REST APIs mit Fokus auf responsive Gestaltung, Performance und wartbare Komponentenarchitektur.",
+          "Frontend Entwicklung für Fanody.com, eine Live Events und Fan Video Plattform mit zweisprachiger (DE/EN) Nutzererfahrung.",
+          "Directus Datenmodelle für den Post Bereich und die Fan Einreichung Artist Sektion konzipiert und umgesetzt; alle Eingabefelder gebaut und REST API Anbindung mit Profinity Prüfung integriert.",
+          "Umsetzung von Post Composer, Banner Upload, Verifizierungs Badges und Events Suche mit React, Next.js, TypeScript und Tailwind CSS.",
         ],
-        specialization: "Frontend-Entwicklung, Directus CMS, Events-Plattform-UI, REST-API-Integration, i18n",
+        specialization: "Directus Modellierung, Formular UI, REST API Integration, Profinity Prüfung, i18n",
       },
       1: {
         role: "Frontend Developer · Praktikum",
@@ -211,7 +211,7 @@ const de = {
         title: "Fanody.com",
         date: "Jan 2026 – Jun 2026",
         bullets: [
-          "Live Events Plattform: Directus CMS, Events Suche, DE/EN i18n; React, Next.js, TypeScript, Tailwind CSS.",
+          "Directus Modelle für Post und Fan Einreichung Artist Bereich, Eingabefelder, REST APIs mit Profinity Prüfung; DE/EN i18n; React, Next.js, TypeScript, Tailwind CSS.",
         ],
       },
       {
@@ -222,7 +222,7 @@ const de = {
       {
         title: "Ecommerce App",
         date: "Nov 2024",
-        bullets: ["React E-Commerce mit Warenkorb, State Management und Tailwind CSS."],
+        bullets: ["React E Commerce mit Warenkorb, State Management und Tailwind CSS."],
       },
     ],
   },

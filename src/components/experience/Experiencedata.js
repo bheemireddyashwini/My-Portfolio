@@ -8,11 +8,11 @@ const Experiencedata = [
     location: "Düsseldorf, North Rhine-Westphalia, Germany · Hybrid",
     current: false,
     desc: [
-      "Contributed to frontend development for Fanody.com, a live events and fan video platform, building CMS backed content workflows and bilingual (DE/EN) user experiences.",
-      "Implemented key frontend features including Directus CMS models, post composer, banner upload, fan submission flows, custom verification badges for artists, and a dynamic events section with listings, detail views, and autocomplete search.",
-      "Built production UI with React, Next.js, TypeScript, and Tailwind CSS; integrated REST APIs with emphasis on responsive design, performance, and maintainable component architecture.",
+      "Frontend development for Fanody.com, a live events and fan video platform with bilingual (DE/EN) user experiences.",
+      "Designed and implemented Directus data models for the post section and fan submission artist section; built all form input fields and integrated REST APIs with Profinity content validation.",
+      "Delivered production UI including post composer, banner upload, artist verification badges, and events listings with autocomplete search using React, Next.js, TypeScript, and Tailwind CSS.",
     ],
-    specialization: "Frontend development, Directus CMS, events platform UI, REST API integration, i18n",
+    specialization: "Directus modeling, form UI, REST API integration, Profinity validation, i18n",
     skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Directus", "REST APIs"],
   },
   {

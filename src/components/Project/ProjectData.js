@@ -4,7 +4,7 @@ const ProjectData = [
     title: "Fanody.com",
     date: "Jan 2026 – Jun 2026",
     description:
-      "Production live events and fan video platform. Built CMS backed content workflows, event listings with autocomplete search, post composer, fan submission flows, and bilingual (DE/EN) UI using React, Next.js, TypeScript, Tailwind CSS, and Directus.",
+      "Production live events and fan video platform. Designed Directus models for the post and fan submission artist sections, implemented all form input fields, and integrated REST APIs with Profinity content checks. Bilingual (DE/EN) UI with React, Next.js, TypeScript, Tailwind CSS, and Directus.",
     image: "/logos/netmobile.svg",
     technologies: [
       "React",
