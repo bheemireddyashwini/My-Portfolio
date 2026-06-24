@@ -180,6 +180,7 @@ const en = {
       linkedinLabel: "LinkedIn",
     },
     availability: "Available from July 2026",
+    workAuthorization: "Work authorization: unrestricted in Germany",
     languageList: ["English — Fluent", "German — B2 completed (Lingoda)"],
     skillGroups: [
       {

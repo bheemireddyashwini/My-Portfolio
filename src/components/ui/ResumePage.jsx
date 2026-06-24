@@ -67,6 +67,7 @@ export default function ResumePage() {
                   </a>
                 </li>
                 <li>{r.availability}</li>
+                <li>{r.workAuthorization}</li>
               </ul>
             </div>
             <div className="resume-photo-wrap">

@@ -113,16 +113,17 @@ export function AboutSection() {
               <p className="about-profile-label">{t.about.profile}</p>
               <h3 className="text-heading text-xl font-bold sm:text-2xl">{Bio.name}</h3>
             </div>
-            <div className="about-status-row">
-              <div className="about-status-badge" aria-label="Open to opportunities">
-                <span className="about-status-glow" aria-hidden="true" />
-                <span className="about-status-dot" aria-hidden="true" />
-                <span className="about-status-text">{t.about.openToOpportunities}</span>
-              </div>
-            </div>
           </div>
 
           <AboutProfilePhoto />
+
+          <div className="about-status-row">
+            <div className="about-status-badge" aria-label="Open to opportunities">
+              <span className="about-status-glow" aria-hidden="true" />
+              <span className="about-status-dot" aria-hidden="true" />
+              <span className="about-status-text">{t.about.openToOpportunities}</span>
+            </div>
+          </div>
 
           <div className="about-highlight-grid">
             <div className="about-highlight-card about-highlight-focus">
