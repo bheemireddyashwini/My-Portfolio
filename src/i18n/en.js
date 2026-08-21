@@ -179,7 +179,7 @@ const en = {
       githubLabel: "GitHub",
       linkedinLabel: "LinkedIn",
     },
-    availability: "Available from July 2026",
+    availability: "Available immediately",
     workAuthorization: "Work authorization: unrestricted in Germany",
     languageList: ["English — Fluent", "German — B2 completed (Lingoda)"],
     skillGroups: [

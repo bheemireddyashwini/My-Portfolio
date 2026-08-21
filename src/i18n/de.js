@@ -180,7 +180,7 @@ const de = {
       githubLabel: "GitHub",
       linkedinLabel: "LinkedIn",
     },
-    availability: "Verfügbar ab Juli 2026",
+    availability: "Ab sofort verfügbar",
     workAuthorization: "Arbeitsberechtigung: unbefristet in Deutschland",
     languageList: ["Englisch — Fließend", "Deutsch — B2 abgeschlossen (Lingoda)"],
     skillGroups: [
